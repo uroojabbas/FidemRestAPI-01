@@ -1,0 +1,52 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="Urooj Abbas" id="01">
+        <createTable remarks="Used to store user's information"
+                     tableName="users">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="email" type="varchar(100)" />
+            <column name="phone" type="int" />
+            <column name="address" type="int">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+        <createTable remarks="Used to store user's address"
+                     tableName="addresses">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="street" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="city" type="varchar(100)" />
+            <column name="pin" type="int" />
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="users"
+                                 baseColumnNames="address" constraintName="address_fk"
+                                 referencedTableName="addresses" referencedColumnNames="id" />
+    </changeSet>
+
+    <changeSet author="Urooj" id="03">
+        <dropForeignKeyConstraint baseTableName="users" constraintName="address_fk"/>
+    </changeSet>
+
+    <changeSet author="Urooj" id="04">
+        <addColumn tableName="users">
+            <column name="username" type="varchar(256)"/>
+        </addColumn>
+
+            <addColumn tableName="users">
+                <column name="password" type="varchar(1024)"/>
+            </addColumn>
+    </changeSet>
+</databaseChangeLog>

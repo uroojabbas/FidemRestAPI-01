@@ -1,0 +1,74 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+        mavenLocal()
+
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath ('org.liquibase:liquibase-gradle-plugin:2.0.1')
+		// classpath('com.fasterxml.jackson.core':'jackson-databind':'2.9.7')
+		}
+}
+
+plugins {
+    id "org.hibernate.gradle.tools" version "1.2.5"
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.hibernate.gradle.tools'
+apply plugin: 'org.liquibase.gradle'
+
+group = 'com.vroom'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+// jar.dependsOn ':frontend:buildClientToSpring'
+// war.dependsOn ':frontend:buildClientToSpring'
+
+jar {
+	baseName = 'souk'
+	version = '0.0.1-SNAPSHOT'
+	manifest {
+		attributes("Main-Class": "com.vroom.dataservice.DataserviceApplication")
+	}
+	// from('frontend/src') {
+	// 	into 'public'
+	// }
+}
+
+// jar.dependsOn(':frontend:build')
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile ('org.json:json:20180813')
+	compile ('org.apache.commons:commons-lang3:3.0')
+	compile("org.liquibase:liquibase-core")
+	runtime(['org.mariadb.jdbc:mariadb-java-client:2.1.2'],
+            ['org.springframework.boot:spring-boot-devtools'])
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('io.projectreactor:reactor-test')
+}
+
+
+import org.hibernate.gradle.tools.Schema
+
+database{
+	basePackage = "com.vroom.dbmodel.orm"
+	url = "jdbc:mariadb://localhost"
+	dialect = "org.hibernate.dialect.MariaDBDialect"
+	driver = "org.mariadb.jdbc.Driver"
+	catalog = ["yaqeen" : new Schema("yaqeen",".*")]
+}
