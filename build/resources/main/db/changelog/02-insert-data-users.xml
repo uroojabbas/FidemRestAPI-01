@@ -1,0 +1,49 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="02" author="Urooj Abbas">
+        <insert tableName="addresses">
+            <column name="id" valueNumeric="1" />
+            <column name="street" value="street1" />
+            <column name="city" value="city1" />
+            <column name="pin" valueNumeric="123456" />
+        </insert>
+        <insert tableName="addresses">
+            <column name="id" valueNumeric="2" />
+            <column name="street" value="street2" />
+            <column name="city" value="city2" />
+            <column name="pin" valueNumeric="123457" />
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" valueNumeric="1" />
+            <column name="name" value="Ali" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="phone" valueNumeric="1234567890" />
+            <column name="address" valueNumeric="1" />
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="2" />
+            <column name="name" value="Rafay" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="phone" valueNumeric="1234567891" />
+            <column name="address" valueNumeric="2" />
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="3" />
+            <column name="name" value="Mujtaba" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="phone" valueNumeric="1234567891" />
+            <column name="address" valueNumeric="2" />
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="4" />
+            <column name="name" value="Abbas" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="phone" valueNumeric="1234567891" />
+            <column name="address" valueNumeric="2" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>
