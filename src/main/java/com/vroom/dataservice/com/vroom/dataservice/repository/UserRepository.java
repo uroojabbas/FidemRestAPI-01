@@ -1,5 +1,6 @@
 package com.vroom.dataservice.com.vroom.dataservice.repository;
-import com.vroom.orm.Users;
+import com.vroom.dbmodel.orm.Users;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,5 +15,7 @@ public interface UserRepository extends CrudRepository<Users,Long>{
 
     List<Users> findAll();
 
+
     Users findByUsername(String userName);
+
 }

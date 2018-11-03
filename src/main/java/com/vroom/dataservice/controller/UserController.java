@@ -1,14 +1,15 @@
 package com.vroom.dataservice.controller;
 
+import com.vroom.dbmodel.orm.Users;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import com.vroom.dataservice.com.vroom.dataservice.repository.UserRepository;
-import com.vroom.orm.Users;
+
+import java.util.List;
 
 @RestController
 public class UserController {
@@ -41,7 +42,7 @@ public class UserController {
 
     @PostMapping(value = "/user/login",consumes =MediaType.APPLICATION_JSON_VALUE )
     @ResponseBody
-    public Users loginUser(@RequestBody Users user){
+    public Object loginUser(@RequestBody Users user){
         logger.debug("loginUser : Name[" + user.toString() + "]");
         return userRepository.findByUsername(user.getUsername());
 

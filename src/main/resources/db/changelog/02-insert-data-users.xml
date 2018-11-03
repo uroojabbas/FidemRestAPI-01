@@ -19,31 +19,180 @@
 
         <insert tableName="users">
             <column name="id" valueNumeric="1" />
-            <column name="name" value="Ali" />
+            <column name="name" value="Ali Jaffar" />
             <column name="email" value="contact@jeejava.com" />
             <column name="phone" valueNumeric="1234567890" />
             <column name="address" valueNumeric="1" />
+            <column name="username" value="sjaffar"/>
         </insert>
         <insert tableName="users">
             <column name="id" valueNumeric="2" />
-            <column name="name" value="Rafay" />
+            <column name="name" value="Abdul Rafay" />
             <column name="email" value="contact@jeejava.com" />
             <column name="phone" valueNumeric="1234567891" />
             <column name="address" valueNumeric="2" />
+            <column name="username" value="arafay"/>
         </insert>
         <insert tableName="users">
             <column name="id" valueNumeric="3" />
-            <column name="name" value="Mujtaba" />
+            <column name="name" value="Muhammad Mujtaba" />
             <column name="email" value="contact@jeejava.com" />
             <column name="phone" valueNumeric="1234567891" />
             <column name="address" valueNumeric="2" />
+            <column name="username" value="mmujtaba"/>
         </insert>
         <insert tableName="users">
             <column name="id" valueNumeric="4" />
-            <column name="name" value="Abbas" />
+            <column name="name" value="Urooj Abbas" />
             <column name="email" value="contact@jeejava.com" />
             <column name="phone" valueNumeric="1234567891" />
             <column name="address" valueNumeric="2" />
+            <column name="username" value="uabbas"/>
         </insert>
+    </changeSet>
+    <changeSet id="03" author="urooj">
+        <insert tableName="city"> <column name="cityname" value="Karachi"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Lahore"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Faisalabad"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Serai"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Rawalpindi"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Multan"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Gujranwala"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Hyderabad City"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Peshawar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Abbottabad"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Islamabad"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Quetta"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Bannu"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Bahawalpur"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Sargodha"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Sialkot City"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Sukkur"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Larkana"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Sheikhupura"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Mirpur Khas"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Rahimyar Khan"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Kohat"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Jhang Sadr"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Gujrat"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Bardar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Kasur"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Dera Ghazi Khan"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Masiwala"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Nawabshah"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Okara"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Gilgit"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Chiniot"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Sadiqabad"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Turbat"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Dera Ismail Khan"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Chaman"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Zhob"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Mehra"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Parachinar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Gwadar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Kundian"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Shahdad Kot"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Haripur"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Matiari"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Dera Allahyar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Lodhran"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Batgram"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Thatta"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Bagh"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Badin"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Mansehra"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Ziarat"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Muzaffargarh"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Tando Allahyar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Dera Murad Jamali"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Karak"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Mardan"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Uthal"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Nankana Sahib"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Barkhan"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Hafizabad"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Kotli"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Loralai"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Dera Bugti"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Jhang City"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Sahiwal"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Sanghar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Pakpattan"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Chakwal"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Khushab"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Ghotki"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Kohlu"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Khuzdar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Awaran"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Nowshera"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Charsadda"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Qila Abdullah"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Bahawalnagar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Dadu"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Aliabad"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Lakki Marwat"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Chilas"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Pishin"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Tank"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Chitral"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Qila Saifullah"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Shikarpur"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Panjgur"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Mastung"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Kalat"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Gandava"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Khanewal"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Narowal"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Khairpur"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Malakand"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Vihari"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Saidu Sharif"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Jhelum"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Mandi Bahauddin"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Bhakkar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Toba Tek Singh"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Jamshoro"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Kharan"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Umarkot"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Hangu"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Timargara"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Gakuch"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Jacobabad"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Alpurai"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Mianwali"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Musa Khel Bazar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Naushahro Firoz"/></insert>
+        <insert tableName="city"> <column name="cityname" value="New Mirpur"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Daggar"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Eidgah"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Sibi"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Dalbandin"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Rajanpur"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Leiah"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Upper Dir"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Tando Muhammad Khan"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Attock City"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Rawala Kot"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Swabi"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Kandhkot"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Dasu"/></insert>
+        <insert tableName="city"> <column name="cityname" value="Athmuqam"/></insert>
+    </changeSet>
+
+    <changeSet id="04" author="urooj">
+    <insert tableName="vendorcategory"> <column name="categoryname" value="Internal"/></insert>
+        <insert tableName="vendorcategory"> <column name="categoryname" value="External"/></insert>
+
+        <insert tableName="customercategory"> <column name="categoryname" value="School"/></insert>
+        <insert tableName="customercategory"> <column name="categoryname" value="Wholeseller"/></insert>
+        <insert tableName="customercategory"> <column name="categoryname" value="Distributer"/></insert>
+    </changeSet>
+
+    <changeSet id="05" author="urooj">
+        <insert tableName="region"> <column name="regionname" value="Head Office"/></insert>
+        <insert tableName="region"> <column name="regionname" value="North"/></insert>
+        <insert tableName="region"> <column name="regionname" value="South"/></insert>
+        <insert tableName="region"> <column name="regionname" value="Central"/></insert>
     </changeSet>
 </databaseChangeLog>

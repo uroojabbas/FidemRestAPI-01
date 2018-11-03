@@ -49,4 +49,79 @@
                 <column name="password" type="varchar(1024)"/>
             </addColumn>
     </changeSet>
+
+    <changeSet author="Urooj" id="05">
+    <createTable remarks="Adding city table"
+                 tableName="city">
+        <column name="cityname" type="varchar(128)">
+            <constraints nullable="false" />
+        </column>
+        <column name="isdeleted" type="boolean">
+        </column>
+        <column autoIncrement="true" name="id" type="int">
+            <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+        </column>
+    </createTable>
+
+        <addDefaultValue columnDataType="boolean"
+                         columnName="isdeleted"
+                         defaultValueBoolean="false"
+                         tableName="city"/>
+
+    </changeSet>
+
+    <changeSet author="Urooj" id="06">
+        <createTable remarks="Adding Vendor Category"
+                     tableName="vendorcategory">
+            <column name="categoryname" type="varchar(128)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean">
+            </column>
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+        </createTable>
+
+        <addDefaultValue columnDataType="boolean"
+                         columnName="isdeleted"
+                         defaultValueBoolean="false"
+                         tableName="vendorcategory"/>
+
+        <createTable remarks="Adding Customer Category"
+                     tableName="customercategory">
+            <column name="categoryname" type="varchar(128)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean">
+            </column>
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+        </createTable>
+
+        <addDefaultValue columnDataType="boolean"
+                         columnName="isdeleted"
+                         defaultValueBoolean="false"
+                         tableName="customercategory"/>
+
+    </changeSet>
+<changeSet author="urooj" id="07">
+    <createTable remarks="Adding Customer Category"
+                 tableName="region">
+        <column name="regionname" type="varchar(128)">
+            <constraints nullable="false" />
+        </column>
+        <column name="isdeleted" type="boolean">
+        </column>
+        <column autoIncrement="true" name="id" type="int">
+            <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+        </column>
+    </createTable>
+
+    <addDefaultValue columnDataType="boolean"
+                     columnName="isdeleted"
+                     defaultValueBoolean="false"
+                     tableName="region"/>
+</changeSet>
 </databaseChangeLog>
