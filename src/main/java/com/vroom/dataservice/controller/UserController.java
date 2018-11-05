@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    private static final Logger logger = LoggerFactory.getLogger(CustomErrorController.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     UserRepository userRepository;
@@ -46,5 +46,12 @@ public class UserController {
         logger.debug("loginUser : Name[" + user.toString() + "]");
         return userRepository.findByUsername(user.getUsername());
 
+    }
+
+    @PostMapping(value = "/user/add",consumes =MediaType.APPLICATION_JSON_VALUE )
+    @ResponseBody
+    public Object insertUser(@RequestBody Users user){
+        logger.debug("inserUser : Name[" + user.toString() + "]");
+        return userRepository.save(user);
     }
 }

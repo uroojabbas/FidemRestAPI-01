@@ -4,49 +4,36 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="02" author="Urooj Abbas">
-        <insert tableName="addresses">
-            <column name="id" valueNumeric="1" />
-            <column name="street" value="street1" />
-            <column name="city" value="city1" />
-            <column name="pin" valueNumeric="123456" />
-        </insert>
-        <insert tableName="addresses">
-            <column name="id" valueNumeric="2" />
-            <column name="street" value="street2" />
-            <column name="city" value="city2" />
-            <column name="pin" valueNumeric="123457" />
-        </insert>
-
         <insert tableName="users">
             <column name="id" valueNumeric="1" />
             <column name="name" value="Ali Jaffar" />
             <column name="email" value="contact@jeejava.com" />
-            <column name="phone" valueNumeric="1234567890" />
-            <column name="address" valueNumeric="1" />
+            <column name="phone" value="1234567890" />
+            <column name="address" value="1" />
             <column name="username" value="sjaffar"/>
         </insert>
         <insert tableName="users">
             <column name="id" valueNumeric="2" />
             <column name="name" value="Abdul Rafay" />
             <column name="email" value="contact@jeejava.com" />
-            <column name="phone" valueNumeric="1234567891" />
-            <column name="address" valueNumeric="2" />
+            <column name="phone" value="1234567891" />
+            <column name="address" value="DHA" />
             <column name="username" value="arafay"/>
         </insert>
         <insert tableName="users">
             <column name="id" valueNumeric="3" />
             <column name="name" value="Muhammad Mujtaba" />
             <column name="email" value="contact@jeejava.com" />
-            <column name="phone" valueNumeric="1234567891" />
-            <column name="address" valueNumeric="2" />
+            <column name="phone" value="1234567891" />
+            <column name="address" value="2" />
             <column name="username" value="mmujtaba"/>
         </insert>
         <insert tableName="users">
             <column name="id" valueNumeric="4" />
             <column name="name" value="Urooj Abbas" />
             <column name="email" value="contact@jeejava.com" />
-            <column name="phone" valueNumeric="1234567891" />
-            <column name="address" valueNumeric="2" />
+            <column name="phone" value="1234567891" />
+            <column name="address" value="2" />
             <column name="username" value="uabbas"/>
         </insert>
     </changeSet>

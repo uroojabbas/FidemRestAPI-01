@@ -13,31 +13,18 @@
                 <constraints nullable="false" />
             </column>
             <column name="email" type="varchar(100)" />
-            <column name="phone" type="int" />
-            <column name="address" type="int">
+            <column name="phone" type="varchar(56)" />
+            <column name="address" type="varchar(256)">
                 <constraints nullable="false" />
             </column>
+            <column name="departmentid" type="int"/>
+            <column name="cityid" type="int"/>
+            <column name="regionid" type="int"/>
+            <column name="gender" type="int"/>
+            <column name="permanent" type="boolean"/>
+            <column name="hiredate" type="date"/>
         </createTable>
 
-        <createTable remarks="Used to store user's address"
-                     tableName="addresses">
-            <column name="id" type="int">
-                <constraints primaryKey="true" nullable="false" />
-            </column>
-            <column name="street" type="varchar(100)">
-                <constraints nullable="false" />
-            </column>
-            <column name="city" type="varchar(100)" />
-            <column name="pin" type="int" />
-        </createTable>
-
-        <addForeignKeyConstraint baseTableName="users"
-                                 baseColumnNames="address" constraintName="address_fk"
-                                 referencedTableName="addresses" referencedColumnNames="id" />
-    </changeSet>
-
-    <changeSet author="Urooj" id="03">
-        <dropForeignKeyConstraint baseTableName="users" constraintName="address_fk"/>
     </changeSet>
 
     <changeSet author="Urooj" id="04">
