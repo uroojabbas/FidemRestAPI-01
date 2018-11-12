@@ -127,7 +127,5 @@
                      defaultValueBoolean="false"
                      tableName="region"/>
 </changeSet>
-    <changeSet id="08" author="">
-        <
-    </changeSet>
+
 </databaseChangeLog>
