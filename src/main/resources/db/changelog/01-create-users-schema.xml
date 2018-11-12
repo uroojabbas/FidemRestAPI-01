@@ -6,10 +6,10 @@
     <changeSet author="Urooj Abbas" id="01">
         <createTable remarks="Used to store user's information"
                      tableName="users">
-            <column name="id" type="int">
+            <column autoIncrement="true" name="id" type="int">
                 <constraints primaryKey="true" nullable="false" />
             </column>
-            <column name="name" type="varchar(50)">
+            <column  name="name" type="varchar(50)">
                 <constraints nullable="false" />
             </column>
             <column name="email" type="varchar(100)" />
@@ -23,18 +23,34 @@
             <column name="gender" type="int"/>
             <column name="permanent" type="boolean"/>
             <column name="hiredate" type="date"/>
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
         </createTable>
 
+        <addUniqueConstraint
+                tableName="users"
+                columnNames="name"
+                constraintName="unique_employee_name" />
     </changeSet>
+
 
     <changeSet author="Urooj" id="04">
         <addColumn tableName="users">
-            <column name="username" type="varchar(256)"/>
+            <column name="username" type="varchar(256)">
+            <constraints nullable="false" />
+            </column>
+
         </addColumn>
 
             <addColumn tableName="users">
-                <column name="password" type="varchar(1024)"/>
+                <column name="password" type="varchar(1024)">
+                    </column>
             </addColumn>
+
+        <addUniqueConstraint
+                tableName="users"
+                columnNames="username"
+                constraintName="unique_loging_name" />
+
     </changeSet>
 
     <changeSet author="Urooj" id="05">
@@ -111,4 +127,7 @@
                      defaultValueBoolean="false"
                      tableName="region"/>
 </changeSet>
+    <changeSet id="08" author="">
+        <
+    </changeSet>
 </databaseChangeLog>

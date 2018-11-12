@@ -20,7 +20,8 @@ public class UserController {
     UserRepository userRepository;
 
     @GetMapping("/user/{id}")
-    public Users getUser(@PathVariable int id){
+    @ResponseBody
+    public Object getUser(@PathVariable int id){
         logger.debug("getUser : [" + id + "]");
         return userRepository.findById(id);
 
@@ -50,8 +51,22 @@ public class UserController {
 
     @PostMapping(value = "/user/add",consumes =MediaType.APPLICATION_JSON_VALUE )
     @ResponseBody
-    public Object insertUser(@RequestBody Users user){
+    public Users insertUser(@RequestBody Users user){
         logger.debug("inserUser : Name[" + user.toString() + "]");
+        return userRepository.save(user);
+    }
+
+    @PostMapping(value = "/user/delete",consumes =MediaType.APPLICATION_JSON_VALUE )
+    @ResponseBody
+    public Users deleteUser(@RequestBody int id){
+        logger.debug("inserUser : Name[" + id + "]");
+
+        Users user = userRepository.findById(id);
+
+        if(user != null && user.getId() > 0){
+            user.setIsdeleted(true);
+        }
+
         return userRepository.save(user);
     }
 }
