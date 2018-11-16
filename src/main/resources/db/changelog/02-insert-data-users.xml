@@ -202,4 +202,11 @@
         <insert tableName="region"> <column name="regionname" value="South"/></insert>
         <insert tableName="region"> <column name="regionname" value="Central"/></insert>
     </changeSet>
+
+    <changeSet id="06" author="urooj">
+        <insert tableName="vendortype"> <column name="type" value="Printing"/></insert>
+        <insert tableName="vendortype"> <column name="type" value="Packaging"/></insert>
+        <insert tableName="vendortype"> <column name="type" value="Transport"/></insert>
+    </changeSet>
+
 </databaseChangeLog>

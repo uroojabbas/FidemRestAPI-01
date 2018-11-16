@@ -20,8 +20,9 @@ import javax.persistence.UniqueConstraint;
         ,catalog="yaqeen"
         , uniqueConstraints = {@UniqueConstraint(columnNames="name"), @UniqueConstraint(columnNames="username")}
 )
-public class Users  implements java.io.Serializable {
+public class Users  extends AbstractEntity {
 
+    private static final long serialVersionUID = 1L;
 
     private Integer id;
     private String name;
@@ -204,5 +205,3 @@ public class Users  implements java.io.Serializable {
     }
 
 }
-
-

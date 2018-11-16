@@ -128,4 +128,77 @@
                      tableName="region"/>
 </changeSet>
 
+    <changeSet author="urooj" id="08">
+
+        <createTable remarks="Adding Vendor type table"
+                     tableName="vendortype">
+
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column  name="type" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+
+        </createTable>
+        <createTable remarks="Adding Vendor table"
+                     tableName="vendor">
+
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column  name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="address" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="email" type="varchar(100)" />
+
+            <column  name="contactperson" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="contactone" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="contactpersontwo" type="varchar(50)">
+            </column>
+
+            <column  name="contacttwo" type="varchar(50)">
+            </column>
+
+            <column  name="ntn" type="varchar(30)"/>
+
+            <column  name="strn" type="varchar(30)"/>
+
+            <column  name="vendortypeid" type="int"/>
+
+            <column  name="discount" type="int"/>
+
+            <column  name="paymentterms" type="int"/>
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <addUniqueConstraint
+                tableName="vendor"
+                columnNames="name"
+                constraintName="unique_vendor_name" />
+
+        <addForeignKeyConstraint baseColumnNames="vendortypeid"
+                                 baseTableName="vendor"
+                                 constraintName="fk_vendor_type"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vendortype"/>
+
+    </changeSet>
 </databaseChangeLog>
