@@ -209,4 +209,17 @@
         <insert tableName="vendortype"> <column name="type" value="Transport"/></insert>
     </changeSet>
 
+    <changeSet id="07" author="urooj">
+        <insert tableName="institutetype"> <column name="type" value="Primary"/></insert>
+        <insert tableName="institutetype"> <column name="type" value="Secondary"/></insert>
+        <insert tableName="institutetype"> <column name="type" value="College"/></insert>
+        <insert tableName="institutetype"> <column name="type" value="Matric Level"/></insert>
+        <insert tableName="institutetype"> <column name="type" value="A Levels"/></insert>
+        <insert tableName="institutetype"> <column name="type" value="Inter Level"/></insert>
+
+        <insert tableName="clienttype"> <column name="type" value="Wholeseller"/></insert>
+        <insert tableName="clienttype"> <column name="type" value="Retailer"/></insert>
+        <insert tableName="clienttype"> <column name="type" value="Educational Institution"/></insert>
+    </changeSet>
+
 </databaseChangeLog>

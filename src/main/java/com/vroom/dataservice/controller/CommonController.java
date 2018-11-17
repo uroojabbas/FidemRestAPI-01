@@ -1,11 +1,7 @@
 package com.vroom.dataservice.controller;
 
-import com.vroom.dataservice.com.vroom.dataservice.repository.CityRepository;
-import com.vroom.dataservice.com.vroom.dataservice.repository.RegionRepository;
-import com.vroom.dataservice.com.vroom.dataservice.repository.VendorTypeRepository;
-import com.vroom.dbmodel.orm.City;
-import com.vroom.dbmodel.orm.Region;
-import com.vroom.dbmodel.orm.Vendortype;
+import com.vroom.dataservice.com.vroom.dataservice.repository.*;
+import com.vroom.dbmodel.orm.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +23,12 @@ public class CommonController {
     @Autowired
     VendorTypeRepository vendorTypeRepository;
 
+    @Autowired
+    ClientTypeRepository ClientTypeRepository;
+
+    @Autowired
+    InstituteTypeRepository instituteTypeRepository;
+
     @GetMapping("/citylist")
     public List<City> getCityList(){
         logger.debug("getCityList");
@@ -35,15 +37,25 @@ public class CommonController {
 
     @GetMapping("/reigonlist")
     public List<Region> getReigonList(){
-
         logger.debug("getReigonList");
         return regionRepository.findAll();
     }
 
     @GetMapping("/vendortypelist")
     public List<Vendortype> getVendorTypeList(){
-
         logger.debug("getVendorTypeList");
         return vendorTypeRepository.findAll();
+    }
+
+    @GetMapping("/clienttypelist")
+    public List<Clienttype> getClientTypeList(){
+        logger.debug("getClientTypeList");
+        return ClientTypeRepository.findAll();
+    }
+
+    @GetMapping("/institutetypelist")
+    public List<Institutetype> getInstitutetypeList(){
+        logger.debug("getInstitutetypeList");
+        return instituteTypeRepository.findAll();
     }
 }

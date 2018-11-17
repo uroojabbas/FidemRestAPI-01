@@ -201,4 +201,134 @@
                                  referencedTableName="vendortype"/>
 
     </changeSet>
+
+    <changeSet author="urooj" id="09">
+        <createTable remarks="Adding School Type"
+                     tableName="institutetype">
+            <column name="type" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean">
+            </column>
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+        </createTable>
+
+        <addDefaultValue columnDataType="boolean"
+                         columnName="isdeleted"
+                         defaultValueBoolean="false"
+                         tableName="institutetype"/>
+
+        <createTable remarks="Adding client Type"
+                     tableName="clienttype">
+            <column name="type" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean">
+            </column>
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+        </createTable>
+
+        <addDefaultValue columnDataType="boolean"
+                         columnName="isdeleted"
+                         defaultValueBoolean="false"
+                         tableName="clienttype"/>
+
+        <createTable remarks="Adding Client table"
+                     tableName="client">
+
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column  name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="address" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="email" type="varchar(100)" />
+
+            <column  name="principlename" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="contact" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="contactpersontwo" type="varchar(50)">
+            </column>
+
+            <column  name="contacttwo" type="varchar(50)">
+            </column>
+
+            <column  name="instituetypeid" type="int"/>
+
+            <column  name="clienttypeid" type="int"/>
+
+            <column  name="totalbranches" type="int"/>
+
+            <column  name="strenght" type="int"/>
+
+            <column  name="discount" type="int"/>
+
+            <column  name="paymentterms" type="int"/>
+
+            <column name="cityid" type="int"/>
+
+            <column name="regionid" type="int"/>
+
+            <column name="userid" type="int"/>
+
+            <column name="modifiedbyuserid" type="int"/>
+
+            <column name="modifiedtime" type="date"/>
+
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <addUniqueConstraint
+                tableName="client"
+                columnNames="name"
+                constraintName="unique_client_name" />
+
+        <addForeignKeyConstraint baseColumnNames="instituetypeid"
+                                 baseTableName="client"
+                                 constraintName="fk_institute_type"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="institutetype"/>
+
+        <addForeignKeyConstraint baseColumnNames="clienttypeid"
+                                 baseTableName="client"
+                                 constraintName="fk_client_type"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="clienttype"/>
+
+        <addForeignKeyConstraint baseColumnNames="cityid"
+                                 baseTableName="client"
+                                 constraintName="fk_client_city"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="city"/>
+
+        <addForeignKeyConstraint baseColumnNames="regionid"
+                                 baseTableName="client"
+                                 constraintName="fk_client_region"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="region"/>
+
+    </changeSet>
 </databaseChangeLog>
