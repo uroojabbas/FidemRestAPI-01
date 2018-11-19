@@ -331,4 +331,17 @@
                                  referencedTableName="region"/>
 
     </changeSet>
+
+    <changeSet id="10" author="Urooj">
+        <addColumn tableName="client">
+            <column name="area" type="varchar(100)">
+            </column>
+        </addColumn>
+
+        <addColumn tableName="client">
+            <column name="clientstaus" type="int" defaultValue="1">
+            </column>
+        </addColumn>
+
+    </changeSet>
 </databaseChangeLog>

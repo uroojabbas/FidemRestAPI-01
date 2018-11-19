@@ -20,15 +20,15 @@ public class ClientController {
 
     @GetMapping("/client/{id}")
     @ResponseBody
-    public Client getClient(@PathVariable int id){
-        logger.debug("getClient : [" + id + "]");
+    public Client getClientById(@PathVariable int id){
+        logger.debug("getClientById : [" + id + "]");
         return clientService.getClient(id);
 
     }
 
-    @GetMapping("/client/{name}")
-    public Client getClient(@PathVariable String name){
-        logger.debug("getClient : [" + name + "]");
+    @GetMapping("/clientbyname/{name}")
+    public List<Client> getClientByName(@PathVariable String name){
+        logger.debug("getClientByName : [" + name + "]");
         return clientService.getClient(name);
     }
 

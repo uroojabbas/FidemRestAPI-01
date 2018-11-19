@@ -16,7 +16,7 @@ import static javax.persistence.GenerationType.IDENTITY;
     ,catalog="yaqeen"
     , uniqueConstraints = @UniqueConstraint(columnNames="name") 
 )
-public class Client  extends AbstractEntity {
+public class Client  {
 
 
      private Integer id;
@@ -39,6 +39,31 @@ public class Client  extends AbstractEntity {
      private Integer modifiedbyuserid;
      private Date modifiedtime;
      private Boolean isdeleted;
+     private String area;
+     private int clientstaus;
+
+    @Transient
+    private String cityname;
+
+    @Transient
+    private String regionname;
+
+
+    @Transient
+    private String institutetypename;
+
+    @Transient
+    private String clienttypename;
+
+
+    @Column(name="area", length=100)
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
 
     @Transient
     public String getInstitutetypename() {
@@ -61,11 +86,30 @@ public class Client  extends AbstractEntity {
     }
 
 
-    @Transient
-     private String institutetypename;
 
      @Transient
-     private String clienttypename;
+    public String getCityname() {
+
+         if(this.cityname == null || this.cityname.isEmpty())
+         {
+             return this.city.getCityname();
+         }else {
+             return this.cityname;
+         }
+    }
+
+
+
+
+    @Transient
+    public String getRegionname() {
+         if(this.regionname == null || this.regionname.isEmpty()){
+             return this.region.getRegionname();
+
+         }else {
+             return this.regionname;
+         }
+    }
 
 
     public Client() {
@@ -303,8 +347,14 @@ public class Client  extends AbstractEntity {
     }
 
 
+    @Column(name="clientstaus")
+    public int getClientstaus() {
+        return clientstaus;
+    }
 
-
+    public void setClientstaus(int clientstaus) {
+        this.clientstaus = clientstaus;
+    }
 }
 
 

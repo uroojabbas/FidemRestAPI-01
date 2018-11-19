@@ -13,7 +13,7 @@ public interface ClientRepository extends CrudRepository<Client,Long> {
     List<Client> findAll();
 
     @Query("SELECT c FROM Client c WHERE c.name = :name AND (c.isdeleted = false) ")
-    Client findByName(@Param("name") String  name);
+    List<Client> findByName(@Param("name") String  name);
 
     @Query("SELECT c FROM Client c WHERE c.id = :id AND (c.isdeleted = false) ")
     Client findById(@Param("id") int  id);
