@@ -344,4 +344,31 @@
         </addColumn>
 
     </changeSet>
+
+    <changeSet author="AJ" id="101">
+        <createTable remarks="Used to store employee designation types"
+                     tableName="designation">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+             <createTable remarks="Used to employee department types"
+                     tableName="department">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+    </changeSet>
+
 </databaseChangeLog>

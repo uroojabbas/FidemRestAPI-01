@@ -226,7 +226,25 @@
         <update tableName="clienttype"> <column name="type" value="Wholesaler"/>
         <where> id = '1' </where>
     </update>
-        
+
+    <changeSet id="102" author="aj">
+        <insert tableName="designation"> <column name="type" value="Chief Executive Officer"/></insert>
+        <insert tableName="designation"> <column name="type" value="Chief Operating Officer"/></insert>
+        <insert tableName="designation"> <column name="type" value="Chief Financial Officer"/></insert>
+        <insert tableName="designation"> <column name="type" value="Manager"/></insert>
+        <insert tableName="designation"> <column name="type" value="Assistant Manager"/></insert>
+        <insert tableName="designation"> <column name="type" value="Analyst"/></insert>
+        <insert tableName="designation"> <column name="type" value="Admin Staff"/></insert>
+        <insert tableName="designation"> <column name="type" value="Sales Agent"/></insert>
+        <insert tableName="designation"> <column name="type" value="Director"/></insert>
+
+        <insert tableName="department"> <column name="type" value="Human Resources"/></insert>
+        <insert tableName="department"> <column name="type" value="Accounts and Finance"/></insert>
+        <insert tableName="department"> <column name="type" value="Administration"/></insert>
+        <insert tableName="department"> <column name="type" value="Marketing and Sales"/></insert>
+        <insert tableName="department"> <column name="type" value="Procurement"/></insert>
+    </changeSet>
+
     </changeSet>
 
 </databaseChangeLog>
