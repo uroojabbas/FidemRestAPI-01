@@ -226,25 +226,72 @@
         <update tableName="clienttype"> <column name="type" value="Wholesaler"/>
         <where> id = '1' </where>
     </update>
-
+    </changeSet>
+    
     <changeSet id="102" author="aj">
-        <insert tableName="designation"> <column name="type" value="Chief Executive Officer"/></insert>
-        <insert tableName="designation"> <column name="type" value="Chief Operating Officer"/></insert>
-        <insert tableName="designation"> <column name="type" value="Chief Financial Officer"/></insert>
-        <insert tableName="designation"> <column name="type" value="Manager"/></insert>
-        <insert tableName="designation"> <column name="type" value="Assistant Manager"/></insert>
-        <insert tableName="designation"> <column name="type" value="Analyst"/></insert>
-        <insert tableName="designation"> <column name="type" value="Admin Staff"/></insert>
-        <insert tableName="designation"> <column name="type" value="Sales Agent"/></insert>
-        <insert tableName="designation"> <column name="type" value="Director"/></insert>
+        <insert tableName="designation"> <column name="name" value="Chief Executive Officer"/></insert>
+        <insert tableName="designation"> <column name="name" value="Chief Operating Officer"/></insert>
+        <insert tableName="designation"> <column name="name" value="Chief Financial Officer"/></insert>
+        <insert tableName="designation"> <column name="name" value="Manager"/></insert>
+        <insert tableName="designation"> <column name="name" value="Assistant Manager"/></insert>
+        <insert tableName="designation"> <column name="name" value="Analyst"/></insert>
+        <insert tableName="designation"> <column name="name" value="Admin Staff"/></insert>
+        <insert tableName="designation"> <column name="name" value="Sales Agent"/></insert>
+        <insert tableName="designation"> <column name="name" value="Director"/></insert>
 
-        <insert tableName="department"> <column name="type" value="Human Resources"/></insert>
-        <insert tableName="department"> <column name="type" value="Accounts and Finance"/></insert>
-        <insert tableName="department"> <column name="type" value="Administration"/></insert>
-        <insert tableName="department"> <column name="type" value="Marketing and Sales"/></insert>
-        <insert tableName="department"> <column name="type" value="Procurement"/></insert>
+        <insert tableName="department"> <column name="name" value="Human Resources"/></insert>
+        <insert tableName="department"> <column name="name" value="Accounts and Finance"/></insert>
+        <insert tableName="department"> <column name="name" value="Administration"/></insert>
+        <insert tableName="department"> <column name="name" value="Marketing and Sales"/></insert>
+        <insert tableName="department"> <column name="name" value="Procurement"/></insert>
     </changeSet>
 
+    <changeSet id="103" author="aj">
+        <insert tableName="paymenttype"> <column name="name" value="Cash"/></insert>
+        <insert tableName="paymenttype"> <column name="name" value="Credit Card"/></insert>
+        <insert tableName="paymenttype"> <column name="name" value="Debit Card"/></insert>
+        <insert tableName="paymenttype"> <column name="name" value="Pay Order"/></insert>
+        <insert tableName="paymenttype"> <column name="name" value="Bank Transfer"/></insert>
+        <insert tableName="paymenttype"> <column name="name" value="Cheque"/></insert>
+
+        <insert tableName="employeetype"> <column name="name" value="Permanent"/></insert>
+        <insert tableName="employeetype"> <column name="name" value="Contractual"/></insert>
+        <insert tableName="employeetype"> <column name="name" value="Other"/></insert>
+
+        <insert tableName="marketsegment"> <column name="name" value="A"/></insert>
+        <insert tableName="marketsegment"> <column name="name" value="B"/></insert>
+        <insert tableName="marketsegment"> <column name="name" value="C"/></insert>
+
+        <insert tableName="curriculumtype"> <column name="name" value="Primary"/></insert>
+        <insert tableName="curriculumtype"> <column name="name" value="Secondary"/></insert>
+        <insert tableName="curriculumtype"> <column name="name" value="College"/></insert>
+        <insert tableName="curriculumtype"> <column name="name" value="Matric"/></insert>
+        <insert tableName="curriculumtype"> <column name="name" value="Inter"/></insert>
+        <insert tableName="curriculumtype"> <column name="name" value="O Levels"/></insert>
+        <insert tableName="curriculumtype"> <column name="name" value="A Levels"/></insert>
+        <insert tableName="curriculumtype"> <column name="name" value="University"/></insert>
+
+        <insert tableName="saletype"> <column name="name" value="Sample"/></insert>
+        <insert tableName="saletype"> <column name="name" value="Final"/></insert>
+
+        <insert tableName="subjects"> <column name="name" value="English"/> <column name="shortcode" value="ENG"/></insert>
+        <insert tableName="subjects"> <column name="name" value="Mathematics"/> <column name="shortcode" value="MAT"/></insert>
+        <insert tableName="subjects"> <column name="name" value="Statistics"/> <column name="shortcode" value="STA"/></insert>
+        <insert tableName="subjects"> <column name="name" value="Biology"/> <column name="shortcode" value="BIO"/></insert>
+        <insert tableName="subjects"> <column name="name" value="Chemistry"/> <column name="shortcode" value="CHE"/></insert>
+        <insert tableName="subjects"> <column name="name" value="Physics"/> <column name="shortcode" value="PHY"/></insert>
+        <insert tableName="subjects"> <column name="name" value="Social Studies"/> <column name="shortcode" value="SS"/></insert>
+        <insert tableName="subjects"> <column name="name" value="Islamiat"/> <column name="shortcode" value="ISL"/></insert>
+        <insert tableName="subjects"> <column name="name" value="Urdu"/> <column name="shortcode" value="URD"/></insert>
+        <insert tableName="subjects"> <column name="name" value="Science"/> <column name="shortcode" value="SCI"/></insert>
+
+        <insert tableName="paperquality"> <column name="name" value="50 GSM Offset"/></insert>
+        <insert tableName="paperquality"> <column name="name" value="60 GSM Offset"/></insert>
+        <insert tableName="paperquality"> <column name="name" value="70 GSM Offset"/></insert>
+        <insert tableName="paperquality"> <column name="name" value="80 GSM Offset"/></insert>
+
     </changeSet>
+
+
 
 </databaseChangeLog>

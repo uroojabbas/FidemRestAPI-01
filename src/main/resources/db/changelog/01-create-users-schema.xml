@@ -371,4 +371,94 @@
 
     </changeSet>
 
+    <changeSet author="AJ" id="102">
+
+        <createTable remarks="Used to store possible payment types"
+                     tableName="paymenttype">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <createTable remarks="Used to store employee contract types"
+                     tableName="employeetype">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <createTable remarks="Used to store market segment types"
+                     tableName="marketsegment">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <createTable remarks="Used to store curriculum types"
+                     tableName="curriculumtype">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <createTable remarks="Used to store sale types"
+                     tableName="saletype">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable> 
+
+        <createTable remarks="Used to define subjects"
+                     tableName="subjects">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+                        <column  name="shortcode" type="varchar(10)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>   
+
+        <createTable remarks="Used to define paper quality"
+                     tableName="paperquality">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>          
+
+    </changeSet>
+
 </databaseChangeLog>
