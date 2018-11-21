@@ -293,5 +293,483 @@
     </changeSet>
 
 
+    <changeSet id="08" author="urooj">
+        <insert tableName="language"><column name="languagecode" value="aa"/><column name="language" value="Afar"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ab"/><column name="language" value="Abkhazian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ae"/><column name="language" value="Avestan"/></insert>
+        <insert tableName="language"><column name="languagecode" value="af"/><column name="language" value="Afrikaans"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ak"/><column name="language" value="Akan"/></insert>
+        <insert tableName="language"><column name="languagecode" value="am"/><column name="language" value="Amharic"/></insert>
+        <insert tableName="language"><column name="languagecode" value="an"/><column name="language" value="Aragonese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ar"/><column name="language" value="Arabic"/></insert>
+        <insert tableName="language"><column name="languagecode" value="as"/><column name="language" value="Assamese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="av"/><column name="language" value="Avaric"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ay"/><column name="language" value="Aymara"/></insert>
+        <insert tableName="language"><column name="languagecode" value="az"/><column name="language" value="Azerbaijani"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ba"/><column name="language" value="Bashkir"/></insert>
+        <insert tableName="language"><column name="languagecode" value="be"/><column name="language" value="Belarusian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="bg"/><column name="language" value="Bulgarian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="bh"/><column name="language" value="Bihari languages"/></insert>
+        <insert tableName="language"><column name="languagecode" value="bm"/><column name="language" value="Bambara"/></insert>
+        <insert tableName="language"><column name="languagecode" value="bi"/><column name="language" value="Bislama"/></insert>
+        <insert tableName="language"><column name="languagecode" value="bn"/><column name="language" value="Bengali"/></insert>
+        <insert tableName="language"><column name="languagecode" value="bo"/><column name="language" value="Tibetan"/></insert>
+        <insert tableName="language"><column name="languagecode" value="br"/><column name="language" value="Breton"/></insert>
+        <insert tableName="language"><column name="languagecode" value="bs"/><column name="language" value="Bosnian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ca"/><column name="language" value="Catalan; Valencian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ce"/><column name="language" value="Chechen"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ch"/><column name="language" value="Chamorro"/></insert>
+        <insert tableName="language"><column name="languagecode" value="co"/><column name="language" value="Corsican"/></insert>
+        <insert tableName="language"><column name="languagecode" value="cr"/><column name="language" value="Cree"/></insert>
+        <insert tableName="language"><column name="languagecode" value="cs"/><column name="language" value="Czech"/></insert>
+        <insert tableName="language"><column name="languagecode" value="cv"/><column name="language" value="Chuvash"/></insert>
+        <insert tableName="language"><column name="languagecode" value="cy"/><column name="language" value="Welsh"/></insert>
+        <insert tableName="language"><column name="languagecode" value="da"/><column name="language" value="Danish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="de"/><column name="language" value="German"/></insert>
+        <insert tableName="language"><column name="languagecode" value="dz"/><column name="language" value="Dzongkha"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ee"/><column name="language" value="Ewe"/></insert>
+        <insert tableName="language"><column name="languagecode" value="el"/><column name="language" value="Greek"/></insert>
+        <insert tableName="language"><column name="languagecode" value="en"/><column name="language" value="English"/></insert>
+        <insert tableName="language"><column name="languagecode" value="eo"/><column name="language" value="Esperanto"/></insert>
+        <insert tableName="language"><column name="languagecode" value="es"/><column name="language" value="Spanish; Castilian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="et"/><column name="language" value="Estonian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="eu"/><column name="language" value="Basque"/></insert>
+        <insert tableName="language"><column name="languagecode" value="fa"/><column name="language" value="Persian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ff"/><column name="language" value="Fulah"/></insert>
+        <insert tableName="language"><column name="languagecode" value="fi"/><column name="language" value="Finnish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="fj"/><column name="language" value="Fijian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="fo"/><column name="language" value="Faroese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="fr"/><column name="language" value="French"/></insert>
+        <insert tableName="language"><column name="languagecode" value="fy"/><column name="language" value="Western Frisian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ga"/><column name="language" value="Irish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="gd"/><column name="language" value="Gaelic; Scottish Gaelic"/></insert>
+        <insert tableName="language"><column name="languagecode" value="gl"/><column name="language" value="Galician"/></insert>
+        <insert tableName="language"><column name="languagecode" value="gn"/><column name="language" value="Guarani"/></insert>
+        <insert tableName="language"><column name="languagecode" value="gu"/><column name="language" value="Gujarati"/></insert>
+        <insert tableName="language"><column name="languagecode" value="gv"/><column name="language" value="Manx"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ha"/><column name="language" value="Hausa"/></insert>
+        <insert tableName="language"><column name="languagecode" value="he"/><column name="language" value="Hebrew"/></insert>
+        <insert tableName="language"><column name="languagecode" value="hi"/><column name="language" value="Hindi"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ho"/><column name="language" value="Hiri Motu"/></insert>
+        <insert tableName="language"><column name="languagecode" value="hr"/><column name="language" value="Croatian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ht"/><column name="language" value="Haitian; Haitian Creole"/></insert>
+        <insert tableName="language"><column name="languagecode" value="hu"/><column name="language" value="Hungarian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="hy"/><column name="language" value="Armenian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="hz"/><column name="language" value="Herero"/></insert>
+        <insert tableName="language"><column name="languagecode" value="id"/><column name="language" value="Indonesian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ie"/><column name="language" value="Interlingue; Occidental"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ig"/><column name="language" value="Igbo"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ii"/><column name="language" value="Sichuan Yi; Nuosu"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ik"/><column name="language" value="Inupiaq"/></insert>
+        <insert tableName="language"><column name="languagecode" value="io"/><column name="language" value="Ido"/></insert>
+        <insert tableName="language"><column name="languagecode" value="is"/><column name="language" value="Icelandic"/></insert>
+        <insert tableName="language"><column name="languagecode" value="it"/><column name="language" value="Italian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="iu"/><column name="language" value="Inuktitut"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ja"/><column name="language" value="Japanese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="jv"/><column name="language" value="Javanese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ka"/><column name="language" value="Georgian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="kg"/><column name="language" value="Kongo"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ki"/><column name="language" value="Kikuyu; Gikuyu"/></insert>
+        <insert tableName="language"><column name="languagecode" value="kj"/><column name="language" value="Kuanyama; Kwanyama"/></insert>
+        <insert tableName="language"><column name="languagecode" value="kk"/><column name="language" value="Kazakh"/></insert>
+        <insert tableName="language"><column name="languagecode" value="kl"/><column name="language" value="Kalaallisut; Greenlandic"/></insert>
+        <insert tableName="language"><column name="languagecode" value="km"/><column name="language" value="Central Khmer"/></insert>
+        <insert tableName="language"><column name="languagecode" value="kn"/><column name="language" value="Kannada"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ko"/><column name="language" value="Korean"/></insert>
+        <insert tableName="language"><column name="languagecode" value="kr"/><column name="language" value="Kanuri"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ks"/><column name="language" value="Kashmiri"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ku"/><column name="language" value="Kurdish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="kv"/><column name="language" value="Komi"/></insert>
+        <insert tableName="language"><column name="languagecode" value="kw"/><column name="language" value="Cornish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ky"/><column name="language" value="Kirghiz; Kyrgyz"/></insert>
+        <insert tableName="language"><column name="languagecode" value="la"/><column name="language" value="Latin"/></insert>
+        <insert tableName="language"><column name="languagecode" value="lb"/><column name="language" value="Luxembourgish; Letzeburgesch"/></insert>
+        <insert tableName="language"><column name="languagecode" value="lg"/><column name="language" value="Ganda"/></insert>
+        <insert tableName="language"><column name="languagecode" value="li"/><column name="language" value="Limburgan; Limburger; Limburgish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ln"/><column name="language" value="Lingala"/></insert>
+        <insert tableName="language"><column name="languagecode" value="lo"/><column name="language" value="Lao"/></insert>
+        <insert tableName="language"><column name="languagecode" value="lt"/><column name="language" value="Lithuanian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="lu"/><column name="language" value="Luba-Katanga"/></insert>
+        <insert tableName="language"><column name="languagecode" value="lv"/><column name="language" value="Latvian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="mg"/><column name="language" value="Malagasy"/></insert>
+        <insert tableName="language"><column name="languagecode" value="mh"/><column name="language" value="Marshallese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="mi"/><column name="language" value="Maori"/></insert>
+        <insert tableName="language"><column name="languagecode" value="mk"/><column name="language" value="Macedonian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ml"/><column name="language" value="Malayalam"/></insert>
+        <insert tableName="language"><column name="languagecode" value="mn"/><column name="language" value="Mongolian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="mr"/><column name="language" value="Marathi"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ms"/><column name="language" value="Malay"/></insert>
+        <insert tableName="language"><column name="languagecode" value="mt"/><column name="language" value="Maltese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="my"/><column name="language" value="Burmese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="na"/><column name="language" value="Nauru"/></insert>
+        <insert tableName="language"><column name="languagecode" value="nb"/><column name="language" value="Bokmål, Norwegian; Norwegian Bokmål"/></insert>
+        <insert tableName="language"><column name="languagecode" value="nd"/><column name="language" value="Ndebele, North; North Ndebele"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ne"/><column name="language" value="Nepali"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ng"/><column name="language" value="Ndonga"/></insert>
+        <insert tableName="language"><column name="languagecode" value="nl"/><column name="language" value="Dutch; Flemish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="nn"/><column name="language" value="Norwegian Nynorsk; Nynorsk, Norwegian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="no"/><column name="language" value="Norwegian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="nr"/><column name="language" value="Ndebele, South; South Ndebele"/></insert>
+        <insert tableName="language"><column name="languagecode" value="nv"/><column name="language" value="Navajo; Navaho"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ny"/><column name="language" value="Chichewa; Chewa; Nyanja"/></insert>
+        <insert tableName="language"><column name="languagecode" value="oc"/><column name="language" value="Occitan (post 1500); Provençal"/></insert>
+        <insert tableName="language"><column name="languagecode" value="oj"/><column name="language" value="Ojibwa"/></insert>
+        <insert tableName="language"><column name="languagecode" value="om"/><column name="language" value="Oromo"/></insert>
+        <insert tableName="language"><column name="languagecode" value="or"/><column name="language" value="Oriya"/></insert>
+        <insert tableName="language"><column name="languagecode" value="os"/><column name="language" value="Ossetian; Ossetic"/></insert>
+        <insert tableName="language"><column name="languagecode" value="pa"/><column name="language" value="Panjabi; Punjabi"/></insert>
+        <insert tableName="language"><column name="languagecode" value="pi"/><column name="language" value="Pali"/></insert>
+        <insert tableName="language"><column name="languagecode" value="pl"/><column name="language" value="Polish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ps"/><column name="language" value="Pushto; Pashto"/></insert>
+        <insert tableName="language"><column name="languagecode" value="pt"/><column name="language" value="Portuguese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="qu"/><column name="language" value="Quechua"/></insert>
+        <insert tableName="language"><column name="languagecode" value="rm"/><column name="language" value="Romansh"/></insert>
+        <insert tableName="language"><column name="languagecode" value="rn"/><column name="language" value="Rundi"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ro"/><column name="language" value="Romanian; Moldavian; Moldovan"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ru"/><column name="language" value="Russian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="rw"/><column name="language" value="Kinyarwanda"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sa"/><column name="language" value="Sanskrit"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sc"/><column name="language" value="Sardinian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sd"/><column name="language" value="Sindhi"/></insert>
+        <insert tableName="language"><column name="languagecode" value="se"/><column name="language" value="Northern Sami"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sg"/><column name="language" value="Sango"/></insert>
+        <insert tableName="language"><column name="languagecode" value="si"/><column name="language" value="Sinhala; Sinhalese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sk"/><column name="language" value="Slovak"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sl"/><column name="language" value="Slovenian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sm"/><column name="language" value="Samoan"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sn"/><column name="language" value="Shona"/></insert>
+        <insert tableName="language"><column name="languagecode" value="so"/><column name="language" value="Somali"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sq"/><column name="language" value="Albanian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sr"/><column name="language" value="Serbian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ss"/><column name="language" value="Swati"/></insert>
+        <insert tableName="language"><column name="languagecode" value="st"/><column name="language" value="Sotho, Southern"/></insert>
+        <insert tableName="language"><column name="languagecode" value="su"/><column name="language" value="Sundanese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sv"/><column name="language" value="Swedish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="sw"/><column name="language" value="Swahili"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ta"/><column name="language" value="Tamil"/></insert>
+        <insert tableName="language"><column name="languagecode" value="te"/><column name="language" value="Telugu"/></insert>
+        <insert tableName="language"><column name="languagecode" value="tg"/><column name="language" value="Tajik"/></insert>
+        <insert tableName="language"><column name="languagecode" value="th"/><column name="language" value="Thai"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ti"/><column name="language" value="Tigrinya"/></insert>
+        <insert tableName="language"><column name="languagecode" value="tk"/><column name="language" value="Turkmen"/></insert>
+        <insert tableName="language"><column name="languagecode" value="tl"/><column name="language" value="Tagalog"/></insert>
+        <insert tableName="language"><column name="languagecode" value="tn"/><column name="language" value="Tswana"/></insert>
+        <insert tableName="language"><column name="languagecode" value="to"/><column name="language" value="Tonga (Tonga Islands)"/></insert>
+        <insert tableName="language"><column name="languagecode" value="tr"/><column name="language" value="Turkish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ts"/><column name="language" value="Tsonga"/></insert>
+        <insert tableName="language"><column name="languagecode" value="tt"/><column name="language" value="Tatar"/></insert>
+        <insert tableName="language"><column name="languagecode" value="tw"/><column name="language" value="Twi"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ty"/><column name="language" value="Tahitian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ug"/><column name="language" value="Uighur; Uyghur"/></insert>
+        <insert tableName="language"><column name="languagecode" value="uk"/><column name="language" value="Ukrainian"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ur"/><column name="language" value="Urdu"/></insert>
+        <insert tableName="language"><column name="languagecode" value="uz"/><column name="language" value="Uzbek"/></insert>
+        <insert tableName="language"><column name="languagecode" value="ve"/><column name="language" value="Venda"/></insert>
+        <insert tableName="language"><column name="languagecode" value="vi"/><column name="language" value="Vietnamese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="vo"/><column name="language" value="Volapük"/></insert>
+        <insert tableName="language"><column name="languagecode" value="wa"/><column name="language" value="Walloon"/></insert>
+        <insert tableName="language"><column name="languagecode" value="wo"/><column name="language" value="Wolof"/></insert>
+        <insert tableName="language"><column name="languagecode" value="xh"/><column name="language" value="Xhosa"/></insert>
+        <insert tableName="language"><column name="languagecode" value="yi"/><column name="language" value="Yiddish"/></insert>
+        <insert tableName="language"><column name="languagecode" value="yo"/><column name="language" value="Yoruba"/></insert>
+        <insert tableName="language"><column name="languagecode" value="za"/><column name="language" value="Zhuang; Chuang"/></insert>
+        <insert tableName="language"><column name="languagecode" value="zh"/><column name="language" value="Chinese"/></insert>
+        <insert tableName="language"><column name="languagecode" value="zu"/><column name="language" value="Zulu"/></insert>
+
+        <update tableName="language"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '8' </where>
+        </update>
+
+        <update tableName="language"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '36' </where>
+        </update>
+
+        <update tableName="language"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '41' </where>
+        </update>
+
+        <update tableName="language"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '124' </where>
+        </update>
+        <update tableName="language"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '127' </where>
+        </update>
+        <update tableName="language"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '137' </where>
+        </update>
+        <update tableName="language"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '169' </where>
+        </update>
+        <update tableName="language"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '180' </where>
+        </update>
+
+        <insert tableName="country"><column name="countrycode" value="AF"/><column name="country" value="Afghanistan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AX"/><column name="country" value="Åland Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AL"/><column name="country" value="Albania"/></insert>
+        <insert tableName="country"><column name="countrycode" value="DZ"/><column name="country" value="Algeria"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AS"/><column name="country" value="American Samoa"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AD"/><column name="country" value="Andorra"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AO"/><column name="country" value="Angola"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AI"/><column name="country" value="Anguilla"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AQ"/><column name="country" value="Antarctica"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AG"/><column name="country" value="Antigua and Barbuda"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AR"/><column name="country" value="Argentina"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AM"/><column name="country" value="Armenia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AW"/><column name="country" value="Aruba"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AU"/><column name="country" value="Australia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AT"/><column name="country" value="Austria"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AZ"/><column name="country" value="Azerbaijan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BH"/><column name="country" value="Bahrain"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BS"/><column name="country" value="Bahamas"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BD"/><column name="country" value="Bangladesh"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BB"/><column name="country" value="Barbados"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BY"/><column name="country" value="Belarus"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BE"/><column name="country" value="Belgium"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BZ"/><column name="country" value="Belize"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BJ"/><column name="country" value="Benin"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BM"/><column name="country" value="Bermuda"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BT"/><column name="country" value="Bhutan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BO"/><column name="country" value="Bolivia, Plurinational State of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BQ"/><column name="country" value="Bonaire, Sint Eustatius and Saba"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BA"/><column name="country" value="Bosnia and Herzegovina"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BW"/><column name="country" value="Botswana"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BV"/><column name="country" value="Bouvet Island"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BR"/><column name="country" value="Brazil"/></insert>
+        <insert tableName="country"><column name="countrycode" value="IO"/><column name="country" value="British Indian Ocean Territory"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BN"/><column name="country" value="Brunei Darussalam"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BG"/><column name="country" value="Bulgaria"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BF"/><column name="country" value="Burkina Faso"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BI"/><column name="country" value="Burundi"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KH"/><column name="country" value="Cambodia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CM"/><column name="country" value="Cameroon"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CA"/><column name="country" value="Canada"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CV"/><column name="country" value="Cape Verde"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KY"/><column name="country" value="Cayman Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CF"/><column name="country" value="Central African Republic"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TD"/><column name="country" value="Chad"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CL"/><column name="country" value="Chile"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CN"/><column name="country" value="China"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CX"/><column name="country" value="Christmas Island"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CC"/><column name="country" value="Cocos (Keeling) Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CO"/><column name="country" value="Colombia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KM"/><column name="country" value="Comoros"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CG"/><column name="country" value="Congo"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CD"/><column name="country" value="Congo, the Democratic Republic of the"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CK"/><column name="country" value="Cook Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CR"/><column name="country" value="Costa Rica"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CI"/><column name="country" value="Côte d'Ivoire"/></insert>
+        <insert tableName="country"><column name="countrycode" value="HR"/><column name="country" value="Croatia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CU"/><column name="country" value="Cuba"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CW"/><column name="country" value="Curaçao"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CY"/><column name="country" value="Cyprus"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CZ"/><column name="country" value="Czech Republic"/></insert>
+        <insert tableName="country"><column name="countrycode" value="DK"/><column name="country" value="Denmark"/></insert>
+        <insert tableName="country"><column name="countrycode" value="DJ"/><column name="country" value="Djibouti"/></insert>
+        <insert tableName="country"><column name="countrycode" value="DM"/><column name="country" value="Dominica"/></insert>
+        <insert tableName="country"><column name="countrycode" value="DO"/><column name="country" value="Dominican Republic"/></insert>
+        <insert tableName="country"><column name="countrycode" value="EC"/><column name="country" value="Ecuador"/></insert>
+        <insert tableName="country"><column name="countrycode" value="EG"/><column name="country" value="Egypt"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SV"/><column name="country" value="El Salvador"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GQ"/><column name="country" value="Equatorial Guinea"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ER"/><column name="country" value="Eritrea"/></insert>
+        <insert tableName="country"><column name="countrycode" value="EE"/><column name="country" value="Estonia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ET"/><column name="country" value="Ethiopia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="FK"/><column name="country" value="Falkland Islands (Malvinas)"/></insert>
+        <insert tableName="country"><column name="countrycode" value="FO"/><column name="country" value="Faroe Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="FJ"/><column name="country" value="Fiji"/></insert>
+        <insert tableName="country"><column name="countrycode" value="FI"/><column name="country" value="Finland"/></insert>
+        <insert tableName="country"><column name="countrycode" value="FR"/><column name="country" value="France"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GF"/><column name="country" value="French Guiana"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PF"/><column name="country" value="French Polynesia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TF"/><column name="country" value="French Southern Territories"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GA"/><column name="country" value="Gabon"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GM"/><column name="country" value="Gambia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GE"/><column name="country" value="Georgia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="DE"/><column name="country" value="Germany"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GH"/><column name="country" value="Ghana"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GI"/><column name="country" value="Gibraltar"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GR"/><column name="country" value="Greece"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GL"/><column name="country" value="Greenland"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GD"/><column name="country" value="Grenada"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GP"/><column name="country" value="Guadeloupe"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GU"/><column name="country" value="Guam"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GT"/><column name="country" value="Guatemala"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GG"/><column name="country" value="Guernsey"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GN"/><column name="country" value="Guinea"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GW"/><column name="country" value="Guinea-Bissau"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GY"/><column name="country" value="Guyana"/></insert>
+        <insert tableName="country"><column name="countrycode" value="HT"/><column name="country" value="Haiti"/></insert>
+        <insert tableName="country"><column name="countrycode" value="HM"/><column name="country" value="Heard Island and McDonald Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="VA"/><column name="country" value="Holy See (Vatican City State)"/></insert>
+        <insert tableName="country"><column name="countrycode" value="HN"/><column name="country" value="Honduras"/></insert>
+        <insert tableName="country"><column name="countrycode" value="HK"/><column name="country" value="Hong Kong"/></insert>
+        <insert tableName="country"><column name="countrycode" value="HU"/><column name="country" value="Hungary"/></insert>
+        <insert tableName="country"><column name="countrycode" value="IS"/><column name="country" value="Iceland"/></insert>
+        <insert tableName="country"><column name="countrycode" value="IN"/><column name="country" value="India"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ID"/><column name="country" value="Indonesia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="IR"/><column name="country" value="Iran, Islamic Republic of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="IQ"/><column name="country" value="Iraq"/></insert>
+        <insert tableName="country"><column name="countrycode" value="IE"/><column name="country" value="Ireland"/></insert>
+        <insert tableName="country"><column name="countrycode" value="IM"/><column name="country" value="Isle of Man"/></insert>
+        <insert tableName="country"><column name="countrycode" value="IL"/><column name="country" value="Israel"/></insert>
+        <insert tableName="country"><column name="countrycode" value="IT"/><column name="country" value="Italy"/></insert>
+        <insert tableName="country"><column name="countrycode" value="JM"/><column name="country" value="Jamaica"/></insert>
+        <insert tableName="country"><column name="countrycode" value="JP"/><column name="country" value="Japan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="JE"/><column name="country" value="Jersey"/></insert>
+        <insert tableName="country"><column name="countrycode" value="JO"/><column name="country" value="Jordan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KZ"/><column name="country" value="Kazakhstan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KE"/><column name="country" value="Kenya"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KI"/><column name="country" value="Kiribati"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KP"/><column name="country" value="Korea, Democratic People's Republic of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KR"/><column name="country" value="Korea, Republic of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KW"/><column name="country" value="Kuwait"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KG"/><column name="country" value="Kyrgyzstan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LA"/><column name="country" value="Lao People's Democratic Republic"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LV"/><column name="country" value="Latvia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LB"/><column name="country" value="Lebanon"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LS"/><column name="country" value="Lesotho"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LR"/><column name="country" value="Liberia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LY"/><column name="country" value="Libya"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LI"/><column name="country" value="Liechtenstein"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LT"/><column name="country" value="Lithuania"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LU"/><column name="country" value="Luxembourg"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MO"/><column name="country" value="Macao"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MK"/><column name="country" value="Macedonia, the Former Yugoslav Republic of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MG"/><column name="country" value="Madagascar"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MW"/><column name="country" value="Malawi"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MY"/><column name="country" value="Malaysia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MV"/><column name="country" value="Maldives"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ML"/><column name="country" value="Mali"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MT"/><column name="country" value="Malta"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MH"/><column name="country" value="Marshall Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MQ"/><column name="country" value="Martinique"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MR"/><column name="country" value="Mauritania"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MU"/><column name="country" value="Mauritius"/></insert>
+        <insert tableName="country"><column name="countrycode" value="YT"/><column name="country" value="Mayotte"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MX"/><column name="country" value="Mexico"/></insert>
+        <insert tableName="country"><column name="countrycode" value="FM"/><column name="country" value="Micronesia, Federated States of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MD"/><column name="country" value="Moldova, Republic of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MC"/><column name="country" value="Monaco"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MN"/><column name="country" value="Mongolia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ME"/><column name="country" value="Montenegro"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MS"/><column name="country" value="Montserrat"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MA"/><column name="country" value="Morocco"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MZ"/><column name="country" value="Mozambique"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MM"/><column name="country" value="Myanmar"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NA"/><column name="country" value="Namibia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NR"/><column name="country" value="Nauru"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NP"/><column name="country" value="Nepal"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NL"/><column name="country" value="Netherlands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NC"/><column name="country" value="New Caledonia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NZ"/><column name="country" value="New Zealand"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NI"/><column name="country" value="Nicaragua"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NE"/><column name="country" value="Niger"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NG"/><column name="country" value="Nigeria"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NU"/><column name="country" value="Niue"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NF"/><column name="country" value="Norfolk Island"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MP"/><column name="country" value="Northern Mariana Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="NO"/><column name="country" value="Norway"/></insert>
+        <insert tableName="country"><column name="countrycode" value="OM"/><column name="country" value="Oman"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PK"/><column name="country" value="Pakistan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PW"/><column name="country" value="Palau"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PS"/><column name="country" value="Palestine, State of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PA"/><column name="country" value="Panama"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PG"/><column name="country" value="Papua New Guinea"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PY"/><column name="country" value="Paraguay"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PE"/><column name="country" value="Peru"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PH"/><column name="country" value="Philippines"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PN"/><column name="country" value="Pitcairn"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PL"/><column name="country" value="Poland"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PT"/><column name="country" value="Portugal"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PR"/><column name="country" value="Puerto Rico"/></insert>
+        <insert tableName="country"><column name="countrycode" value="QA"/><column name="country" value="Qatar"/></insert>
+        <insert tableName="country"><column name="countrycode" value="RE"/><column name="country" value="Réunion"/></insert>
+        <insert tableName="country"><column name="countrycode" value="RO"/><column name="country" value="Romania"/></insert>
+        <insert tableName="country"><column name="countrycode" value="RU"/><column name="country" value="Russian Federation"/></insert>
+        <insert tableName="country"><column name="countrycode" value="RW"/><column name="country" value="Rwanda"/></insert>
+        <insert tableName="country"><column name="countrycode" value="BL"/><column name="country" value="Saint Barthélemy"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SH"/><column name="country" value="Saint Helena, Ascension and Tristan da Cunha"/></insert>
+        <insert tableName="country"><column name="countrycode" value="KN"/><column name="country" value="Saint Kitts and Nevis"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LC"/><column name="country" value="Saint Lucia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="MF"/><column name="country" value="Saint Martin (French part)"/></insert>
+        <insert tableName="country"><column name="countrycode" value="PM"/><column name="country" value="Saint Pierre and Miquelon"/></insert>
+        <insert tableName="country"><column name="countrycode" value="VC"/><column name="country" value="Saint Vincent and the Grenadines"/></insert>
+        <insert tableName="country"><column name="countrycode" value="WS"/><column name="country" value="Samoa"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SM"/><column name="country" value="San Marino"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ST"/><column name="country" value="Sao Tome and Principe"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SA"/><column name="country" value="Saudi Arabia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SN"/><column name="country" value="Senegal"/></insert>
+        <insert tableName="country"><column name="countrycode" value="RS"/><column name="country" value="Serbia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SC"/><column name="country" value="Seychelles"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SL"/><column name="country" value="Sierra Leone"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SG"/><column name="country" value="Singapore"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SX"/><column name="country" value="Sint Maarten (Dutch part)"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SK"/><column name="country" value="Slovakia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SI"/><column name="country" value="Slovenia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SB"/><column name="country" value="Solomon Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SO"/><column name="country" value="Somalia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ZA"/><column name="country" value="South Africa"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GS"/><column name="country" value="South Georgia and the South Sandwich Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SS"/><column name="country" value="South Sudan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ES"/><column name="country" value="Spain"/></insert>
+        <insert tableName="country"><column name="countrycode" value="LK"/><column name="country" value="Sri Lanka"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SD"/><column name="country" value="Sudan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SR"/><column name="country" value="Suriname"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SJ"/><column name="country" value="Svalbard and Jan Mayen"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SZ"/><column name="country" value="Swaziland"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SE"/><column name="country" value="Sweden"/></insert>
+        <insert tableName="country"><column name="countrycode" value="CH"/><column name="country" value="Switzerland"/></insert>
+        <insert tableName="country"><column name="countrycode" value="SY"/><column name="country" value="Syrian Arab Republic"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TW"/><column name="country" value="Taiwan, Province of China"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TJ"/><column name="country" value="Tajikistan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TZ"/><column name="country" value="Tanzania, United Republic of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TH"/><column name="country" value="Thailand"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TL"/><column name="country" value="Timor-Leste"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TG"/><column name="country" value="Togo"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TK"/><column name="country" value="Tokelau"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TO"/><column name="country" value="Tonga"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TT"/><column name="country" value="Trinidad and Tobago"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TN"/><column name="country" value="Tunisia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TR"/><column name="country" value="Turkey"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TM"/><column name="country" value="Turkmenistan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TC"/><column name="country" value="Turks and Caicos Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="TV"/><column name="country" value="Tuvalu"/></insert>
+        <insert tableName="country"><column name="countrycode" value="UG"/><column name="country" value="Uganda"/></insert>
+        <insert tableName="country"><column name="countrycode" value="UA"/><column name="country" value="Ukraine"/></insert>
+        <insert tableName="country"><column name="countrycode" value="AE"/><column name="country" value="United Arab Emirates"/></insert>
+        <insert tableName="country"><column name="countrycode" value="GB"/><column name="country" value="United Kingdom"/></insert>
+        <insert tableName="country"><column name="countrycode" value="US"/><column name="country" value="United States"/></insert>
+        <insert tableName="country"><column name="countrycode" value="UM"/><column name="country" value="United States Minor Outlying Islands"/></insert>
+        <insert tableName="country"><column name="countrycode" value="UY"/><column name="country" value="Uruguay"/></insert>
+        <insert tableName="country"><column name="countrycode" value="UZ"/><column name="country" value="Uzbekistan"/></insert>
+        <insert tableName="country"><column name="countrycode" value="VU"/><column name="country" value="Vanuatu"/></insert>
+        <insert tableName="country"><column name="countrycode" value="VE"/><column name="country" value="Venezuela, Bolivarian Republic of"/></insert>
+        <insert tableName="country"><column name="countrycode" value="VN"/><column name="country" value="Viet Nam"/></insert>
+        <insert tableName="country"><column name="countrycode" value="VG"/><column name="country" value="Virgin Islands, British"/></insert>
+        <insert tableName="country"><column name="countrycode" value="VI"/><column name="country" value="Virgin Islands, U.S."/></insert>
+        <insert tableName="country"><column name="countrycode" value="WF"/><column name="country" value="Wallis and Futuna"/></insert>
+        <insert tableName="country"><column name="countrycode" value="EH"/><column name="country" value="Western Sahara"/></insert>
+        <insert tableName="country"><column name="countrycode" value="YE"/><column name="country" value="Yemen"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ZM"/><column name="country" value="Zambia"/></insert>
+        <insert tableName="country"><column name="countrycode" value="ZW"/><column name="country" value="Zimbabwe"/></insert>
+
+        <update tableName="country"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '46' </where>
+        </update>
+        <update tableName="country"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '168' </where>
+        </update>
+        <update tableName="country"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '195' </where>
+        </update>
+        <update tableName="country"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '235' </where>
+        </update>
+        <update tableName="country"> <column name="isdeleted" valueBoolean="false"/>
+            <where> id = '236' </where>
+        </update>
+    </changeSet>
+
 
 </databaseChangeLog>

@@ -461,4 +461,37 @@
 
     </changeSet>
 
+    <changeSet id="11" author="Urooj">
+        <createTable remarks="Adding language"
+                     tableName="language">
+            <column name="language" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="languagecode" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean" defaultValue="true">
+            </column>
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+        </createTable>
+
+        <createTable remarks="Adding country"
+                     tableName="country">
+            <column name="country" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="countrycode" type="varchar(2)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="isdeleted" type="boolean" defaultValue="true">
+            </column>
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>
