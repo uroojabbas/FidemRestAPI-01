@@ -898,4 +898,21 @@
         
     </changeSet>
 
+    <changeSet id="10" author="uabbas">
+        <update tableName="users"> <column name="designationid" value="1"/>
+            <where> id = '1' </where>
+        </update>
+
+        <update tableName="users"> <column name="designationid" value="2"/>
+            <where> id = '2' </where>
+        </update>
+
+        <update tableName="users"> <column name="designationid" value="3"/>
+            <where> id = '3' </where>
+        </update>
+
+        <update tableName="users"> <column name="designationid" value="4"/>
+            <where> id = '4' </where>
+        </update>
+    </changeSet>
 </databaseChangeLog>

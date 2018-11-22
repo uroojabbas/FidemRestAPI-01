@@ -44,6 +44,12 @@ public class CommonController {
     @Autowired
     ProductCategoryRepository productCategoryRepository;
 
+    @Autowired
+    DepartmentRepository departmentRepository;
+
+    @Autowired
+    DesignationRepository designationRepository;
+
     @GetMapping("/citylist")
     public List<City> getCityList(){
         logger.debug("getCityList");
@@ -102,5 +108,17 @@ public class CommonController {
     public List<Productcategory> getProductCategoryList(){
         logger.debug("getProductCategoryList");
         return productCategoryRepository.findAll();
+    }
+
+    @GetMapping("/departmentlist")
+    public List<Department> getDepartmentList(){
+        logger.debug("getDepartmentList");
+        return departmentRepository.findAll();
+    }
+
+    @GetMapping("/designationlist")
+    public List<Designation> getDesignationList(){
+        logger.debug("getDesignationList");
+        return designationRepository.findAll();
     }
 }

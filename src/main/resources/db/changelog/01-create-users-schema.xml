@@ -593,4 +593,27 @@
                                  referencedColumnNames="id"
                                  referencedTableName="language"/>
     </changeSet>
+
+    <changeSet id="13" author="urooj">
+        <addColumn tableName="users">
+            <column name="designationid" type="int">
+            </column>
+        </addColumn>
+
+        <addForeignKeyConstraint baseColumnNames="designationid"
+                                 baseTableName="users"
+                                 constraintName="fk_user_designation"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="designation"/>
+
+        <addForeignKeyConstraint baseColumnNames="departmentid"
+                                 baseTableName="users"
+                                 constraintName="fk_user_department"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="department"/>
+    </changeSet>
 </databaseChangeLog>

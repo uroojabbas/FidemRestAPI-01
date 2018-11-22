@@ -1,5 +1,6 @@
 package com.vroom.dataservice.controller;
 
+import com.vroom.dataservice.services.UserService;
 import com.vroom.dbmodel.orm.Users;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,9 @@ public class UserController {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    UserService userService;
 
     @GetMapping("/user/{id}")
     @ResponseBody
@@ -53,7 +57,7 @@ public class UserController {
     @ResponseBody
     public Users insertUser(@RequestBody Users user){
         logger.debug("inserUser : Name[" + user.toString() + "]");
-        return userRepository.save(user);
+        return userService.save(user);
     }
 
     @PostMapping(value = "/user/delete",consumes =MediaType.APPLICATION_JSON_VALUE )
