@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface PageQualityRepository extends CrudRepository<PaperQuality,Long> {
+public interface PaperQualityRepository extends CrudRepository<PaperQuality,Long> {
 
     @Query("SELECT pq FROM PaperQuality pq WHERE (pq.isdeleted = false OR pq.isdeleted = 'false') ")
     List<PaperQuality> findAll();

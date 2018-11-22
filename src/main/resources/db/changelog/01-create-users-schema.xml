@@ -494,4 +494,103 @@
             </column>
         </createTable>
     </changeSet>
+
+    <changeSet id="12" author="urooj">
+        <createTable remarks="Used to store Product category"
+                     tableName="productcategory">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <createTable remarks="Adding Product table"
+                     tableName="product">
+
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column  name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="isbn" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="author" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="subject" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="edition" type="varchar(50)"/>
+
+            <column  name="barcode" type="varchar(50)">
+            </column>
+
+            <column  name="languageid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="publisher" type="varchar(100)"/>
+
+            <column  name="countryid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="productcategoryid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="marketsegmentid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="pagecount" type="int"/>
+
+            <column  name="productcost" type="int"/>
+
+            <column name="paperqualityid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="retailprice" type="int"/>
+
+            <column name="userid" type="int"/>
+
+            <column name="modifiedbyuserid" type="int"/>
+
+            <column name="modifiedtime" type="date"/>
+
+            <column name="insertedtime" type="date"/>
+
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <addUniqueConstraint
+                tableName="product"
+                columnNames="isbn"
+                constraintName="unique_product_isbn" />
+
+        <addUniqueConstraint
+                tableName="product"
+                columnNames="name"
+                constraintName="unique_product_name" />
+
+        <addForeignKeyConstraint baseColumnNames="languageid"
+                                 baseTableName="product"
+                                 constraintName="fk_product_language"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="language"/>
+    </changeSet>
 </databaseChangeLog>

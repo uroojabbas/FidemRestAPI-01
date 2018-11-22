@@ -29,6 +29,21 @@ public class CommonController {
     @Autowired
     InstituteTypeRepository instituteTypeRepository;
 
+    @Autowired
+    CountryRepository countryRepository;
+
+    @Autowired
+    MarketSegmentRepository marketSegmentRepository;
+
+    @Autowired
+    PaperQualityRepository paperQualityRepository;
+
+    @Autowired
+    LanguageRepository languageRepository;
+
+    @Autowired
+    ProductCategoryRepository productCategoryRepository;
+
     @GetMapping("/citylist")
     public List<City> getCityList(){
         logger.debug("getCityList");
@@ -57,5 +72,35 @@ public class CommonController {
     public List<Institutetype> getInstitutetypeList(){
         logger.debug("getInstitutetypeList");
         return instituteTypeRepository.findAll();
+    }
+
+    @GetMapping("/countrylist")
+    public List<Country> getCountryList(){
+        logger.debug("getCountryList");
+        return countryRepository.findAll();
+    }
+
+    @GetMapping("/languagelist")
+    public List<Language> getLanguageList(){
+        logger.debug("getLanguageList");
+        return languageRepository.findAll();
+    }
+
+    @GetMapping("/marketsegmentlist")
+    public List<Marketsegment> getMarketSegmentList(){
+        logger.debug("getMarketSegmentList");
+        return marketSegmentRepository.findAll();
+    }
+
+    @GetMapping("/paperqualitylist")
+    public List<PaperQuality> getPaperQualityList(){
+        logger.debug("getPaperQualityList");
+        return paperQualityRepository.findAll();
+    }
+
+    @GetMapping("/productcategorylist")
+    public List<Productcategory> getProductCategoryList(){
+        logger.debug("getProductCategoryList");
+        return productCategoryRepository.findAll();
     }
 }

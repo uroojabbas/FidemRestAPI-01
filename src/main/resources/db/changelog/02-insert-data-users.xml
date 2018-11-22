@@ -771,5 +771,12 @@
         </update>
     </changeSet>
 
-
+    <changeSet id="09" author="urooj">
+        <insert tableName="productcategory"> <column name="name" value="Pre-Primary"/></insert>
+        <insert tableName="productcategory"> <column name="name" value="Primary"/></insert>
+        <insert tableName="productcategory"> <column name="name" value="Secondary"/></insert>
+        <insert tableName="productcategory"> <column name="name" value="O'Level"/></insert>
+        <insert tableName="productcategory"> <column name="name" value="A'Level"/></insert>
+        <insert tableName="productcategory"> <column name="name" value="Collage"/></insert>
+    </changeSet>
 </databaseChangeLog>

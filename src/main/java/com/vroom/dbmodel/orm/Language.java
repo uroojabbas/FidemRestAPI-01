@@ -21,6 +21,17 @@ public class Language  implements java.io.Serializable {
 
      private Integer id;
      private String language;
+
+    @Column(name="languagecode", nullable=false, length=2)
+    public String getLanguagecode() {
+        return languagecode;
+    }
+
+    public void setLanguagecode(String languagecode) {
+        this.languagecode = languagecode;
+    }
+
+    private String languagecode;
      private Boolean isdeleted;
 
     public Language() {
