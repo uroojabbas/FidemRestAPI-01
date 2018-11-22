@@ -1,4 +1,4 @@
-<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+﻿<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
@@ -779,4 +779,123 @@
         <insert tableName="productcategory"> <column name="name" value="A'Level"/></insert>
         <insert tableName="productcategory"> <column name="name" value="Collage"/></insert>
     </changeSet>
+    <changeSet id="501" author="TempData">
+    	<insert tableName="client">
+            <column name="id" valueNumeric="1" />
+            <column name="name" value="Urdu Bazar Shop" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="address" value="Paper Market 1" />
+            <column name="principlename" value="Khan Saad"/>
+            <column name="contact" value="03013234567"/>
+            <column name="instituetypeid" valueNumeric="2"/>
+            <column name="clienttypeid" valueNumeric="1"/>
+            <column name="discount" valueNumeric="11"/>
+            <column name="paymentterms" valueNumeric="10"/>
+            <column name="cityid" valueNumeric="2"/>
+            <column name="regionid" valueNumeric="2"/>
+            <column name="userid" valueNumeric="1"/>
+        </insert>   
+        <insert tableName="client">
+            <column name="id" valueNumeric="2" />
+            <column name="name" value="BeaconHouse" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="address" value="Defence Phase 6" />
+            <column name="principlename" value="Jamal Khan"/>
+            <column name="contact" value="03001234567"/>
+            <column name="instituetypeid" valueNumeric="1"/>
+            <column name="clienttypeid" valueNumeric="3"/>
+            <column name="discount" valueNumeric="11"/>
+            <column name="paymentterms" valueNumeric="5"/>
+            <column name="cityid" valueNumeric="1"/>
+            <column name="regionid" valueNumeric="1"/>
+            <column name="userid" valueNumeric="1"/>
+        </insert>
+        <insert tableName="client">
+            <column name="id" valueNumeric="3" />
+            <column name="name" value="The City School" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="address" value="Defence Phase 4" />
+            <column name="principlename" value="Shan Khan"/>
+            <column name="contact" value="03031234567"/>
+            <column name="instituetypeid" valueNumeric="1"/>
+            <column name="clienttypeid" valueNumeric="3"/>
+            <column name="discount" valueNumeric="11"/>
+            <column name="paymentterms" valueNumeric="5"/>
+            <column name="cityid" valueNumeric="1"/>
+            <column name="regionid" valueNumeric="1"/>
+            <column name="userid" valueNumeric="1"/>
+        </insert>
+        <insert tableName="client">
+            <column name="id" valueNumeric="4" />
+            <column name="name" value="Foundation Public" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="address" value="Defence Phase 2" />
+            <column name="principlename" value="Ali Khan"/>
+            <column name="contact" value="03021234567"/>
+            <column name="instituetypeid" valueNumeric="2"/>
+            <column name="clienttypeid" valueNumeric="3"/>
+            <column name="discount" valueNumeric="11"/>
+            <column name="paymentterms" valueNumeric="5"/>
+            <column name="cityid" valueNumeric="1"/>
+            <column name="regionid" valueNumeric="1"/>
+            <column name="userid" valueNumeric="1"/>
+        </insert>
+       	<insert tableName="client">
+            <column name="id" valueNumeric="5" />
+            <column name="name" value="Educators School" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="address" value="Defence Phase 1" />
+            <column name="principlename" value="Saad Khan"/>
+            <column name="contact" value="03011234567"/>
+            <column name="instituetypeid" valueNumeric="2"/>
+            <column name="clienttypeid" valueNumeric="3"/>
+            <column name="discount" valueNumeric="11"/>
+            <column name="paymentterms" valueNumeric="10"/>
+            <column name="cityid" valueNumeric="2"/>
+            <column name="regionid" valueNumeric="2"/>
+            <column name="userid" valueNumeric="1"/>
+        </insert>   
+        <insert tableName="client">
+            <column name="id" valueNumeric="6" />
+            <column name="name" value="Tariq Book Stall" />
+            <column name="email" value="contact@jeejava.com" />
+            <column name="address" value="Nazimabad 1" />
+            <column name="principlename" value="Ajmal Saad"/>
+            <column name="contact" value="03013234567"/>
+            <column name="instituetypeid" valueNumeric="2"/>
+            <column name="clienttypeid" valueNumeric="2"/>
+            <column name="discount" valueNumeric="11"/>
+            <column name="paymentterms" valueNumeric="10"/>
+            <column name="cityid" valueNumeric="2"/>
+            <column name="regionid" valueNumeric="2"/>
+            <column name="userid" valueNumeric="1"/>
+        </insert>   
+
+        <insert tableName="vendor">
+            <column name="id" valueNumeric="1" />
+            <column name="name" value="Fidem" />
+            <column name="address" value="Korangi 1" />
+        	<column name="contactperson" value="John Davids"/>    
+            <column name="contactone" value="03014234267"/>
+            <column name="vendortypeid" valueNumeric="1"/>
+        </insert>      
+        <insert tableName="vendor">
+            <column name="id" valueNumeric="2" />
+            <column name="name" value="Oxford" />
+            <column name="address" value="Korangi 2" />
+        	<column name="contactperson" value="Steve Harmison"/>    
+            <column name="contactone" value="03024234267"/>
+            <column name="vendortypeid" valueNumeric="2"/>
+        </insert>  
+        <insert tableName="vendor">
+            <column name="id" valueNumeric="3" />
+            <column name="name" value="Printing Press" />
+            <column name="address" value="Korangi 4" />
+        	<column name="contactperson" value="John Harmison"/>    
+            <column name="contactone" value="03024234167"/>
+            <column name="vendortypeid" valueNumeric="3"/>
+        </insert>  
+        
+    </changeSet>
+
 </databaseChangeLog>
