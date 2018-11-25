@@ -616,4 +616,19 @@
                                  referencedColumnNames="id"
                                  referencedTableName="department"/>
     </changeSet>
+
+    <changeSet id="14" author="urooj">
+        <addColumn tableName="product">
+            <column name="vendorid" type="int">
+            </column>
+        </addColumn>
+
+        <addForeignKeyConstraint baseColumnNames="vendorid"
+                                 baseTableName="product"
+                                 constraintName="fk_product_vendor"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vendor"/>
+    </changeSet>
 </databaseChangeLog>

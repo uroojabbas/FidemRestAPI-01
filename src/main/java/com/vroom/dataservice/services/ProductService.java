@@ -3,9 +3,11 @@ package com.vroom.dataservice.services;
 import com.vroom.dataservice.com.vroom.dataservice.repository.LanguageRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.ProductRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.UserRepository;
+import com.vroom.dataservice.com.vroom.dataservice.repository.VendorRepository;
 import com.vroom.dbmodel.orm.Language;
 import com.vroom.dbmodel.orm.Product;
 import com.vroom.dbmodel.orm.Users;
+import com.vroom.dbmodel.orm.Vendor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,9 @@ public class ProductService {
     @Autowired
     LanguageRepository languageRepository;
 
+    @Autowired
+    VendorRepository vendorRepository;
+
     public Product getProduct(int id){
         logger.debug("getProduct : [" + id + "]");
         return productRepository.findById(id);
@@ -51,10 +56,11 @@ public class ProductService {
 
         Users user = userRepository.findById(product.getUserid());
         Language language = languageRepository.findByLanguage(product.getLanguagename());
+        Vendor vendor = vendorRepository.findByName(product.getVendorName());
+
+        product.setVendor(vendor);
         product.setIsdeleted(Boolean.FALSE);
-        if((product.getLanguage() != null) && !(product.getLanguage().getLanguage().equalsIgnoreCase(product.getLanguagename()))) {
-            product.setLanguage(language);
-        }
+        product.setLanguage(language);
 
         if(product.getId() == null) {
             product.setUserid(user.getId());
@@ -78,4 +84,7 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    public List<Product> getProductByVendorId(int vendorId){
+      return productRepository.findByVendorId(vendorId);
+    }
 }

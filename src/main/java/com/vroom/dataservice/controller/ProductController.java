@@ -26,6 +26,14 @@ public class ProductController {
 
     }
 
+    @GetMapping("/product/vendor/{vendorId}")
+    @ResponseBody
+    public List<Product> getProductByVendorId(@PathVariable int vendorId){
+        logger.debug("getProductById : [" + vendorId + "]");
+        return productService.getProductByVendorId(vendorId);
+
+    }
+
     @GetMapping("/productbyname/{name}")
     public List<Product> getProductByName(@PathVariable String name){
         logger.debug("getProductByName : [" + name + "]");

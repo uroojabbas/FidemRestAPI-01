@@ -15,7 +15,7 @@ public interface VendorRepository extends CrudRepository<Vendor,Long> {
 
     @Query("SELECT v FROM Vendor v " +
             " WHERE v.name=:name and (v.isdeleted = false) ")
-    List<Vendor> findByName(@Param("name") String name);
+    Vendor findByName(@Param("name") String name);
 
     @Query("SELECT v FROM Vendor v " +
             " WHERE  (v.isdeleted = false) ")

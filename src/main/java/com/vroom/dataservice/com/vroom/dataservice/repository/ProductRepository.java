@@ -20,4 +20,7 @@ public interface ProductRepository extends CrudRepository<Product,Long> {
 
     @Query("SELECT p FROM Product p WHERE p.isbn = :isbn AND (p.isdeleted = false) ")
     Product findByISBN(@Param("isbn") int  isbn);
+
+    @Query("SELECT p FROM Product p WHERE p.vendor.id = :vendorId AND (p.isdeleted = false) ")
+    List<Product> findByVendorId(@Param("vendorId") int  vendorId);
 }

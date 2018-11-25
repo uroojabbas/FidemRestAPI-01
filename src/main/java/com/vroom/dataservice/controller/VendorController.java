@@ -32,7 +32,7 @@ public class VendorController {
     }
 
     @GetMapping("/vendors/{name}")
-    public List<Vendor> getVendor(@PathVariable String name){
+    public Vendor getVendor(@PathVariable String name){
         logger.debug("getVendor : [" + name + "]");
         return vendorRepository.findByName(name);
 
