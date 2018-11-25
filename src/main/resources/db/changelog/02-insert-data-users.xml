@@ -915,4 +915,117 @@
             <where> id = '4' </where>
         </update>
     </changeSet>
+
+    <changeSet id="502" author="TempData">
+        <insert tableName="product">
+            <column name="id" valueNumeric="1" />
+            <column name="name" value="A Case of Exploding Mangoes" />
+            <column name="isbn" value="0-307-26807-1" />
+            <column name="author" value="Muhammad Hanif" />
+            <column name="subject" value="Historical Fiction"/>
+            <column name="languageid" valueNumeric="36"/>
+            <column name="countryid" valueNumeric="168"/>
+            <column name="productcategoryid" valueNumeric="5"/>
+            <column name="productcost" valueNumeric="1500"/>
+            <column name="paperqualityid" valueNumeric="3"/>
+            <column name="retailprice" valueNumeric="2000"/>
+            <column name="publisher" value="Oxford"/>
+            <column name="marketsegmentid" valueNumeric="1"/>
+        </insert> 
+        <insert tableName="product">
+            <column name="id" valueNumeric="2" />
+            <column name="name" value="The Reluctant Fundamentalist" />
+            <column name="isbn" value="0-241-14365-9" />
+            <column name="author" value="Mohsin Hamid" />
+            <column name="subject" value="Novel"/>
+            <column name="languageid" valueNumeric="36"/>
+            <column name="countryid" valueNumeric="168"/>
+            <column name="productcategoryid" valueNumeric="5"/>
+            <column name="productcost" valueNumeric="1580"/>
+            <column name="paperqualityid" valueNumeric="3"/>
+            <column name="retailprice" valueNumeric="2050"/>
+            <column name="publisher" value="Oxford"/>
+            <column name="marketsegmentid" valueNumeric="1"/>
+        </insert> 
+        <insert tableName="product">
+            <column name="id" valueNumeric="3" />
+            <column name="name" value="In the Line of Fire: A Memoir" />
+            <column name="isbn" value="074-3283449" />
+            <column name="author" value="Pervez Musharraf" />
+            <column name="subject" value="Autobiography"/>
+            <column name="languageid" valueNumeric="36"/>
+            <column name="countryid" valueNumeric="168"/>
+            <column name="productcategoryid" valueNumeric="5"/>
+            <column name="productcost" valueNumeric="1400"/>
+            <column name="paperqualityid" valueNumeric="3"/>
+            <column name="retailprice" valueNumeric="3500"/>
+            <column name="publisher" value="Oxford"/>
+            <column name="marketsegmentid" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" valueNumeric="4" />
+            <column name="name" value="Songs of Blood and Sword" />
+            <column name="isbn" value="9788184753899" />
+            <column name="author" value="Fatima Bhutto" />
+            <column name="subject" value="Autobiography"/>
+            <column name="languageid" valueNumeric="36"/>
+            <column name="countryid" valueNumeric="168"/>
+            <column name="productcategoryid" valueNumeric="5"/>
+            <column name="productcost" valueNumeric="1200"/>
+            <column name="paperqualityid" valueNumeric="3"/>
+            <column name="retailprice" valueNumeric="3800"/>
+            <column name="publisher" value="Oxford"/>
+            <column name="marketsegmentid" valueNumeric="1"/>
+        </insert> 
+        <insert tableName="product">
+            <column name="id" valueNumeric="5" />
+            <column name="name" value="Into to Mathematics" />
+            <column name="isbn" value="978818432899" />
+            <column name="author" value="Amjad Khalid" />
+            <column name="subject" value="Mathematics"/>
+            <column name="languageid" valueNumeric="36"/>
+            <column name="countryid" valueNumeric="168"/>
+            <column name="productcategoryid" valueNumeric="2"/>
+            <column name="productcost" valueNumeric="1200"/>
+            <column name="paperqualityid" valueNumeric="3"/>
+            <column name="retailprice" valueNumeric="3800"/>
+            <column name="publisher" value="Fidem"/>
+            <column name="marketsegmentid" valueNumeric="2"/>
+        </insert> 
+        <insert tableName="product">
+            <column name="id" valueNumeric="6" />
+            <column name="name" value="Into to Science" />
+            <column name="isbn" value="978418432299" />
+            <column name="author" value="Saad Faizan" />
+            <column name="subject" value="Science"/>
+            <column name="languageid" valueNumeric="36"/>
+            <column name="countryid" valueNumeric="168"/>
+            <column name="productcategoryid" valueNumeric="2"/>
+            <column name="productcost" valueNumeric="1200"/>
+            <column name="paperqualityid" valueNumeric="3"/>
+            <column name="retailprice" valueNumeric="2800"/>
+            <column name="publisher" value="Fidem"/>
+            <column name="marketsegmentid" valueNumeric="2"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" valueNumeric="7" />
+            <column name="name" value="Urdu Zabaan" />
+            <column name="isbn" value="9783241299" />
+            <column name="author" value="Faiza Javed" />
+            <column name="subject" value="Urdu"/>
+            <column name="languageid" valueNumeric="169"/>
+            <column name="countryid" valueNumeric="168"/>
+            <column name="productcategoryid" valueNumeric="2"/>
+            <column name="productcost" valueNumeric="1400"/>
+            <column name="paperqualityid" valueNumeric="3"/>
+            <column name="retailprice" valueNumeric="2200"/>
+            <column name="publisher" value="Fidem"/>
+            <column name="marketsegmentid" valueNumeric="2"/>
+        </insert> 
+
+    <insert tableName="subjects"> <column name="name" value="Historical Fiction"/> <column name="shortcode" value="HF"/></insert>
+    <insert tableName="subjects"> <column name="name" value="Novel"/> <column name="shortcode" value="NOV"/></insert>
+    <insert tableName="subjects"> <column name="name" value="Autobiography"/> <column name="shortcode" value="AUT"/></insert>
+
+</changeSet> 
 </databaseChangeLog>
