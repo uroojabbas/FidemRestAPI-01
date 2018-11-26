@@ -1026,6 +1026,23 @@
     <insert tableName="subjects"> <column name="name" value="Historical Fiction"/> <column name="shortcode" value="HF"/></insert>
     <insert tableName="subjects"> <column name="name" value="Novel"/> <column name="shortcode" value="NOV"/></insert>
     <insert tableName="subjects"> <column name="name" value="Autobiography"/> <column name="shortcode" value="AUT"/></insert>
+</changeSet> 
+
+<changeSet id="503" author="TempData">
+        <update tableName="product"> <column name="vendorid" valueNumeric="2"/>
+        <where> id = '1' </where>    </update>
+        <update tableName="product"> <column name="vendorid" valueNumeric="2"/>
+        <where> id = '2' </where>    </update>
+        <update tableName="product"> <column name="vendorid" valueNumeric="2"/>
+        <where> id = '3' </where>    </update>
+        <update tableName="product"> <column name="vendorid" valueNumeric="2"/>
+        <where> id = '4' </where>    </update>
+        <update tableName="product"> <column name="vendorid" valueNumeric="1"/>
+        <where> id = '5' </where>    </update>
+        <update tableName="product"> <column name="vendorid" valueNumeric="1"/>
+        <where> id = '6' </where>    </update>
+        <update tableName="product"> <column name="vendorid" valueNumeric="1"/>
+        <where> id = '7' </where>    </update>
 
 </changeSet> 
 </databaseChangeLog>
