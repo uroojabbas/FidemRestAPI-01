@@ -3,6 +3,24 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
+    <changeSet id="01" author="urooj">
+        <insert tableName="designation"> <column name="name" value="Chief Executive Officer"/></insert>
+        <insert tableName="designation"> <column name="name" value="Chief Operating Officer"/></insert>
+        <insert tableName="designation"> <column name="name" value="Chief Financial Officer"/></insert>
+        <insert tableName="designation"> <column name="name" value="Manager"/></insert>
+        <insert tableName="designation"> <column name="name" value="Assistant Manager"/></insert>
+        <insert tableName="designation"> <column name="name" value="Analyst"/></insert>
+        <insert tableName="designation"> <column name="name" value="Admin Staff"/></insert>
+        <insert tableName="designation"> <column name="name" value="Sales Agent"/></insert>
+        <insert tableName="designation"> <column name="name" value="Director"/></insert>
+
+        <insert tableName="department"> <column name="name" value="Human Resources"/></insert>
+        <insert tableName="department"> <column name="name" value="Accounts and Finance"/></insert>
+        <insert tableName="department"> <column name="name" value="Administration"/></insert>
+        <insert tableName="department"> <column name="name" value="Marketing and Sales"/></insert>
+        <insert tableName="department"> <column name="name" value="Procurement"/></insert>
+    </changeSet>
+
     <changeSet id="02" author="Urooj Abbas">
         <insert tableName="users">
             <column name="id" valueNumeric="1" />
@@ -226,24 +244,6 @@
         <update tableName="clienttype"> <column name="type" value="Wholesaler"/>
         <where> id = '1' </where>
     </update>
-    </changeSet>
-    
-    <changeSet id="102" author="aj">
-        <insert tableName="designation"> <column name="name" value="Chief Executive Officer"/></insert>
-        <insert tableName="designation"> <column name="name" value="Chief Operating Officer"/></insert>
-        <insert tableName="designation"> <column name="name" value="Chief Financial Officer"/></insert>
-        <insert tableName="designation"> <column name="name" value="Manager"/></insert>
-        <insert tableName="designation"> <column name="name" value="Assistant Manager"/></insert>
-        <insert tableName="designation"> <column name="name" value="Analyst"/></insert>
-        <insert tableName="designation"> <column name="name" value="Admin Staff"/></insert>
-        <insert tableName="designation"> <column name="name" value="Sales Agent"/></insert>
-        <insert tableName="designation"> <column name="name" value="Director"/></insert>
-
-        <insert tableName="department"> <column name="name" value="Human Resources"/></insert>
-        <insert tableName="department"> <column name="name" value="Accounts and Finance"/></insert>
-        <insert tableName="department"> <column name="name" value="Administration"/></insert>
-        <insert tableName="department"> <column name="name" value="Marketing and Sales"/></insert>
-        <insert tableName="department"> <column name="name" value="Procurement"/></insert>
     </changeSet>
 
     <changeSet id="103" author="aj">
