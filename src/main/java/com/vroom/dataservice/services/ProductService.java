@@ -1,5 +1,6 @@
 package com.vroom.dataservice.services;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.vroom.dataservice.com.vroom.dataservice.repository.LanguageRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.ProductRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.UserRepository;
@@ -8,12 +9,15 @@ import com.vroom.dbmodel.orm.Language;
 import com.vroom.dbmodel.orm.Product;
 import com.vroom.dbmodel.orm.Users;
 import com.vroom.dbmodel.orm.Vendor;
+import org.hibernate.service.spi.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.persistence.PersistenceException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Date;
 import java.util.List;
 
@@ -54,22 +58,43 @@ public class ProductService {
     public Product save(Product product){
         logger.debug("saveProduct : Name[" + product.toString() + "]");
 
-        Users user = userRepository.findById(product.getUserid());
-        Language language = languageRepository.findByLanguage(product.getLanguagename());
-        Vendor vendor = vendorRepository.findByName(product.getVendorName());
+        if(product != null) {
 
-        product.setVendor(vendor);
-        product.setIsdeleted(Boolean.FALSE);
-        product.setLanguage(language);
+            Users user = userRepository.findById(product.getUserid());
+            Language language = languageRepository.findByLanguage(product.getLanguagename());
+            Vendor vendor = vendorRepository.findByName(product.getVendorName());
+            Product previousProduct = null;
 
-        if(product.getId() == null) {
-            product.setUserid(user.getId());
-            product.setInsertedtime(new Date());
-        }else{
-            product.setModifiedtime(new Date());
-            product.setModifiedbyuserid(user.getId());
+            if (product.getId() != null) {
+                previousProduct = productRepository.findById(product.getId());
+                if(previousProduct != null) {
+                    previousProduct.setIsdeleted(Boolean.TRUE);
+                    previousProduct.setModifiedtime(new Date());
+                    previousProduct.setModifiedbyuserid(user.getId());
+                }
+            }
+
+            product.setVendor(vendor);
+            product.setIsdeleted(Boolean.FALSE);
+            product.setLanguage(language);
+
+            if(product.getId() == null) {
+                product.setUserid(user.getId());
+                product.setInsertedtime(new Date());
+            }else{
+                product.setId(null);
+                product.setModifiedtime(new Date());
+                product.setModifiedbyuserid(user.getId());
+            }
+                product = productRepository.save(product);
+            if(previousProduct != null) {
+                productRepository.save(previousProduct);
+            }
+
         }
-        return productRepository.save(product);
+
+
+        return product;
     }
 
     public Product delete(@RequestBody int id){

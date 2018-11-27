@@ -577,13 +577,9 @@
 
         <addUniqueConstraint
                 tableName="product"
-                columnNames="isbn"
+                columnNames="id,isbn"
                 constraintName="unique_product_isbn" />
 
-        <addUniqueConstraint
-                tableName="product"
-                columnNames="name"
-                constraintName="unique_product_name" />
 
         <addForeignKeyConstraint baseColumnNames="languageid"
                                  baseTableName="product"
