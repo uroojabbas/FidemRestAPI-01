@@ -627,4 +627,92 @@
                                  referencedColumnNames="id"
                                  referencedTableName="vendor"/>
     </changeSet>
+
+    <changeSet id="15" author="urooj">
+        <createTable remarks="Used to store Purchase Order  status lookup table"
+                     tableName="postatustype">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <createTable remarks="Used to store Purchase Order Master info"
+                     tableName="pomaster">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column  name="vendorid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="userid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="modifiedbyuserid" type="int"/>
+
+            <column name="modifiedtime" type="date"/>
+
+            <column name="insertedtime" type="date"/>
+
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+
+        </createTable>
+
+        <createTable remarks="Used to store Purchase Order Detail info"
+                     tableName="podetail">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="poid" type="int">
+                nullable="false" />
+            </column>
+            <column name="productid" type="int">
+                nullable="false" />
+            </column>
+
+            <column name="quantity" type="int"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="vendorid"
+                                 baseTableName="pomaster"
+                                 constraintName="fk_purchase_order_vendor"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vendor"/>
+
+        <addForeignKeyConstraint baseColumnNames="userid"
+                                 baseTableName="pomaster"
+                                 constraintName="fk_purchase_order_user"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+
+
+        <createTable remarks="Used to store Purchase Order status info"
+                     tableName="postatus">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="poid" type="int">
+                nullable="false" />
+            </column>
+            <column name="postatusid" type="int">
+                nullable="false" />
+            </column>
+
+            <column name="isactive" type="boolean" defaultValueBoolean="true"/>
+            <column name="modifiedbyuserid" type="int"/>
+            <column name="modifiedtime" type="date"/>
+
+        </createTable>
+    </changeSet>
 </databaseChangeLog>

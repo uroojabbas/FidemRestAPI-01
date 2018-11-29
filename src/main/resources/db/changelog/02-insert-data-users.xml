@@ -777,7 +777,7 @@
         <insert tableName="productcategory"> <column name="name" value="Secondary"/></insert>
         <insert tableName="productcategory"> <column name="name" value="O'Level"/></insert>
         <insert tableName="productcategory"> <column name="name" value="A'Level"/></insert>
-        <insert tableName="productcategory"> <column name="name" value="Collage"/></insert>
+        <insert tableName="productcategory"> <column name="name" value="College"/></insert>
     </changeSet>
     <changeSet id="501" author="TempData">
     	<insert tableName="client">
@@ -1044,5 +1044,18 @@
         <update tableName="product"> <column name="vendorid" valueNumeric="1"/>
         <where> id = '7' </where>    </update>
 
-</changeSet> 
+</changeSet>
+
+    <changeSet id="11" author="urooj">
+        <insert tableName="postatustype"> <column name="name" value="PO Pending Approval"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="PO Approved"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="Partial Inventory Received"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="Complete Inventory Received"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="Invoice Received"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="Partial Payment Dispatched"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="Complete Payment Dispatched"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="Rejected"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="Canceled"/></insert>
+    </changeSet>
+
 </databaseChangeLog>
