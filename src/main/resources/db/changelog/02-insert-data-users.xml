@@ -1057,5 +1057,10 @@
         <insert tableName="postatustype"> <column name="name" value="Rejected"/></insert>
         <insert tableName="postatustype"> <column name="name" value="Canceled"/></insert>
     </changeSet>
+		
+	<changeSet id="201" author="Mubashir">
+		<update tableName="postatustype"> <column name="name" value = "Cancelled"/>
+        <where> id = '9' </where> 	</update>
+	</changeSet>
 
 </databaseChangeLog>
