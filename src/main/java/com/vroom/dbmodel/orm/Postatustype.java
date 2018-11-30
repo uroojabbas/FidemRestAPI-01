@@ -72,6 +72,8 @@ public class Postatustype  implements java.io.Serializable {
     public void setIsdeleted(Boolean isdeleted) {
         this.isdeleted = isdeleted;
     }
+
+
 }
 
 

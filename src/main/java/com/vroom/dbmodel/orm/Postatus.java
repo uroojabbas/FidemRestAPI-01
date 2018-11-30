@@ -22,7 +22,7 @@ public class Postatus  implements java.io.Serializable {
 
      private Integer id;
      private Pomaster pomaster;
-     private Integer postatusid;
+     private Postatustype postatustype;
      private Boolean isactive;
      private Integer modifiedbyuserid;
      private Date modifiedtime;
@@ -30,9 +30,9 @@ public class Postatus  implements java.io.Serializable {
     public Postatus() {
     }
 
-    public Postatus(Pomaster pomaster, Integer postatusid, Boolean isactive, Integer modifiedbyuserid, Date modifiedtime) {
+    public Postatus(Pomaster pomaster, Postatustype postatustype, Boolean isactive, Integer modifiedbyuserid, Date modifiedtime) {
        this.pomaster = pomaster;
-       this.postatusid = postatusid;
+       this.postatustype = postatustype;
        this.isactive = isactive;
        this.modifiedbyuserid = modifiedbyuserid;
        this.modifiedtime = modifiedtime;
@@ -62,14 +62,15 @@ public class Postatus  implements java.io.Serializable {
         this.pomaster = pomaster;
     }
 
-    
-    @Column(name="postatusid")
-    public Integer getPostatusid() {
-        return this.postatusid;
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="postatusid", nullable=false)
+    public Postatustype getPostatusType() {
+        return this.postatustype;
     }
     
-    public void setPostatusid(Integer postatusid) {
-        this.postatusid = postatusid;
+    public void setPostatusType(Postatustype postatustype) {
+        this.postatustype = postatustype;
     }
 
     
@@ -103,7 +104,10 @@ public class Postatus  implements java.io.Serializable {
     }
 
 
-
+    @Transient
+    public String getPoStatusName(){
+        return this.postatustype.getName();
+    }
 
 }
 

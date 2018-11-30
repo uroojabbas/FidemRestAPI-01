@@ -22,15 +22,15 @@ public class Podetail  implements java.io.Serializable {
 
     private Integer id;
     private Pomaster pomaster;
-    private Integer productid;
+    private Product product;
     private Integer quantity;
 
     public Podetail() {
     }
 
-    public Podetail(Pomaster pomaster, Integer productid, Integer quantity) {
+    public Podetail(Pomaster pomaster, Product product, Integer quantity) {
         this.pomaster = pomaster;
-        this.productid = productid;
+        this.product = product;
         this.quantity = quantity;
     }
 
@@ -59,13 +59,14 @@ public class Podetail  implements java.io.Serializable {
     }
 
 
-    @Column(name="productid")
-    public Integer getProductid() {
-        return this.productid;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="productid", nullable=false)
+    public Product getProduct() {
+        return this.product;
     }
 
-    public void setProductid(Integer productid) {
-        this.productid = productid;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
 
@@ -76,5 +77,10 @@ public class Podetail  implements java.io.Serializable {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    @Transient
+    public int getTotalAmount(){
+        return this.quantity * this.product.getProductcost();
     }
 }

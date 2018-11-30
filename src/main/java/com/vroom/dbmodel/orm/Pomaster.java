@@ -4,6 +4,7 @@ package com.vroom.dbmodel.orm;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.apache.commons.lang3.time.DateFormatUtils;
+import org.hibernate.annotations.Where;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -37,6 +38,7 @@ public class Pomaster  implements java.io.Serializable {
 
     @OneToMany(cascade = CascadeType.ALL,
             mappedBy="pomaster")
+    @Where(clause = "isactive = true")
     public Set<Postatus> getPostatus(){
        return this.postatus;
     }
@@ -147,6 +149,50 @@ public class Pomaster  implements java.io.Serializable {
     @Transient
     public String getPoId(){
         return "PO-" + this.getId() + "-" + DateFormatUtils.format(this.insertedtime, "yyyy");
+    }
+
+    @Transient
+    public int getTotalProducts(){
+        return ((this.podetail != null) || !(this.podetail.isEmpty())) ?
+        this.getPodetail().size() :  0;
+    }
+
+    @Transient
+    public int getTotalQuantity(){
+        int quantity = 0;
+        if ((this.podetail != null) || !(this.podetail.isEmpty())) {
+            quantity = this.podetail.stream().map(pod -> pod.getQuantity()).reduce(0, Integer::sum);
+        }
+        return quantity;
+    }
+
+    @Transient
+    public int getTotalAmount(){
+        int totalAmount = 0;
+        if ((this.podetail != null) || !(this.podetail.isEmpty())) {
+            totalAmount = this.podetail.stream().map(pod -> pod.getTotalAmount()).reduce(0, Integer::sum);
+        }
+        return (this.vendor.getDiscount() != null ) ? totalAmount * (100/this.vendor.getDiscount()) : totalAmount;
+    }
+
+    @Transient
+    public String getPoStatusType(){
+        String poStatus;
+        Postatus pstatus = new Postatus();
+        if(this.postatus != null){
+            pstatus = this.postatus.stream().filter(ps -> ps.getIsactive()).findFirst().orElse(null);
+        }
+        return (pstatus != null) ? pstatus.getPostatusType().getName() : "";
+    }
+
+    @Transient
+    public String getVendorName(){
+        return this.vendor.getName();
+    }
+
+    @Transient
+    public String getUserName(){
+        return this.users.getName();
     }
 }
 
