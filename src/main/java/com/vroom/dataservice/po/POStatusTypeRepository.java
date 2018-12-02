@@ -1,4 +1,4 @@
-package com.vroom.dataservice.com.vroom.dataservice.repository;
+package com.vroom.dataservice.po;
 
 import com.vroom.dbmodel.orm.Postatustype;
 import org.springframework.data.jpa.repository.Query;
@@ -9,12 +9,12 @@ import java.util.List;
 
 public interface POStatusTypeRepository extends CrudRepository<Postatustype,Long> {
 
-    @Query("SELECT l FROM Postatustype l WHERE (l.isdeleted = false OR l.isdeleted = 'false') ")
+    @Query("SELECT pst FROM Postatustype pst WHERE (pst.isdeleted = false OR pst.isdeleted = 'false') ")
     List<Postatustype> findAll();
 
     Postatustype findById(int id);
 
-    @Query("SELECT l FROM Postatustype l WHERE l.name = :name and (l.isdeleted = false OR l.isdeleted = 'false') ")
-    Postatustype findByLanguage(@Param("name") String name);
+    @Query("SELECT pst FROM Postatustype pst WHERE pst.name = :name and (pst.isdeleted = false OR pst.isdeleted = 'false') ")
+    Postatustype findByStatus(@Param("name") String name);
 
 }

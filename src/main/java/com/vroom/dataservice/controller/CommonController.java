@@ -1,6 +1,7 @@
 package com.vroom.dataservice.controller;
 
 import com.vroom.dataservice.com.vroom.dataservice.repository.*;
+import com.vroom.dataservice.vendor.VendorTypeRepository;
 import com.vroom.dbmodel.orm.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

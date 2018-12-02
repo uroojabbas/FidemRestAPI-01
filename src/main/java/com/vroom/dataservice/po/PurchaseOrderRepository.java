@@ -1,4 +1,4 @@
-package com.vroom.dataservice.com.vroom.dataservice.repository;
+package com.vroom.dataservice.po;
 
 import com.vroom.dbmodel.orm.Pomaster;
 import org.springframework.data.jpa.repository.Query;
@@ -14,5 +14,6 @@ public interface PurchaseOrderRepository extends CrudRepository<Pomaster,Long> {
 
     @Query("SELECT p FROM Pomaster p WHERE p.id = :id AND (p.isdeleted = false)")
     Pomaster findById(@Param("id") int  id);
+
 }
 

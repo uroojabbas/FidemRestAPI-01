@@ -1,4 +1,4 @@
-package com.vroom.dataservice.com.vroom.dataservice.repository;
+package com.vroom.dataservice.vendor;
 
 import com.vroom.dbmodel.orm.Vendortype;
 import org.springframework.data.jpa.repository.Query;

@@ -1,23 +1,19 @@
 package com.vroom.dataservice.services;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.vroom.dataservice.com.vroom.dataservice.repository.LanguageRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.ProductRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.UserRepository;
-import com.vroom.dataservice.com.vroom.dataservice.repository.VendorRepository;
+import com.vroom.dataservice.vendor.VendorRepository;
 import com.vroom.dbmodel.orm.Language;
 import com.vroom.dbmodel.orm.Product;
 import com.vroom.dbmodel.orm.Users;
 import com.vroom.dbmodel.orm.Vendor;
-import org.hibernate.service.spi.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import javax.persistence.PersistenceException;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Date;
 import java.util.List;
 
