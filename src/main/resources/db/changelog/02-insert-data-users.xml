@@ -1047,8 +1047,8 @@
 </changeSet>
 
     <changeSet id="11" author="urooj">
-        <insert tableName="postatustype"> <column name="name" value="PO Pending Approval"/></insert>
-        <insert tableName="postatustype"> <column name="name" value="PO Approved"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="Pending Approval"/></insert>
+        <insert tableName="postatustype"> <column name="name" value="Approved"/></insert>
         <insert tableName="postatustype"> <column name="name" value="Partial Inventory Received"/></insert>
         <insert tableName="postatustype"> <column name="name" value="Complete Inventory Received"/></insert>
         <insert tableName="postatustype"> <column name="name" value="Invoice Received"/></insert>
