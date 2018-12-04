@@ -43,10 +43,10 @@ public class PurchaseOrderService {
     public Collection<Pomaster> getVendorPOList(int vendorId){
 
         List<Integer> poStatusTypeList = new ArrayList<>(0);
-        poStatusTypeList.add(POStatusType.PO_APPROVED.ordinal());
-        poStatusTypeList.add(POStatusType.PARTIAL_INVENTORY_RECEIVED.ordinal());
+        poStatusTypeList.add(POStatusType.PO_APPROVED.getValue());
+        poStatusTypeList.add(POStatusType.PARTIAL_INVENTORY_RECEIVED.getValue());
 
-        return poStatusRepository.findByVendorId(vendorId);
+        return poStatusRepository.findByVendorId(vendorId,poStatusTypeList);
     }
 
     public Pomaster save(Pomaster pomaster){
