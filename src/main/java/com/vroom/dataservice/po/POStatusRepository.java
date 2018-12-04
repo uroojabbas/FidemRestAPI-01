@@ -19,7 +19,7 @@ public interface POStatusRepository extends CrudRepository<Postatus,Long> {
     Postatus findById(@Param("id") int  id);
 
     @Query("SELECT p.pomaster FROM Postatus p WHERE p.pomaster.vendor.id = :vendorId AND (p.pomaster.isdeleted = false)" +
-            "AND p.postatusType.id IN :poStatusTypeList")
+            "AND p.postatusType.id IN :poStatusTypeList AND p.isactive = true")
     Set<Pomaster> findByVendorId(@Param("vendorId") int  vendorIdm,
                                  @Param("poStatusTypeList") List<Integer> poStatusTypeList);
 }
