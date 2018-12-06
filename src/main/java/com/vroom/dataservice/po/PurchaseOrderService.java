@@ -88,6 +88,7 @@ public class PurchaseOrderService {
     }
 
     public Pomaster rejectPO(Pomaster pomaster){
+
         Pomaster po = purchaseOrderRepository.findById(pomaster.getId());
         Postatustype postatustype = poStatusTypeRepository.findById(POStatusType.REJECTED.getValue());
 
@@ -95,6 +96,7 @@ public class PurchaseOrderService {
     }
 
     public Pomaster cancelPO(Pomaster pomaster){
+
         Pomaster po = purchaseOrderRepository.findById(pomaster.getId());
         Postatustype postatustype = poStatusTypeRepository.findById(POStatusType.CANCELLED.getValue());
 

@@ -715,4 +715,88 @@
 
         </createTable>
     </changeSet>
+
+    <changeSet id="16" author="urooj">
+        <createTable remarks="Used to store inventory"
+                     tableName="inventory">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="referenceid" type="int">
+                nullable="false" />
+            </column>
+
+            <column name="productid" type="int">
+                nullable="false" />
+            </column>
+            <column name="inventorytypeid" type="int">
+                nullable="false" />
+            </column>
+            <column name="activitytypeid" type="int">
+                nullable="false" />
+            </column>
+            <column name="transactiontypeid" type="int">
+                nullable="false" />
+            </column>
+            <column name="regionid" type="int">
+                nullable="false" />
+            </column>
+            <column name="insertedbyuserid" type="int">
+                nullable="false" />
+            </column>
+            <column name="insertedtime" type="date">
+                nullable="false" />
+            </column>
+            <column name="quantity" type="int"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="productId"
+                                 baseTableName="inventory"
+                                 constraintName="fk_inventory_product"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="product"/>
+
+        <createIndex indexName="idx_inventory_referenceId"
+                     tableName="inventory">
+            <column name="referenceid" type="int"/>
+        </createIndex>
+
+        <createIndex indexName="idx_inventory_productId"
+                     tableName="inventory">
+            <column name="productid" type="int"/>
+        </createIndex>
+
+        <createIndex indexName="idx_inventory_type"
+                     tableName="inventory">
+            <column name="inventorytypeid" type="int"/>
+        </createIndex>
+
+        <createIndex indexName="idx_inventory_trans_type"
+                     tableName="inventory">
+            <column name="transactiontypeid" type="int"/>
+        </createIndex>
+
+    </changeSet>
+    <changeSet id="17" author="urooj">
+        <createTable remarks="Used to store inventoryType"
+                     tableName="inventorytype">
+        <column autoIncrement="true" name="id" type="int">
+            <constraints primaryKey="true" nullable="false" />
+        </column>
+        <column name="name" type="varchar(100)">
+            nullable="false" />
+        </column>
+        </createTable>
+        <createTable remarks="Used to store referenceType"
+                     tableName="referencetype">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(100)">
+                nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>

@@ -2,7 +2,11 @@ package com.vroom.dbmodel.orm;
 // Generated Nov 22, 2018 4:34:35 AM by Hibernate Tools 5.2.0.Final
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.*;
 import javax.persistence.Entity;
 
@@ -43,6 +47,20 @@ public class Product  implements java.io.Serializable {
     private Boolean isdeleted;
     private String vendorName;
     private String languagename;
+
+    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+    private Set<Inventory> inventory = new HashSet<>(0);
+
+
+    @OneToMany(cascade = CascadeType.ALL,
+            mappedBy="product")
+    public Set<Inventory> getInventory(){
+        return this.inventory;
+    }
+
+    public void setInventory(Set<Inventory> inventory){
+        this.inventory = inventory;
+    }
     public Product() {
     }
 
