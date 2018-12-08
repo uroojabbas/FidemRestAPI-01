@@ -3,6 +3,7 @@ package com.vroom.dbmodel.orm;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.vroom.dataservice.inventory.TransactionType;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
@@ -83,4 +84,5 @@ public class Podetail  implements java.io.Serializable {
     public int getTotalAmount(){
         return this.quantity * this.product.getProductcost();
     }
+
 }

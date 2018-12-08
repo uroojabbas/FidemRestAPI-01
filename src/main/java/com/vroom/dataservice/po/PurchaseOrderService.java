@@ -1,11 +1,17 @@
 package com.vroom.dataservice.po;
 
 import com.vroom.dataservice.com.vroom.dataservice.repository.*;
+import com.vroom.dataservice.common.InventoryType;
+import com.vroom.dataservice.common.ReferenceType;
+import com.vroom.dataservice.common.Region;
+import com.vroom.dataservice.inventory.InventoryService;
+import com.vroom.dataservice.inventory.TransactionType;
 import com.vroom.dataservice.vendor.VendorRepository;
 import com.vroom.dbmodel.orm.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transaction;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -31,6 +37,9 @@ public class PurchaseOrderService {
 
     @Autowired
     POStatusRepository poStatusRepository;
+
+    @Autowired
+    InventoryService inventoryService;
 
     public Pomaster getById(int id){
         return purchaseOrderRepository.findById(id);
@@ -73,6 +82,7 @@ public class PurchaseOrderService {
 
         for(Podetail podetail: pomaster.getPodetail()){
             Product product = productRepository.findById(podetail.getProduct().getId());
+
             podetail.setProduct(product);
             podetail.setPomaster(pomaster);
         }
@@ -84,7 +94,7 @@ public class PurchaseOrderService {
         Pomaster po = purchaseOrderRepository.findById(pomaster.getId());
         Postatustype postatustype = poStatusTypeRepository.findById(POStatusType.PO_APPROVED.getValue());
 
-         return this.changePOStatus(pomaster, postatustype);
+         return this.changePOStatus(pomaster, postatustype, true);
     }
 
     public Pomaster rejectPO(Pomaster pomaster){
@@ -92,7 +102,7 @@ public class PurchaseOrderService {
         Pomaster po = purchaseOrderRepository.findById(pomaster.getId());
         Postatustype postatustype = poStatusTypeRepository.findById(POStatusType.REJECTED.getValue());
 
-        return this.changePOStatus(pomaster, postatustype);
+        return this.changePOStatus(pomaster, postatustype, false);
     }
 
     public Pomaster cancelPO(Pomaster pomaster){
@@ -100,10 +110,11 @@ public class PurchaseOrderService {
         Pomaster po = purchaseOrderRepository.findById(pomaster.getId());
         Postatustype postatustype = poStatusTypeRepository.findById(POStatusType.CANCELLED.getValue());
 
-        return this.changePOStatus(pomaster, postatustype);
+        return this.changePOStatus(pomaster, postatustype,false);
     }
 
-    private  Pomaster changePOStatus(Pomaster pomaster, Postatustype postatustype){
+    private  Pomaster changePOStatus(Pomaster pomaster, Postatustype postatustype,
+                                     boolean generateInventory){
         Pomaster po = purchaseOrderRepository.findById(pomaster.getId());
 
         if((po.getPostatus() != null) && !(po.getPostatus().isEmpty())){
@@ -115,9 +126,20 @@ public class PurchaseOrderService {
             Postatus newPostatus = new Postatus(po,postatustype, true, pomaster.getUsers().getId(), new Date());
             po.getPostatus().add(newPostatus);
 
+            if(generateInventory){
+
+                po.getPodetail().forEach(podetail->
+                        inventoryService.addInventoryOnApprove(podetail,
+                                pomaster.getUsers(),
+                                TransactionType.PURCHASE_GENERATED,
+                                podetail.getQuantity()));
+
+            }
             po = purchaseOrderRepository.save(po);
         }
 
         return po;
     }
+
+
 }

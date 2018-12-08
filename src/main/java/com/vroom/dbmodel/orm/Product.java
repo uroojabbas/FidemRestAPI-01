@@ -3,6 +3,7 @@ package com.vroom.dbmodel.orm;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.vroom.dataservice.inventory.TransactionType;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -47,6 +48,14 @@ public class Product  implements java.io.Serializable {
     private Boolean isdeleted;
     private String vendorName;
     private String languagename;
+
+
+    private int quantity;
+
+    @Transient
+    public int getQuantity(){
+        return this.quantity;
+    }
 
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     private Set<Inventory> inventory = new HashSet<>(0);
@@ -345,7 +354,21 @@ public class Product  implements java.io.Serializable {
 
 
 
+    @Transient
+    public int getTotalLtdQuantity(){
+        return this.getInventory().stream()
+                .filter(inventory -> inventory.getTransactionType().
+                        equals(TransactionType.INVENTORY_ADDITION)).
+                        mapToInt(Inventory::getQuantity).sum();
+    }
 
+    @Transient
+    public int getOriginalQuantity(){
+        return this.getInventory().stream()
+                .filter(inventory -> inventory.getTransactionType().
+                        equals(TransactionType.PURCHASE_GENERATED)).
+                        mapToInt(Inventory::getQuantity).sum();
+    }
 }
 
 

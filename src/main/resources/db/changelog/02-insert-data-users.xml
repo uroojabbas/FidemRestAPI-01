@@ -1090,6 +1090,30 @@
         <insert tableName="postatustype"> <column name="name" value="Rejected"/></insert>
         <insert tableName="postatustype"> <column name="name" value="Cancelled"/></insert>
     </changeSet>
-		
+
+    <changeSet id="11" author="urooj">
+        <insert tableName="referencetype"> <column name="id" value="0"/> <column name="name" value="PURCHASE_ORDER"/></insert>
+        <insert tableName="referencetype"> <column name="id" value="1"/> <column name="name" value="SALE_ORDER"/></insert>
+        <insert tableName="referencetype"> <column name="id" value="2"/> <column name="name" value="TRANSFER"/></insert>
+
+        <insert tableName="inventorytype"> <column name="id" value="0"/> <column name="name" value="FORSALE"/></insert>
+        <insert tableName="inventorytype"> <column name="id" value="1"/> <column name="name" value="SAMPLE"/></insert>
+
+        <insert tableName="transactiontype"> <column name="id" value="0"/> <column name="name" value="PURCHASE_GENERATED"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="1"/> <column name="name" value="PURCHASE_CANCELLED"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="2"/> <column name="name" value="PARTIAL_PO_CLOSURE"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="3"/> <column name="name" value="PARTIAL_PO_CLOSURE_REVERSAL"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="4"/> <column name="name" value="PURCHASE_INVENTORY_RETURN"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="5"/> <column name="name" value="INVENTORY_ADDITION"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="6"/> <column name="name" value="INVENTORY_DEDUCTION"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="7"/> <column name="name" value="INVENTORY_WRITE-OFF"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="8"/> <column name="name" value="INVENTORY_TRANSFER_IN"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="9"/> <column name="name" value="INVENTORY_TRANSFER_OUT"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="10"/> <column name="name" value="SALE_GENERATED"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="11"/> <column name="name" value="SALE_CANCELLED"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="12"/> <column name="name" value="PARTIAL_SO_CLOSURE"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="13"/> <column name="name" value="PARTIAL_SO_CLOSURE_REVERSAL"/></insert>
+        <insert tableName="transactiontype"> <column name="id" value="14"/> <column name="name" value="SALE_INVENTORY_RETURN"/></insert>
+    </changeSet>
 
 </databaseChangeLog>

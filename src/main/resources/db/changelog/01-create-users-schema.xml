@@ -732,9 +732,6 @@
             <column name="inventorytypeid" type="int">
                 nullable="false" />
             </column>
-            <column name="activitytypeid" type="int">
-                nullable="false" />
-            </column>
             <column name="transactiontypeid" type="int">
                 nullable="false" />
             </column>
@@ -782,7 +779,7 @@
     <changeSet id="17" author="urooj">
         <createTable remarks="Used to store inventoryType"
                      tableName="inventorytype">
-        <column autoIncrement="true" name="id" type="int">
+        <column name="id" type="int">
             <constraints primaryKey="true" nullable="false" />
         </column>
         <column name="name" type="varchar(100)">
@@ -791,12 +788,25 @@
         </createTable>
         <createTable remarks="Used to store referenceType"
                      tableName="referencetype">
-            <column autoIncrement="true" name="id" type="int">
+            <column name="id" type="int">
                 <constraints primaryKey="true" nullable="false" />
             </column>
             <column name="name" type="varchar(100)">
                 nullable="false" />
             </column>
         </createTable>
+    </changeSet>
+
+    <changeSet id="18" author="urooj">
+        <createTable remarks="Used to store transactiontype"
+                     tableName="transactiontype">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(100)">
+                nullable="false" />
+            </column>
+        </createTable>
+
     </changeSet>
 </databaseChangeLog>

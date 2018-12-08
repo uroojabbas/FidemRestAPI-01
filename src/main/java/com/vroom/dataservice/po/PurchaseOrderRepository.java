@@ -15,5 +15,8 @@ public interface PurchaseOrderRepository extends CrudRepository<Pomaster,Long> {
     @Query("SELECT p FROM Pomaster p WHERE p.id = :id AND (p.isdeleted = false)")
     Pomaster findById(@Param("id") int  id);
 
+    @Query("SELECT p.pomaster FROM Podetail p WHERE p.id = :id")
+    Pomaster findByPODetailId(@Param("id") int  id);
+
 }
 

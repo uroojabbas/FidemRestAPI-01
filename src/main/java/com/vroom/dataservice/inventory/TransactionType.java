@@ -1,7 +1,6 @@
 package com.vroom.dataservice.inventory;
 
 public enum  TransactionType {
-
     PURCHASE_GENERATED,
     PURCHASE_CANCELLED,
     PARTIAL_PO_CLOSURE,

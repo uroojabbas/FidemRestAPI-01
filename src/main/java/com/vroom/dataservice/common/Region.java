@@ -7,7 +7,4 @@ public enum Region {
     South,
     Central;
 
-    public int getValue() {
-        return ordinal() + 1;
-    }
 }
