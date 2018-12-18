@@ -1,8 +1,8 @@
-package com.vroom.dataservice.services;
+package com.vroom.dataservice.Product;
 
 import com.vroom.dataservice.com.vroom.dataservice.repository.LanguageRepository;
-import com.vroom.dataservice.com.vroom.dataservice.repository.ProductRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.UserRepository;
+import com.vroom.dataservice.common.Region;
 import com.vroom.dataservice.vendor.VendorRepository;
 import com.vroom.dbmodel.orm.Language;
 import com.vroom.dbmodel.orm.Product;
@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -49,6 +50,11 @@ public class ProductService {
     public List<Product> getAllProducts(){
         logger.debug("getAllVendors");
         return productRepository.findAll();
+    }
+
+    public Collection<Product> getProductsByRegion(Region region){
+        logger.debug("getProductsByRegion");
+        return productRepository.findByRegion(region);
     }
 
     public Product save(Product product){

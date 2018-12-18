@@ -151,10 +151,6 @@ public class Inventory  implements java.io.Serializable {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
-
-
-
-
 }
 
 

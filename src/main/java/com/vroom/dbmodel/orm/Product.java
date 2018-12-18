@@ -357,8 +357,8 @@ public class Product  implements java.io.Serializable {
     @Transient
     public int getTotalLtdQuantity(){
         return this.getInventory().stream()
-                .filter(inventory -> inventory.getTransactionType().
-                        equals(TransactionType.INVENTORY_ADDITION)).
+                .filter(inventory -> inventory.getTransactionType()
+                        != TransactionType.PURCHASE_GENERATED).
                         mapToInt(Inventory::getQuantity).sum();
     }
 

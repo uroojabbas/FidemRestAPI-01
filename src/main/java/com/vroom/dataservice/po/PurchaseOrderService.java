@@ -1,9 +1,7 @@
 package com.vroom.dataservice.po;
 
+import com.vroom.dataservice.Product.ProductRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.*;
-import com.vroom.dataservice.common.InventoryType;
-import com.vroom.dataservice.common.ReferenceType;
-import com.vroom.dataservice.common.Region;
 import com.vroom.dataservice.inventory.InventoryService;
 import com.vroom.dataservice.inventory.TransactionType;
 import com.vroom.dataservice.vendor.VendorRepository;
@@ -11,7 +9,6 @@ import com.vroom.dbmodel.orm.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transaction;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -128,11 +125,13 @@ public class PurchaseOrderService {
 
             if(generateInventory){
 
-                po.getPodetail().forEach(podetail->
-                        inventoryService.addInventoryOnApprove(podetail,
+                po.getPodetail().forEach(podetail->{
+                        Inventory inventory = inventoryService.addInventoryOnApprove(podetail.getProduct(),
                                 pomaster.getUsers(),
                                 TransactionType.PURCHASE_GENERATED,
-                                podetail.getQuantity()));
+                                podetail.getQuantity());
+                podetail.getProduct().getInventory().add(inventory);
+                });
 
             }
             po = purchaseOrderRepository.save(po);

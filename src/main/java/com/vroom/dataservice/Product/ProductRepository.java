@@ -1,11 +1,13 @@
-package com.vroom.dataservice.com.vroom.dataservice.repository;
+package com.vroom.dataservice.Product;
 
+import com.vroom.dataservice.common.Region;
 import com.vroom.dbmodel.orm.Product;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ProductRepository extends CrudRepository<Product,Long> {
 
@@ -23,4 +25,8 @@ public interface ProductRepository extends CrudRepository<Product,Long> {
 
     @Query("SELECT p FROM Product p WHERE p.vendor.id = :vendorId AND (p.isdeleted = false) ")
     List<Product> findByVendorId(@Param("vendorId") int  vendorId);
+
+    @Query("SELECT i.product FROM Inventory i WHERE i.region = :region " +
+            "AND (i.product.isdeleted = false) ")
+    Set<Product> findByRegion(@Param("region") Region region);
 }

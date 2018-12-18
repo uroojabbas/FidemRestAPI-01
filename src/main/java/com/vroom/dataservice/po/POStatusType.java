@@ -9,7 +9,9 @@ public enum  POStatusType {
     PARTIAL_PAYMENT_DISPATCHED,
     COMPLETE_PAYMENT_DISPATCHED,
     REJECTED,
-    CANCELLED;
+    CANCELLED,
+    TO_INVENTORY_RECEIVED,
+    TO_INVENTORY_DISPATCHED;
 
     public int getValue() {
         return ordinal() + 1;

@@ -1,6 +1,6 @@
 package com.vroom.dataservice.inventory;
 
-import com.vroom.dataservice.com.vroom.dataservice.repository.ProductRepository;
+import com.vroom.dataservice.Product.ProductRepository;
 import com.vroom.dataservice.common.InventoryType;
 import com.vroom.dataservice.common.ReferenceType;
 import com.vroom.dataservice.common.Region;
@@ -61,7 +61,7 @@ public class InventoryService {
 
             products.forEach(podetail -> {
 
-                Inventory inventory = addInventory(podetail,
+                Inventory inventory = addInventory(podetail.getProduct(),
                         pomaster.getUsers(),
                         TransactionType.INVENTORY_ADDITION,
                         podetail.getProduct().getQuantity());
@@ -96,7 +96,7 @@ public class InventoryService {
         return (receivedQuantity < actualQuantity);
     }
 
-    public Inventory addInventory(Podetail podetail,
+    public Inventory addInventory(Product product,
                                       Users user,
                                       TransactionType transactionType,
                                       int quantity){
@@ -106,7 +106,7 @@ public class InventoryService {
         inventory.setReferenceType(ReferenceType.PURCHASE_ORDER);
         inventory.setInventoryType(InventoryType.FORSALE);
         inventory.setTransactionType(transactionType);
-        inventory.setProduct(podetail.getProduct());
+        inventory.setProduct(product);
         inventory.setQuantity(quantity);
         inventory.setRegion(Region.Head_Office);
         inventory.setInsertedByUserId(user.getId());
@@ -115,16 +115,37 @@ public class InventoryService {
         return inventory;
     }
 
-    public void addInventoryOnApprove(Podetail podetail,
+    public Inventory addInventory(Product product,
+                                  Users user,
+                                  TransactionType transactionType,
+                                  ReferenceType referenceType,
+                                  InventoryType inventoryType,
+                                  Region region,
+                                  int quantity){
+
+        Inventory inventory = new Inventory();
+
+        inventory.setReferenceType(referenceType);
+        inventory.setInventoryType(inventoryType);
+        inventory.setTransactionType(transactionType);
+        inventory.setProduct(product);
+        inventory.setQuantity(quantity);
+        inventory.setRegion(region);
+        inventory.setInsertedByUserId(user.getId());
+        inventory.setInsertedTime(new Date());
+
+        return inventory;
+    }
+    public Inventory addInventoryOnApprove(Product product,
                                       Users user,
                                       TransactionType transactionType,
                                       int quantity){
 
-        Inventory inventory = this.addInventory(podetail,
+        Inventory inventory = this.addInventory(product,
                 user,
                 transactionType,
                 quantity);
 
-        podetail.getProduct().getInventory().add(inventory);
+        return inventory;
     }
 }

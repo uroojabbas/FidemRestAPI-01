@@ -117,7 +117,7 @@
         </column>
         <column name="isdeleted" type="boolean">
         </column>
-        <column autoIncrement="true" name="id" type="int">
+        <column name="id" type="int">
             <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
         </column>
     </createTable>
@@ -808,5 +808,82 @@
             </column>
         </createTable>
 
+    </changeSet>
+
+    <changeSet id="19" author="urooj">
+        <createTable remarks="Used to store Transaction Order Master info"
+                     tableName="tomaster">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column  name="userid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="fromregion" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="transfertype" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="toregion" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="modifiedbyuserid" type="int"/>
+
+            <column name="modifiedtime" type="date"/>
+
+            <column name="insertedtime" type="date"/>
+
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+
+        </createTable>
+
+        <createTable remarks="Used to store Transaction Order Detail info"
+                     tableName="todetail">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="toid" type="int">
+                nullable="false" />
+            </column>
+            <column name="productid" type="int">
+                nullable="false" />
+            </column>
+
+            <column name="quantity" type="int"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="userid"
+                                 baseTableName="tomaster"
+                                 constraintName="fk_transfer_order_user"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+
+
+        <createTable remarks="Used to store Transfer Order status info"
+                     tableName="tostatus">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="toid" type="int">
+                nullable="false" />
+            </column>
+            <column name="tostatusid" type="int">
+                nullable="false" />
+            </column>
+
+            <column name="isactive" type="boolean" defaultValueBoolean="true"/>
+            <column name="modifiedbyuserid" type="int"/>
+            <column name="modifiedtime" type="date"/>
+
+        </createTable>
     </changeSet>
 </databaseChangeLog>

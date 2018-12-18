@@ -5,6 +5,10 @@ public enum Region {
     Head_Office,
     North,
     South,
-    Central;
+    Central,
+    Transit;
 
+    public int getValue() {
+        return ordinal() + 1;
+    }
 }

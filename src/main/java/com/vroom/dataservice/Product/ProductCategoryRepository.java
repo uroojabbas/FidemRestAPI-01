@@ -1,4 +1,4 @@
-package com.vroom.dataservice.com.vroom.dataservice.repository;
+package com.vroom.dataservice.Product;
 
 import com.vroom.dbmodel.orm.Productcategory;
 import org.springframework.data.jpa.repository.Query;

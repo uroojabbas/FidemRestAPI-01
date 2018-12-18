@@ -1,6 +1,6 @@
-package com.vroom.dataservice.controller;
+package com.vroom.dataservice.Product;
 
-import com.vroom.dataservice.services.ProductService;
+import com.vroom.dataservice.common.Region;
 import com.vroom.dbmodel.orm.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 
 @RestController
@@ -44,6 +45,12 @@ public class ProductController {
     public List<Product> getAllProducts(){
         logger.debug("getAllProducts");
         return productService.getAllProducts();
+    }
+
+    @GetMapping("/products/region/{regionName}")
+    public Collection<Product> getProductsByRegion(@PathVariable Region regionName){
+        logger.debug("getProductsByRegion");
+        return productService.getProductsByRegion(regionName);
     }
 
     @PostMapping(value = "/product/save",consumes = MediaType.APPLICATION_JSON_VALUE )

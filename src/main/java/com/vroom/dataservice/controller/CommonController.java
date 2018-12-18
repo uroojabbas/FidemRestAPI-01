@@ -1,5 +1,6 @@
 package com.vroom.dataservice.controller;
 
+import com.vroom.dataservice.Product.ProductCategoryRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.*;
 import com.vroom.dataservice.vendor.VendorTypeRepository;
 import com.vroom.dbmodel.orm.*;
