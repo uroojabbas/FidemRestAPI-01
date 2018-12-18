@@ -108,7 +108,7 @@ public class TransferOrderService {
     }
 
     public Tomaster inventoryReceived(Tomaster tomaster){
-        Postatustype tostatustype = poStatusTypeRepository.findById(POStatusType.TO_INVENTORY_DISPATCHED.getValue());
+        Postatustype tostatustype = poStatusTypeRepository.findById(POStatusType.TO_INVENTORY_RECEIVED.getValue());
 
         tomaster = this.changeTOStatus(tomaster, tostatustype);
 

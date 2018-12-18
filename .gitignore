@@ -1,6 +1,9 @@
 *.[.gradle]
 *.[.idea]
-build/*
-out/*
-gradle/*
-concretepage/*
+build/**
+out/**
+gradle/**
+concretepage/**
+.gradle/**
+bin/**
+.idea/*
