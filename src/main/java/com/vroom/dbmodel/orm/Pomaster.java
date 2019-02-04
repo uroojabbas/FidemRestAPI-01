@@ -167,10 +167,10 @@ public class Pomaster  implements java.io.Serializable {
     }
 
     @Transient
-    public int getTotalAmount(){
-        int totalAmount = 0;
+    public double getTotalAmount(){
+        double totalAmount = 0;
         if ((this.podetail != null) || !(this.podetail.isEmpty())) {
-            totalAmount = this.podetail.stream().map(pod -> pod.getTotalAmount()).reduce(0, Integer::sum);
+            totalAmount = this.podetail.stream().map(pod -> pod.getTotalAmount()).reduce(0.0, Double::sum);
         }
         return (this.vendor.getDiscount() != null ) ? totalAmount * (100/this.vendor.getDiscount()) : totalAmount;
     }

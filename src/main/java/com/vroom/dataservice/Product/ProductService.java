@@ -47,14 +47,14 @@ public class ProductService {
         return productRepository.findByName(name);
     }
 
-    public List<Product> getAllProducts(){
-        logger.debug("getAllVendors");
-        return productRepository.findAll();
+    public List<ProductInventory> getAllProducts() {
+        logger.debug("getAllProducts");
+        return productRepository.findAllProducts();
     }
 
-    public Collection<Product> getProductsByRegion(Region region){
+    public Collection<ProductInventory> getProductsByRegion(Region region){
         logger.debug("getProductsByRegion");
-        return productRepository.findByRegion(region);
+        return productRepository.findProductByRegion(region);
     }
 
     public Product save(Product product){

@@ -81,7 +81,7 @@ public class Podetail  implements java.io.Serializable {
     }
 
     @Transient
-    public int getTotalAmount(){
+    public double getTotalAmount(){
         return this.quantity * this.product.getProductcost();
     }
 

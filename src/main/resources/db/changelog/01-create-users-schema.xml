@@ -556,13 +556,13 @@
 
             <column  name="pagecount" type="int"/>
 
-            <column  name="productcost" type="int"/>
+            <column  name="productcost" type="double"/>
 
             <column name="paperqualityid" type="int">
                 <constraints nullable="false" />
             </column>
 
-            <column name="retailprice" type="int"/>
+            <column name="retailprice" type="double"/>
 
             <column name="userid" type="int"/>
 
@@ -885,5 +885,94 @@
             <column name="modifiedtime" type="date"/>
 
         </createTable>
+    </changeSet>
+
+    <changeSet id="20" author="urooj">
+        <createTable remarks="Used to store Inventory Reference info"
+                     tableName="inventoryreference">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="transactiontypeid" type="int">
+                nullable="false" />
+            </column>
+            <column name="inventorytypeid" type="int">
+                nullable="false" />
+            </column>
+
+            <column name="orderid" type="int">
+                nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="21" author="">
+        <createTable remarks="Used to store Transaction Order Master info"
+                     tableName="grnmaster">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column  name="userid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="poid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="modifiedbyuserid" type="int"/>
+
+            <column name="modifiedtime" type="date"/>
+
+            <column name="insertedtime" type="date"/>
+
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+
+        </createTable>
+
+
+        <createTable remarks="Used to store Transaction Order Master info"
+                     tableName="grndetail">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column  name="grnid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="productid" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="quantity" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="amount" type="double">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="isdeleted" type="boolean" defaultValue="false"/>
+
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="productid"
+                                 baseTableName="grndetail"
+                                 constraintName="fk_grndetail_product"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="product"/>
+
+        <createIndex indexName="idx_grndetail_productId"
+                     tableName="grndetail">
+            <column name="productid" type="int"/>
+        </createIndex>
+
+
     </changeSet>
 </databaseChangeLog>

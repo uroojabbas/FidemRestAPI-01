@@ -1,5 +1,7 @@
 package com.vroom.dataservice.inventory;
 
+import com.vroom.dataservice.GoodsReceivedNote.GoodsReceivedNoteRepository;
+import com.vroom.dataservice.GoodsReceivedNote.GoodsReceivedNoteService;
 import com.vroom.dataservice.Product.ProductRepository;
 import com.vroom.dataservice.common.InventoryType;
 import com.vroom.dataservice.common.ReferenceType;
@@ -8,15 +10,20 @@ import com.vroom.dataservice.po.POStatusType;
 import com.vroom.dataservice.po.POStatusTypeRepository;
 import com.vroom.dataservice.po.PurchaseOrderRepository;
 import com.vroom.dbmodel.orm.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class InventoryService {
+
+    private static final Logger logger = LoggerFactory.getLogger(InventoryService.class);
 
     @Autowired
     InventoryRepository inventoryRepository;
@@ -31,7 +38,13 @@ public class InventoryService {
     @Autowired
     POStatusTypeRepository poStatusTypeRepository;
 
-    public List<Podetail> save(List<Podetail> products){
+    @Autowired
+    GoodsReceivedNoteRepository goodsReceivedNoteRepository;
+
+    @Autowired
+    GoodsReceivedNoteService goodsReceivedNoteService;
+
+    public List<Podetail> save(int userId, List<Podetail> products){
 
         if(products != null && !(products.isEmpty())) {
             Pomaster pomaster = purchaseOrderRepository.findByPODetailId(products.get(0).getId());
@@ -58,6 +71,7 @@ public class InventoryService {
             //adding new status
             pomaster.getPostatus().add(postatus);
 
+            Grnmaster grnmaster = goodsReceivedNoteService.generateGRN(userId, pomaster, userId);
 
             products.forEach(podetail -> {
 
@@ -75,9 +89,13 @@ public class InventoryService {
                     p.getProduct().getInventory().add(inventory);
                 }
 
-            });
+                Grndetail grndetail = new Grndetail(grnmaster, podetail.getProduct(),
+                podetail.getProduct().getQuantity(), (podetail.getProduct().getQuantity() *
+                        podetail.getProduct().getRetailprice()));
+                grnmaster.getGrndetail().add(grndetail);
+            } );
 
-            purchaseOrderRepository.save(pomaster);
+            goodsReceivedNoteRepository.save(grnmaster);
         }
         return products;
     }

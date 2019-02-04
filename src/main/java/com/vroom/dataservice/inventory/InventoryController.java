@@ -22,12 +22,11 @@ public class InventoryController {
 
     @PostMapping(value = "/inventory/add",consumes = MediaType.APPLICATION_JSON_VALUE )
     @ResponseBody
-    public List<Podetail> addInventory(@RequestBody List<Podetail> products){
+    public List<Podetail> addInventory(@RequestBody InventoryRequest products){
         logger.debug("addInventory[" + " " + "]");
 
-        this.inventoryService.save(products);
+        return this.inventoryService.save(products.getUserId(), products.getProducts());
 
-        return products;
-    }
+       }
 }
 

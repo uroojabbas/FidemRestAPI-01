@@ -42,13 +42,14 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public List<Product> getAllProducts(){
+    public List<ProductInventory> getAllProducts(){
         logger.debug("getAllProducts");
         return productService.getAllProducts();
+
     }
 
     @GetMapping("/products/region/{regionName}")
-    public Collection<Product> getProductsByRegion(@PathVariable Region regionName){
+    public Collection<ProductInventory> getProductsByRegion(@PathVariable Region regionName){
         logger.debug("getProductsByRegion");
         return productService.getProductsByRegion(regionName);
     }

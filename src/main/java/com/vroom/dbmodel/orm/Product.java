@@ -3,6 +3,7 @@ package com.vroom.dbmodel.orm;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vroom.dataservice.inventory.TransactionType;
 
 import java.util.Date;
@@ -38,9 +39,9 @@ public class Product  implements java.io.Serializable {
     private int productcategoryid;
     private int marketsegmentid;
     private Integer pagecount;
-    private Integer productcost;
+    private double productcost;
     private int paperqualityid;
-    private Integer retailprice;
+    private double retailprice;
     private Integer userid;
     private Integer modifiedbyuserid;
     private Date modifiedtime;
@@ -60,9 +61,22 @@ public class Product  implements java.io.Serializable {
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     private Set<Inventory> inventory = new HashSet<>(0);
 
+    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+    private Set<Grndetail> grndetail = new HashSet<>(0);
 
     @OneToMany(cascade = CascadeType.ALL,
             mappedBy="product")
+    @JsonIgnore
+    public Set<Grndetail> getGrndetail(){
+        return this.grndetail;
+    }
+
+    public void setGrndetail(Set<Grndetail> grndetail){
+        this.grndetail = grndetail;
+    }
+    @OneToMany(cascade = CascadeType.ALL,
+            mappedBy="product")
+    @JsonIgnore
     public Set<Inventory> getInventory(){
         return this.inventory;
     }
@@ -85,7 +99,7 @@ public class Product  implements java.io.Serializable {
         this.marketsegmentid = marketsegmentid;
         this.paperqualityid = paperqualityid;
     }
-    public Product(Language language, Vendor vendor, String name, String isbn, String author, String subject, String edition, String barcode, String publisher, int countryid, int productcategoryid, int marketsegmentid, Integer pagecount, Integer productcost, int paperqualityid, Integer retailprice, Integer userid, Integer modifiedbyuserid, Date modifiedtime, Date insertedtime, Boolean isdeleted) {
+    public Product(Language language, Vendor vendor, String name, String isbn, String author, String subject, String edition, String barcode, String publisher, int countryid, int productcategoryid, int marketsegmentid, Integer pagecount, double productcost, int paperqualityid, double retailprice, Integer userid, Integer modifiedbyuserid, Date modifiedtime, Date insertedtime, Boolean isdeleted) {
         this.language = language;
         this.vendor = vendor;
         this.name = name;
@@ -274,11 +288,11 @@ public class Product  implements java.io.Serializable {
 
 
     @Column(name="productcost")
-    public Integer getProductcost() {
+    public double getProductcost() {
         return this.productcost;
     }
 
-    public void setProductcost(Integer productcost) {
+    public void setProductcost(double productcost) {
         this.productcost = productcost;
     }
 
@@ -294,11 +308,11 @@ public class Product  implements java.io.Serializable {
 
 
     @Column(name="retailprice")
-    public Integer getRetailprice() {
+    public double getRetailprice() {
         return this.retailprice;
     }
 
-    public void setRetailprice(Integer retailprice) {
+    public void setRetailprice(double retailprice) {
         this.retailprice = retailprice;
     }
 
