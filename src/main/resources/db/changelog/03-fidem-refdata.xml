@@ -1,0 +1,271 @@
+﻿<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="01" author="Ali Jaffar">
+        <insert tableName="users">
+            <column name="id " valueNumeric= "1" />
+            <column name="name " value= "Umair Javaid" />
+            <column name="email " value= "umair.javaid@fidem.com.pk" />
+            <column name="phone " value= "0300-0803230" />
+            <column name="address " value= "" />
+            <column name="username " value= "umair.javaid" />
+            <column name="departmentid " valueNumeric= "4" />
+            <column name="designationid " valueNumeric= "4" />
+            <column name="cityid " valueNumeric= "1" />
+            <column name="regionid " valueNumeric= "2" />
+            <column name="gender " valueNumeric= "1" />
+            <column name="permanent " valueBolean= "1" />
+        </insert>     
+        
+        <insert tableName="users">
+            <column name="id " valueNumeric= "2" />
+            <column name="name " value= "Mansoor Ahmed" />
+            <column name="email " value= "keyaccount_khi02@hotmail.com" />
+            <column name="phone " value= "0300-0305925" />
+            <column name="address " value= "" />
+            <column name="username " value= "mansoor.ahmed" />
+            <column name="departmentid " valueNumeric= "4" />
+            <column name="designationid " valueNumeric= "6" />
+            <column name="cityid " valueNumeric= "1" />
+            <column name="regionid " valueNumeric= "2" />
+            <column name="gender " valueNumeric= "1" />
+            <column name="permanent " valueBolean= "1" />
+        </insert>
+        
+        <insert tableName="users">
+            <column name="id " valueNumeric= "3" />
+            <column name="name " value= "Hassan Farooq" />
+            <column name="email " value= "hassan.farooq@fidem.com.pk" />
+            <column name="phone " value= "0300-0305924" />
+            <column name="address " value= "" />
+            <column name="username " value= "mansoor.ahmed" />
+            <column name="departmentid " valueNumeric= "4" />
+            <column name="designationid " valueNumeric= "4" />
+            <column name="cityid " valueNumeric= "4" />
+            <column name="regionid " valueNumeric= "1" />
+            <column name="gender " valueNumeric= "1" />
+            <column name="permanent " valueBolean= "1" />
+        </insert>  
+        
+        <insert tableName="users">
+            <column name="id " valueNumeric= "4" />
+            <column name="name " value= "Wajahat Hussain" />
+            <column name="email " value= "wajahat.hussain@fidem.com.pk" />
+            <column name="phone " value= "0300-0803235" />
+            <column name="address " value= "" />
+            <column name="username " value= "wajahat.hussain" />
+            <column name="departmentid " valueNumeric= "4" />
+            <column name="designationid " valueNumeric= "6" />
+            <column name="cityid " valueNumeric= "4" />
+            <column name="regionid " valueNumeric= "1" />
+            <column name="gender " valueNumeric= "1" />
+            <column name="permanent " valueBolean= "1" />
+        </insert>  
+        
+        <insert tableName="users">
+            <column name="id " valueNumeric= "5" />
+            <column name="name " value= "Waqas Haider" />
+            <column name="email " value= "waqas@fidem.com.pk" />
+            <column name="phone " value= "0300-0803146" />
+            <column name="address " value= "" />
+            <column name="username " value= "waqas.haider" />
+            <column name="departmentid " valueNumeric= "4" />
+            <column name="designationid " valueNumeric= "4" />
+            <column name="cityid " valueNumeric= "2" />
+            <column name="regionid " valueNumeric= "3" />
+            <column name="gender " valueNumeric= "1" />
+            <column name="permanent " valueBolean= "1" />
+        </insert>  
+        
+        <insert tableName="users">
+            <column name="id " valueNumeric= "6" />
+            <column name="name " value= "Akhtar Javed" />
+            <column name="email " value= "akhtar.javed@fidem.com.pk" />
+            <column name="phone " value= "0300-0803147" />
+            <column name="address " value= "" />
+            <column name="username " value= "akhtar.javed" />
+            <column name="departmentid " valueNumeric= "4" />
+            <column name="designationid " valueNumeric= "6" />
+            <column name="cityid " valueNumeric= "2" />
+            <column name="regionid " valueNumeric= "3" />
+            <column name="gender " valueNumeric= "1" />
+            <column name="permanent " valueBolean= "1" />
+        </insert>  
+        
+        <insert tableName="vendor">
+            <column name="id " valueNumeric= "1" />
+            <column name="name " value= "Yaqeen Art Press" />
+            <column name="address " value= "Korangi Industrial Area, Karachi" />
+            <column name="email " value= "info@yaqeen.biz" />
+            <column name="contactperson " value= "Mr. Sharjeel" />
+            <column name="contactone " value= "35057265-8" />
+            <column name="vendortypeid " valueNumeric= "1" />
+            <column name="ntn " value= "3200368-4" />
+            <column name="strn " value= "0210844211937" />
+        </insert>  
+        
+        <insert tableName="vendor">
+            <column name="id " valueNumeric= "2" />
+            <column name="name " value= "Yaqeen Graphics" />
+            <column name="address " value= "Pakistan Chowk, Karachi" />
+        </insert>  
+        
+        <insert tableName="client">
+            <column name="id " valueNumeric= "1" />
+            <column name="name " value= "Burhani Books Centre Karachi " />
+            <column name="address " value= "Near St. Joseph School, Shahra-e-Iraq Saddar Karachi " />
+            <column name="principlename " value= "Muratza Rawala " />
+            <column name="contact " value= "0300-8240275" />
+            <column name="contactpersontwo " value= "" />
+            <column name="contacttwo " value= "" />
+            <column name="instituetypeid " valueNumeric= "1" />
+            <column name="clienttypeid " valueNumeric= "1" />
+            <column name="strength " value= "1000" />
+            <column name="discount " value= "30" />
+            <column name="paymentterms " value= "15" />
+            <column name="cityid " valueNumeric= "1" />
+            <column name="regionid " valueNumeric= "2" />
+        </insert>
+        
+        <insert tableName="client">
+            <column name="id " valueNumeric= "2" />
+            <column name="name " value= "Mariam Academy Urdu Bazar " />
+            <column name="address " value= "Urdu Bazar, M. A. Jinnah Road, Karachi" />
+            <column name="principlename " value= "Mr. Nouman " />
+            <column name="contact " value= "0331-2425864" />
+            <column name="contactpersontwo " value= "Yousaf" />
+            <column name="contacttwo " value= "0321-2276039" />
+            <column name="instituetypeid " valueNumeric= "1" />
+            <column name="clienttypeid " valueNumeric= "1" />
+            <column name="strength " value= "1000" />
+            <column name="discount " value= "30" />
+            <column name="paymentterms " value= "15" />
+            <column name="cityid " valueNumeric= "1" />
+            <column name="regionid " valueNumeric= "2" />
+        </insert>
+        
+        <insert tableName="client">
+            <column name="id " valueNumeric= "3" />
+            <column name="name " value= "Huzaifa Book Seller" />
+            <column name="address " value= "Urdu Bazar, M. A. Jinnah Road, Karachi" />
+            <column name="principlename " value= "Mr Ali" />
+            <column name="contact " value= "0333-0372780" />
+            <column name="contactpersontwo " value= "Sohail Gaba" />
+            <column name="contacttwo " value= "0333-0372780" />
+            <column name="instituetypeid " valueNumeric= "1" />
+            <column name="clienttypeid " valueNumeric= "1" />
+            <column name="strength " value= "1000" />
+            <column name="discount " value= "30" />
+            <column name="paymentterms " value= "15" />
+            <column name="cityid " valueNumeric= "1" />
+            <column name="regionid " valueNumeric= "2" />
+        </insert>
+        
+        <insert tableName="client">
+            <column name="id " valueNumeric= "4" />
+            <column name="name " value= "Hazara Book Center & Stationers" />
+            "<column name=""address "" value= ""Government College # 2 Road, Mandiyaan,
+             Abbottabad, Pakistan"" />"
+            <column name="principlename " value= "Mr. Qasim Mehboob Khan" />
+            <column name="contact " value= "0345-9553395" />
+            <column name="contactpersontwo " value= "-" />
+            <column name="contacttwo " value= "0313-5951943" />
+            <column name="instituetypeid " valueNumeric= "1" />
+            <column name="clienttypeid " valueNumeric= "1" />
+            <column name="strength " value= "1000" />
+            <column name="discount " value= "30" />
+            <column name="paymentterms " value= "15" />
+            <column name="cityid " valueNumeric= "10" />
+            <column name="regionid " valueNumeric= "1" />
+        </insert>
+        
+        <insert tableName="client">
+            <column name="id " valueNumeric= "5" />
+            <column name="name " value= "Banaras Stationary Mart" />
+            <column name="address " value= "Kachehri Road, Abbottabad, Pakistan" />
+            <column name="principlename " value= "Malik Banaras Khan" />
+            <column name="contact " value= "0346-9529993" />
+            <column name="contactpersontwo " value= "-" />
+            <column name="contacttwo " value= "0992-332166" />
+            <column name="instituetypeid " valueNumeric= "1" />
+            <column name="clienttypeid " valueNumeric= "1" />
+            <column name="strength " value= "1000" />
+            <column name="discount " value= "30" />
+            <column name="paymentterms " value= "15" />
+            <column name="cityid " valueNumeric= "10" />
+            <column name="regionid " valueNumeric= "1" />
+        </insert>
+        
+        <insert tableName="client">
+            <column name="id " valueNumeric= "6" />
+            <column name="name " value= "Welcome Books Peshawar" />
+            <column name="address " value= "Sonehri Masjid Road, Peshawar Cantt, Peshawar" />
+            <column name="principlename " value= "Mr.Naveed" />
+            <column name="contact " value= "0300-5860068" />
+            <column name="contactpersontwo " value= "-" />
+            <column name="contacttwo " value= "-" />
+            <column name="instituetypeid " valueNumeric= "1" />
+            <column name="clienttypeid " valueNumeric= "1" />
+            <column name="strength " value= "1000" />
+            <column name="discount " value= "30" />
+            <column name="paymentterms " value= "15" />
+            <column name="cityid " valueNumeric= "9" />
+            <column name="regionid " valueNumeric= "1" />
+        </insert>
+        
+        <insert tableName="client">
+            <column name="id " valueNumeric= "7" />
+            <column name="name " value= "United Book Depo Urdu Bazar Lahore " />
+            <column name="address " value= "Urdu Bazar, Lahore" />
+            <column name="principlename " value= "Mr. Kamran" />
+            <column name="contact " value= "0300-4578446" />
+            <column name="contactpersontwo " value= "-" />
+            <column name="contacttwo " value= "-" />
+            <column name="instituetypeid " valueNumeric= "1" />
+            <column name="clienttypeid " valueNumeric= "1" />
+            <column name="strength " value= "300" />
+            <column name="discount " value= "30" />
+            <column name="paymentterms " value= "15" />
+            <column name="cityid " valueNumeric= "2" />
+            <column name="regionid " valueNumeric= "3" />
+        </insert>
+        
+        <insert tableName="client">
+            <column name="id " valueNumeric= "8" />
+            <column name="name " value= "National Book Service " />
+            <column name="address " value= "Lahore" />
+            <column name="principlename " value= "Aamer" />
+            <column name="contact " value= "0321-9413036" />
+            <column name="contactpersontwo " value= "-" />
+            <column name="contacttwo " value= "042-37247310" />
+            <column name="instituetypeid " valueNumeric= "1" />
+            <column name="clienttypeid " valueNumeric= "1" />
+            <column name="strength " value= "300" />
+            <column name="discount " value= "30" />
+            <column name="paymentterms " value= "15" />
+            <column name="cityid " valueNumeric= "2" />
+            <column name="regionid " valueNumeric= "3" />
+        </insert>
+        
+        <insert tableName="client">
+            <column name="id " valueNumeric= "9" />
+            <column name="name " value= "Abdullah Enterprises" />
+            <column name="address " value= "Flat # 3 Market Road Model Town, Near Habib Bank LTD Sialkot" />
+            <column name="principlename " value= "Waseem" />
+            <column name="contact " value= "0321-4951011" />
+            <column name="contactpersontwo " value= "-" />
+            <column name="contacttwo " value= "-" />
+            <column name="instituetypeid " valueNumeric= "1" />
+            <column name="clienttypeid " valueNumeric= "1" />
+            <column name="strength " value= "500" />
+            <column name="discount " value= "30" />
+            <column name="paymentterms " value= "15" />
+            <column name="cityid " valueNumeric= "2" />
+            <column name="regionid " valueNumeric= "3" />
+        </insert>
+        
+    </changeSet>
+   
+</databaseChangeLog>

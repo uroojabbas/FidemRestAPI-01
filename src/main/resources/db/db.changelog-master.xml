@@ -7,4 +7,6 @@
              relativeToChangelogFile="true" />
     <include file="changelog/02-insert-data-users.xml"
              relativeToChangelogFile="true" />
+    <include file="changelog/03-fidem-refdata.xml"
+             relativeToChangelogFile="true" />
 </databaseChangeLog>
