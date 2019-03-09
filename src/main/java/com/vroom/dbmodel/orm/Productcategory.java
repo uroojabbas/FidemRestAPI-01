@@ -14,7 +14,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="productcategory"
-    ,catalog="yaqeen"
 )
 public class Productcategory  implements java.io.Serializable {
 

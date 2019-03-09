@@ -14,7 +14,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="region"
-    ,catalog="yaqeen"
 )
 public class Region  implements java.io.Serializable {
 

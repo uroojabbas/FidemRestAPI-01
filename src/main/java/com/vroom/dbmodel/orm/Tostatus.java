@@ -15,7 +15,6 @@ import static javax.persistence.GenerationType.IDENTITY;
  */
 @Entity
 @Table(name="tostatus"
-    ,catalog="yaqeen"
 )
 public class Tostatus  implements java.io.Serializable {
 

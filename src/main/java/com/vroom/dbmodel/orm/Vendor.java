@@ -14,7 +14,6 @@ import static javax.persistence.GenerationType.IDENTITY;
  */
 @Entity
 @Table(name="vendor"
-        ,catalog="yaqeen"
         , uniqueConstraints = @UniqueConstraint(columnNames="name")
 )
 public class Vendor  extends AbstractEntity {

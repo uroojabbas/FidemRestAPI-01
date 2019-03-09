@@ -14,7 +14,6 @@ import static javax.persistence.GenerationType.IDENTITY;
  */
 @Entity
 @Table(name="todetail"
-    ,catalog="yaqeen"
 )
 public class Todetail  implements java.io.Serializable {
 

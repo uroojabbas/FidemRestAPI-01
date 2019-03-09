@@ -19,7 +19,6 @@ import static javax.persistence.GenerationType.IDENTITY;
  */
 @Entity
 @Table(name="product"
-    ,catalog="yaqeen"
     , uniqueConstraints = {@UniqueConstraint(columnNames="isbn"), @UniqueConstraint(columnNames="name")} 
 )
 public class Product  implements java.io.Serializable {

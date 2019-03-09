@@ -21,7 +21,6 @@ import static javax.persistence.GenerationType.IDENTITY;
  */
 @Entity
 @Table(name="tomaster"
-    ,catalog="yaqeen"
 )
 public class Tomaster  implements java.io.Serializable {
 

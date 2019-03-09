@@ -13,7 +13,6 @@ import static javax.persistence.GenerationType.IDENTITY;
  */
 @Entity
 @Table(name="client"
-    ,catalog="yaqeen"
     , uniqueConstraints = @UniqueConstraint(columnNames="name") 
 )
 public class Client  {

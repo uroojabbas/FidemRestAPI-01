@@ -14,7 +14,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="vendortype"
-    ,catalog="yaqeen"
 )
 public class Vendortype  extends AbstractEntity {
 

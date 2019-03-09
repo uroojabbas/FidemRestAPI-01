@@ -13,7 +13,6 @@ import static javax.persistence.GenerationType.IDENTITY;
  */
 @Entity
 @Table(name="users"
-    ,catalog="yaqeen"
     , uniqueConstraints = {@UniqueConstraint(columnNames="name"), @UniqueConstraint(columnNames="username")} 
 )
 public class Users  extends AbstractEntity {

@@ -14,7 +14,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="vendorcategory"
-    ,catalog="yaqeen"
 )
 public class Vendorcategory  implements java.io.Serializable {
 

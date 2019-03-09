@@ -248,7 +248,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column  name="address" type="varchar(50)">
+            <column  name="address" type="varchar(100)">
                 <constraints nullable="false" />
             </column>
 
