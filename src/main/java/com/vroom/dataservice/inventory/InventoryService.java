@@ -2,6 +2,7 @@ package com.vroom.dataservice.inventory;
 
 import com.vroom.dataservice.GoodsReceivedNote.GoodsReceivedNoteRepository;
 import com.vroom.dataservice.GoodsReceivedNote.GoodsReceivedNoteService;
+import com.vroom.dataservice.Product.ProductInventory;
 import com.vroom.dataservice.Product.ProductRepository;
 import com.vroom.dataservice.common.InventoryType;
 import com.vroom.dataservice.common.ReferenceType;
@@ -165,5 +166,9 @@ public class InventoryService {
                 quantity);
 
         return inventory;
+    }
+
+    public List<ProductInventory> getInventoryProducts(){
+        return this.inventoryRepository.findAllInventoryProducts();
     }
 }

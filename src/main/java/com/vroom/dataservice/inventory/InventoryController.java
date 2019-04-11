@@ -1,14 +1,12 @@
 package com.vroom.dataservice.inventory;
+import com.vroom.dataservice.Product.ProductInventory;
 import com.vroom.dbmodel.orm.Podetail;
 import com.vroom.dbmodel.orm.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +26,12 @@ public class InventoryController {
         return this.inventoryService.save(products.getUserId(), products.getProducts());
 
        }
+
+    @GetMapping("/inventory")
+    public List<ProductInventory> getInventoryProducts(){
+        logger.debug("getInventoryProducts");
+        return inventoryService.getInventoryProducts();
+
+    }
 }
 
