@@ -4,7 +4,9 @@ import com.vroom.dbmodel.orm.Tomaster;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -18,9 +20,10 @@ public class TransferOrderController {
 
     @PostMapping(value = "/transferOrder/save",consumes = MediaType.APPLICATION_JSON_VALUE )
     @ResponseBody
-    public Tomaster savePO(@RequestBody Tomaster tomaster){
+    public ResponseEntity<Boolean> savePO(@RequestBody Tomaster tomaster){
         logger.debug("save TO : Name[" + tomaster.toString() + "]");
-        return transferOrderService.save(tomaster);
+        transferOrderService.save(tomaster);
+        return new ResponseEntity<Boolean>(Boolean.TRUE, HttpStatus.OK);
     }
 
     @GetMapping("/transferOrders")
