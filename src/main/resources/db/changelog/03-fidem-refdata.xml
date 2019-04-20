@@ -274,4 +274,90 @@
         
     </changeSet>
    
+    <changeSet id="02" author="Ali Jaffar">
+        
+        <insert tableName="module">
+            <column name="id " valueNumeric= "1" />
+            <column name="moduleName " value= "Administration" />
+        </insert>
+        
+         <insert tableName="module">
+            <column name="id " valueNumeric= "2" />
+            <column name="moduleName " value= "Procurement" />
+        </insert>
+        
+         <insert tableName="module">
+            <column name="id " valueNumeric= "3" />
+            <column name="moduleName " value= "Sales" />
+        </insert>
+        
+        <insert tableName="module">
+            <column name="id " valueNumeric= "4" />
+            <column name="moduleName " value= "Data Management" />
+        </insert>
+        
+        <insert tableName="module">
+            <column name="id " valueNumeric= "5" />
+            <column name="moduleName " value= "Reports" />
+        </insert>
+        
+        <insert tableName="module">
+            <column name="id " valueNumeric= "6" />
+            <column name="moduleName " value= "Accounts" />
+        </insert>
+        
+         <insert tableName="module">
+            <column name="id " valueNumeric= "7" />
+            <column name="moduleName " value= "Human Resources" />
+        </insert>
+        
+         <insert tableName="modulePermissions">
+            <column name="id " valueNumeric= "1" />
+            <column name="PermissionType " value= "Add Purchase Order" />
+            <column name="moduleid " valueNumeric= "2" />
+        </insert>
+        
+        <insert tableName="modulePermissions">
+            <column name="id " valueNumeric= "2" />
+            <column name="PermissionType " value= "Approve Purchase Order" />
+            <column name="moduleid " valueNumeric= "2" />
+        </insert>
+        
+         <insert tableName="modulePermissions">
+            <column name="id " valueNumeric= "3" />
+            <column name="PermissionType " value= "Print Purchase Order" />
+            <column name="moduleid " valueNumeric= "2" />
+        </insert>
+        
+        <insert tableName="modulePermissions">
+            <column name="id " valueNumeric= "4" />
+            <column name="PermissionType " value= "Add / Edit Products" />
+            <column name="moduleid " valueNumeric= "4" />
+        </insert>
+        
+        <insert tableName="modulePermissions">
+            <column name="id " valueNumeric= "5" />
+            <column name="PermissionType " value= "Add / Edit Vendors" />
+            <column name="moduleid " valueNumeric= "4" />
+        </insert>
+        
+        <insert tableName="modulePermissions">
+            <column name="id " valueNumeric= "6" />
+            <column name="PermissionType " value= "Add Inventory" />
+            <column name="moduleid " valueNumeric= "2" />
+        </insert>
+        
+        <insert tableName="modulePermissions">
+            <column name="id " valueNumeric= "7" />
+            <column name="PermissionType " value= "Transfer Inventory" />
+            <column name="moduleid " valueNumeric= "2" />
+        </insert>
+        
+         <insert tableName="modulePermissions">
+            <column name="id " valueNumeric= "8" />
+            <column name="PermissionType " value= "Approve Inventory Transfer" />
+            <column name="moduleid " valueNumeric= "2" />
+        </insert>
+    </changeSet>
+    
 </databaseChangeLog>

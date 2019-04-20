@@ -975,4 +975,55 @@
 
 
     </changeSet>
+    
+    <changeSet author="ali" id="22">
+        <createTable remarks="Adding Module Table"
+                     tableName="module">
+            <column name="moduleName" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean">
+                <constraints nullable="false" />
+            </column>
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+        </createTable>
+
+        <addDefaultValue columnDataType="boolean"
+                         columnName="isdeleted"
+                         defaultValueBoolean="false"
+                         tableName="module"/>
+        
+        <createTable remarks="Adding Module Permissions Table"
+                     tableName="modulePermissions">
+            <column name="PermissionType" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean">
+                <constraints nullable="false" />
+            </column>
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+            <column name="moduleId" type="int">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+        <addDefaultValue columnDataType="boolean"
+                         columnName="isdeleted"
+                         defaultValueBoolean="false"
+                         tableName="modulePermissions"/>
+        
+        <addForeignKeyConstraint baseColumnNames="moduleId"
+                                 baseTableName="modulePermissions"
+                                 constraintName="fk_modulePerm_moduleId"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="module"/>
+        </changeSet>
+    
+    
 </databaseChangeLog>
