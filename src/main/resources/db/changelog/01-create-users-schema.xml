@@ -978,7 +978,7 @@
     
     <changeSet author="ali" id="22">
         <createTable remarks="Adding Module Table"
-                     tableName="module">
+                     tableName="modules">
             <column name="moduleName" type="varchar(50)">
                 <constraints nullable="false" />
             </column>
@@ -993,11 +993,11 @@
         <addDefaultValue columnDataType="boolean"
                          columnName="isdeleted"
                          defaultValueBoolean="false"
-                         tableName="module"/>
+                         tableName="modules"/>
         
         <createTable remarks="Adding Module Permissions Table"
                      tableName="modulePermissions">
-            <column name="PermissionType" type="varchar(50)">
+            <column name="permissionType" type="varchar(50)">
                 <constraints nullable="false" />
             </column>
             <column name="isdeleted" type="boolean">
@@ -1022,7 +1022,7 @@
                                  onDelete="CASCADE"
                                  onUpdate="RESTRICT"
                                  referencedColumnNames="id"
-                                 referencedTableName="module"/>
+                                 referencedTableName="modules"/>
         </changeSet>
     
     

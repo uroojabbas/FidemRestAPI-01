@@ -276,37 +276,37 @@
    
     <changeSet id="02" author="Ali Jaffar">
         
-        <insert tableName="module">
+        <insert tableName="modules">
             <column name="id " valueNumeric= "1" />
             <column name="moduleName " value= "Administration" />
         </insert>
         
-         <insert tableName="module">
+         <insert tableName="modules">
             <column name="id " valueNumeric= "2" />
             <column name="moduleName " value= "Procurement" />
         </insert>
         
-         <insert tableName="module">
+         <insert tableName="modules">
             <column name="id " valueNumeric= "3" />
             <column name="moduleName " value= "Sales" />
         </insert>
         
-        <insert tableName="module">
+        <insert tableName="modules">
             <column name="id " valueNumeric= "4" />
             <column name="moduleName " value= "Data Management" />
         </insert>
         
-        <insert tableName="module">
+        <insert tableName="modules">
             <column name="id " valueNumeric= "5" />
             <column name="moduleName " value= "Reports" />
         </insert>
         
-        <insert tableName="module">
+        <insert tableName="modules">
             <column name="id " valueNumeric= "6" />
             <column name="moduleName " value= "Accounts" />
         </insert>
         
-         <insert tableName="module">
+         <insert tableName="modules">
             <column name="id " valueNumeric= "7" />
             <column name="moduleName " value= "Human Resources" />
         </insert>
