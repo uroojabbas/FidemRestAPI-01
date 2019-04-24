@@ -12,7 +12,7 @@ public class ModulePermissionService {
     @Autowired
     ModulePermissionRepository modulePermissionRepository;
 
-    public Collection<Modules> getModulePermissionList(){
+    public Collection<ModulePermission> getModulePermissionList(){
         return modulePermissionRepository.getPermissionList();
     }
 }

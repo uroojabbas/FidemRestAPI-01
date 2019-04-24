@@ -20,7 +20,7 @@ public class ModulePermissionController {
 
     @GetMapping("/modulePermissions")
     @ResponseBody
-    public Collection<Modules> getProductById(){
+    public Collection<ModulePermission> getProductById(){
         logger.debug("getModulePermissionList : [ ALL]");
         return modulePermissionService.getModulePermissionList();
 

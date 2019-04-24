@@ -8,6 +8,12 @@ import java.util.Set;
 
 public interface ModulePermissionRepository extends CrudRepository<Modules,Long> {
 
-    @Query("SELECT m FROM Modules m Where (m.isdeleted = false) ")
-    public Set<Modules> getPermissionList();
+    @Query(value = "Select m.id AS moduleId,m.moduleName AS moduleName, " +
+            "mp.id AS permissionTypeId, mp.permissionType AS permissionType  " +
+            "From modules m " +
+            "INNER JOIN modulepermissions mp " +
+            "ON(m.id = mp.id) " +
+            "Where m.isdeleted = 0 and mp.isdeleted = 0", nativeQuery = true)
+    public Set<ModulePermission> getPermissionList();
+
 }
