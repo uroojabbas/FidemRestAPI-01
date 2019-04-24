@@ -13,7 +13,8 @@ public interface ModulePermissionRepository extends CrudRepository<Modules,Long>
             "From modules m " +
             "INNER JOIN modulepermissions mp " +
             "ON(m.id = mp.id) " +
-            "Where m.isdeleted = 0 and mp.isdeleted = 0", nativeQuery = true)
+            "Where m.isdeleted = 0 and mp.isdeleted = 0 " +
+            "Order By m.id, mp.id", nativeQuery = true)
     public Set<ModulePermission> getPermissionList();
 
 }
