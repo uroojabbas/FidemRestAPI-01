@@ -979,9 +979,9 @@
     <changeSet author="ali" id="22">
         <createTable remarks="Adding Module Table"
                      tableName="modules">
-            <column name="moduleName" type="varchar(50)">
-                <constraints nullable="false" />
-            </column>
+            <column name="moduleName"  type="varchar(50)">
+              <constraints nullable="false"/>
+        </column>
             <column name="isdeleted" type="boolean">
                 <constraints nullable="false" />
             </column>
@@ -1024,6 +1024,62 @@
                                  referencedColumnNames="id"
                                  referencedTableName="modules"/>
         </changeSet>
-    
-    
+
+<changeSet author="wajeeh" id="23">
+
+    <createTable remarks="Used to store Users and the info"
+                 tableName="userRole">
+
+        <column autoIncrement="true" name="id" type="int">
+            <constraints primaryKey="true" nullable="false" />
+        </column>
+
+        <column  name="roleName" type="varchar(50)">
+            <constraints nullable="false" />
+        </column>
+
+        <column name="isDeleted" type="boolean" defaultValue="false"/>
+
+        <column name="insertedtime" type="date"/>
+
+        <column name="insertedbyuserid" type="int">
+            nullable="false" />
+        </column>
+
+        <column name="modifiedbyuserid" type="int"/>
+
+        <column name="modifiedtime" type="date"/>
+    </createTable>
+
+    <createTable remarks="Used to store Users and the info"
+                 tableName="rolePermission">
+
+        <column autoIncrement="true" name="roleid" type="int">
+            <constraints primaryKey="true" nullable="false" />
+        </column>
+
+        <column name="permissionTypeId" type="int">
+            <constraints nullable="false" />
+        </column>
+
+
+    </createTable>
+
+    <addForeignKeyConstraint baseColumnNames="roleid"
+                             baseTableName="rolePermission"
+                             constraintName="fk_userRole_roleid"
+                             onDelete="CASCADE"
+                             onUpdate="RESTRICT"
+                             referencedColumnNames="id"
+                             referencedTableName="userRole"/>
+
+    <addForeignKeyConstraint baseColumnNames="permissionTypeId"
+                             baseTableName="rolePermission"
+                             constraintName="fk_modulePermissions_permissiontypeid"
+                             onDelete="CASCADE"
+                             onUpdate="RESTRICT"
+                             referencedColumnNames="id"
+                             referencedTableName="modulePermissions"/>
+
+</changeSet>
 </databaseChangeLog>
