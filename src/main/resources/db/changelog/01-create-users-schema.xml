@@ -1026,4 +1026,31 @@
         </changeSet>
     
     
+    
+    <changeSet author="ali" id="23">
+        <createTable remarks="Adding Publisher Table"
+                     tableName="Publisher">
+            <column name="PublisherName" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="isdeleted" type="boolean">
+                <constraints nullable="false" />
+            </column>
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+        </createTable>
+
+        <addDefaultValue columnDataType="boolean"
+                         columnName="isdeleted"
+                         defaultValueBoolean="false"
+                         tableName="Publisher"/>
+    
+        
+    <dropNotNullConstraint 
+            columnDataType="int"
+            columnName="marketsegmentid"
+            tableName="product"/>
+
+    </changeSet>
 </databaseChangeLog>
