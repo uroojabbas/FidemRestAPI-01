@@ -360,4 +360,1339 @@
         </insert>
     </changeSet>
     
+    <changeSet id="03" author="Ali Jaffar">
+        
+        <insert tableName="Publisher">
+            <column name="id " valueNumeric= "1" />
+            <column name="PublisherName " value= "Fidem Education Network" />
+        </insert>
+    
+         <insert tableName="Publisher">
+            <column name="id " valueNumeric= "2" />
+            <column name="PublisherName " value= "Cambridge" />
+        </insert>
+        
+
+       <insert tableName="product">
+   <column name="name" value="Aao Urdu Sekhan - Awal"/>
+   <column name="isbn" value="978-969-703-046-0"/>
+   <column name="author" value="Munawar Jahan"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="240"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aao Urdu Sekhan - Doyum"/>
+   <column name="isbn" value="978-969-703-047-7"/>
+   <column name="author" value="Munawar Jahan"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="250"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aao Urdu Sekhan - Soom"/>
+   <column name="isbn" value="978-969-703-048-4"/>
+   <column name="author" value="Munawar Jahan"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="260"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 1"/>
+   <column name="isbn" value="978-969-9705-05-2"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="180"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 1 (TG)"/>
+   <column name="isbn" value="978-969-9705-25-0"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="140"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 2"/>
+   <column name="isbn" value="978-969-9705-06-9"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="140"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 2 (TG)"/>
+   <column name="isbn" value="978-969-9705-26-7"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="200"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 3"/>
+   <column name="isbn" value="978-969-9705-07-6"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="220"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 3 (TG)"/>
+   <column name="isbn" value="978-969-9705-27-4"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="150"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 4"/>
+   <column name="isbn" value="978-969-9705-08-3"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="185"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 4 (TG)"/>
+   <column name="isbn" value="978-969-9705-28-1"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="250"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 5"/>
+   <column name="isbn" value="978-969-9705-09-0"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="250"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Aasan Islamiat Book 5 (TG)"/>
+   <column name="isbn" value="978-969-9705-29-8"/>
+   <column name="author" value="Ahsan Waqar Ahmed"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="180"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Asan Islamiat Book 6"/>
+   <column name="isbn" value="978-969-9705-62-5"/>
+   <column name="author" value="Col. Ammer Hussain Jami"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="265"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Asan Islamiat Book 7"/>
+   <column name="isbn" value="978-969-9705-63-2"/>
+   <column name="author" value="Col. Ammer Hussain Jami"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="275"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Asan Islamiat Book 8"/>
+   <column name="isbn" value="978-969-9705-64-9"/>
+   <column name="author" value="Col. Ammer Hussain Jami"/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="285"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Cambridge English Mini Dictionary - Second Edition"/>
+   <column name="isbn" value="978-1-107-67213-0"/>
+   <column name="author" value="Cambridge"/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Cambridge"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="8"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="350"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Computer Studies Book 1"/>
+   <column name="isbn" value="978-969-9705-93-9"/>
+   <column name="author" value="Syeda Quratul Ain Furqan"/>
+   <column name="subject" value="Computer"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="240"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Computer Studies Book 2"/>
+   <column name="isbn" value="978-969-9705-94-6"/>
+   <column name="author" value="Syeda Quratul Ain Furqan"/>
+   <column name="subject" value="Computer"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="250"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Computer Studies Book 3"/>
+   <column name="isbn" value="978-969-9705-95-3"/>
+   <column name="author" value="Syeda Quratul Ain Furqan"/>
+   <column name="subject" value="Computer"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="260"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Computer Studies Book 4"/>
+   <column name="isbn" value="978-969-9705-96-0"/>
+   <column name="author" value="Syeda Quratul Ain Furqan"/>
+   <column name="subject" value="Computer"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="270"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Computer Studies Book 5"/>
+   <column name="isbn" value="978-969-9705-97-7"/>
+   <column name="author" value="Syeda Quratul Ain Furqan"/>
+   <column name="subject" value="Computer"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="290"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Doorway to English Series Book 1"/>
+   <column name="isbn" value="978-969-9705-74-8"/>
+   <column name="author" value=""/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="220"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Doorway to English Series Book 2"/>
+   <column name="isbn" value="978-969-9705-75-5"/>
+   <column name="author" value=""/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="230"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Doorway to English Series Book 3"/>
+   <column name="isbn" value="978-969-9705-76-2"/>
+   <column name="author" value=""/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="240"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Doorway to English Series Book 4"/>
+   <column name="isbn" value="978-969-9705-77-9"/>
+   <column name="author" value=""/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="250"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Doorway to English Series Book 5"/>
+   <column name="isbn" value="978-969-9705-78-6"/>
+   <column name="author" value=""/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="260"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="English Worksheet Level 1"/>
+   <column name="isbn" value="978-969-9705-90-8"/>
+   <column name="author" value="Seema Zubairi"/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="175"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="English Worksheet Level 2"/>
+   <column name="isbn" value="978-969-9705-91-5"/>
+   <column name="author" value="Seema Zubairi"/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="180"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="English Worksheet Level 3"/>
+   <column name="isbn" value="978-969-9705-92-2"/>
+   <column name="author" value="Seema Zubairi"/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="185"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Islamiat Book 1 (English)"/>
+   <column name="isbn" value="978-969-9705-82-3"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="180"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Islamiat Book 2 (English)"/>
+   <column name="isbn" value="978-969-9705-83-0"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Islamiat"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="200"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Lets Begin English – Workbook 1"/>
+   <column name="isbn" value="978-969-703-043-9"/>
+   <column name="author" value="Seema Zubairi"/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="310"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Lets Begin English – Workbook 2"/>
+   <column name="isbn" value="978-969-703-044-6"/>
+   <column name="author" value="Seema Zubairi"/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="320"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Lets Begin English – Workbook 3"/>
+   <column name="isbn" value="978-969-703-045-3"/>
+   <column name="author" value="Seema Zubairi"/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="330"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Lets Begin Numbers Workbook 1"/>
+   <column name="isbn" value="978-969-703-040-8"/>
+   <column name="author" value="Seema Zubairi"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="280"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Lets Begin Numbers Workbook 2"/>
+   <column name="isbn" value="978-969-703-041-5"/>
+   <column name="author" value="Seema Zubairi"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="290"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Lets Begin Numbers Workbook 3"/>
+   <column name="isbn" value="978-969-703-042-2"/>
+   <column name="author" value="Seema Zubairi"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="300"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 1 (Old)"/>
+   <column name="isbn" value="978-969-703-020-0"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="215"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 1 (Revised)"/>
+   <column name="isbn" value="978-969-703-020-0"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="55"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 1 (TG)"/>
+   <column name="isbn" value="978-969-9705-30-4"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="230"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 2 (Old)"/>
+   <column name="isbn" value="978-969-703-021-7"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="60"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 2 (TG)"/>
+   <column name="isbn" value="978-969-9705-31-1"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="240"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 3 (Old)"/>
+   <column name="isbn" value="978-969-703-022-4"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="60"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 3 (TG)"/>
+   <column name="isbn" value="978-969-9705-32-8"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="250"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 4 (Old)"/>
+   <column name="isbn" value="978-969-9705-13-7"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="70"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 4 (TG)"/>
+   <column name="isbn" value="978-969-9705-33-5"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="260"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 5 (Old)"/>
+   <column name="isbn" value="978-969-9705-14-4"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="60"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 5 (TG)"/>
+   <column name="isbn" value="978-969-9705-34-2"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="290"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Duniya Urdu Book 8"/>
+   <column name="isbn" value="978-969-703-019-4"/>
+   <column name="author" value="Zahida Maheen"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="215"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Dunya Urdu Book 2 (Revised)"/>
+   <column name="isbn" value="978-969-7030-21-7"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="230"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Dunya Urdu Book 3 (Revised)"/>
+   <column name="isbn" value="978-969-7030-22-4"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="240"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Dunya Urdu Book 4 (Revised)"/>
+   <column name="isbn" value="978-969-703-023-1"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="250"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Dunya Urdu Book 5 (Revised)"/>
+   <column name="isbn" value="978-969-703-024-8"/>
+   <column name="author" value="Zia Ur Rehman Zia"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="260"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Dunya Urdu Book 6 (Revised)"/>
+   <column name="isbn" value="978-969-7030-17-0"/>
+   <column name="author" value="Zahida Maheen"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="270"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Dunya Urdu Book 7 (Revised)"/>
+   <column name="isbn" value="978-969-7030-18-7"/>
+   <column name="author" value="Zahida Maheen"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="280"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Meri Pehli Alif Bay Pay"/>
+   <column name="isbn" value="978-969-9705-52-6"/>
+   <column name="author" value="Saba Paracha"/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="140"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="My First 123"/>
+   <column name="isbn" value="978-969-9705-50-2"/>
+   <column name="author" value="Saba Paracha"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="130"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="My First ABC"/>
+   <column name="isbn" value="978-969-9705-51-9"/>
+   <column name="author" value=""/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="130"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Numbers Worksheet Level 1"/>
+   <column name="isbn" value="978-969-9705-87-8"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="175"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Numbers Worksheet Level 2"/>
+   <column name="isbn" value="978-969-9705-88-5"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="180"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Numbers Worksheet Level 3"/>
+   <column name="isbn" value="978-969-703-042-2"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="185"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 1"/>
+   <column name="isbn" value="978-969-9705-20-5"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="250"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 1 (TG)"/>
+   <column name="isbn" value="978-969-9705-40-3"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="165"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 2"/>
+   <column name="isbn" value="978-969-9705-21-2"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="170"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 2 (TG)"/>
+   <column name="isbn" value="978-969-9705-41-0"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="260"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 3"/>
+   <column name="isbn" value="978-969-9705-22-9"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="270"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 3 (TG)"/>
+   <column name="isbn" value="978-969-9705-42-7"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="170"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 4"/>
+   <column name="isbn" value="978-969-9705-23-6"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="200"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 4 (TG)"/>
+   <column name="isbn" value="978-969-9705-43-4"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="280"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 5"/>
+   <column name="isbn" value="978-969-9705-24-3"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="290"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 5 (TG)"/>
+   <column name="isbn" value="978-969-9705-44-1"/>
+   <column name="author" value="Sajida Rehan"/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="150"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 6"/>
+   <column name="isbn" value="978-969-9705-65-6"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="300"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 7"/>
+   <column name="isbn" value="978-969-9705-72-4"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="330"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Our World of Science Book 8"/>
+   <column name="isbn" value="978-969-9705-73-1"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Science"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="350"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Pre Primary English Work book Level 1"/>
+   <column name="isbn" value="978-969-9705-57-1"/>
+   <column name="author" value=""/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="390"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Pre Primary English Work book Level 2"/>
+   <column name="isbn" value="978-969-9705-58-8"/>
+   <column name="author" value=""/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="390"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Pre Primary English Work book Level 3"/>
+   <column name="isbn" value="978-969-9705-59-5"/>
+   <column name="author" value=""/>
+   <column name="subject" value="English"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="390"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Pre Primary Mathematics Work book Level 1"/>
+   <column name="isbn" value="978-969-9705-53-3"/>
+   <column name="author" value="Saba Paracha"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="360"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Pre Primary Mathematics Work book Level 2"/>
+   <column name="isbn" value="978-969-9705-54-0"/>
+   <column name="author" value="Saba Paracha"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="310"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Pre Primary Mathematics Work book Level 3"/>
+   <column name="isbn" value="978-969-9705-56-4"/>
+   <column name="author" value="Saba Paracha"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="385"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Pre Primary Urdu Amli Kitab Awal"/>
+   <column name="isbn" value="978-969-9705-55-7"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="250"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Pre Primary Urdu Amli Kitab Doyum"/>
+   <column name="isbn" value="978-969-9705-60-1"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="300"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Pre Primary Urdu Amli Kitab Soom"/>
+   <column name="isbn" value="978-969-9705-61-8"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Urdu"/>
+   <column name="languageid" value="169"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="1"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="300"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies Book 6"/>
+   <column name="isbn" value="978-969-9705-69-4"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="320"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies Book 7"/>
+   <column name="isbn" value="978-969-9705-70-0"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="330"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies Book 8"/>
+   <column name="isbn" value="978-969-9705-73-1"/>
+   <column name="author" value=""/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="340"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 1"/>
+   <column name="isbn" value="978-969-9705-15-1"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="210"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 1 (TG)"/>
+   <column name="isbn" value="978-969-9705-35-9"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="140"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 2"/>
+   <column name="isbn" value="978-969-9705-16-8"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="140"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 2 (TG)"/>
+   <column name="isbn" value="978-969-9705-36-6"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="240"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 3"/>
+   <column name="isbn" value="978-969-9705-17-5"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="270"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 3 (TG)"/>
+   <column name="isbn" value="978-969-9705-37-3"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="165"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 4"/>
+   <column name="isbn" value="978-969-9705-18-2"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="170"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 4 (TG)"/>
+   <column name="isbn" value="978-969-9705-38-0"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="290"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 5"/>
+   <column name="isbn" value="978-969-9705-19-9"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="310"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Social Studies for juniors Book 5 (TG)"/>
+   <column name="isbn" value="978-969-9705-39-7"/>
+   <column name="author" value="Dr Mehreen Khan"/>
+   <column name="subject" value="Social Studies"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="170"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 1"/>
+   <column name="isbn" value="978-969-9705-00-7"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="300"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 1 (TG)"/>
+   <column name="isbn" value="978-969-9705-45-8"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="50"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 2"/>
+   <column name="isbn" value="978-969-9705-01-4"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="50"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 2 (TG)"/>
+   <column name="isbn" value="978-969-9705-46-5"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="350"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 3"/>
+   <column name="isbn" value="978-969-9705-02-1"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="380"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 3 (TG)"/>
+   <column name="isbn" value="978-969-9705-47-2"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="55"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 4"/>
+   <column name="isbn" value="978-969-9705-03-8"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="55"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 4 (TG)"/>
+   <column name="isbn" value="978-969-9705-48-9"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="400"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 5"/>
+   <column name="isbn" value="978-969-9705-04-5"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="2"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="410"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 5 (TG)"/>
+   <column name="isbn" value="978-969-9705-49-6"/>
+   <column name="author" value="Noshi Usman"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="7"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="55"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 6"/>
+   <column name="isbn" value="978-969-9705-67-0"/>
+   <column name="author" value="Benish Naseem Zaidi"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="400"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 7"/>
+   <column name="isbn" value="978-969-9705-68-7"/>
+   <column name="author" value="Benish Naseem Zaidi"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="410"/>
+</insert>
+<insert tableName="product">
+   <column name="name" value="Talking Numbers Book 8"/>
+   <column name="isbn" value="978-969-9705-66-3"/>
+   <column name="author" value="Benish Naseem Zaidi"/>
+   <column name="subject" value="Mathematics"/>
+   <column name="languageid" value="36"/>
+   <column name="publisher" value="Fidem Education Network"/>
+   <column name="countryid" value="168"/>
+   <column name="productcategoryid" value="3"/>
+   <column name="paperqualityid" value="5"/>
+   <column name="retailprice" value="420"/>
+</insert>
+        
+    </changeSet>
 </databaseChangeLog>
