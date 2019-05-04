@@ -1,17 +1,42 @@
 package com.vroom.dataservice.UserRole;
 
 import com.vroom.dbmodel.orm.Userrole;
+import com.vroom.dbmodel.orm.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.Collection;
+import java.util.Date;
+
+import com.vroom.dbmodel.orm.Users;
 
 @Service
 public class UserRoleService {
     @Autowired
-    UserRoleRepository repository ;
+    UserRoleRepository repository;
 
-    public Collection<Userrole> getUserRoleList(){
+    private static final Logger logger = LoggerFactory.getLogger(UserRoleService.class);
+
+    public Collection<Userrole> getUserRoleList() {
         return this.repository.findAll();
     }
+
+    /**
+     * To persist user role object into DB
+     * @param userRole
+     * @return
+     */
+    public Userrole save(Userrole userRole) {
+        logger.debug("save User Role : Name[" + userRole.toString() + "]");
+
+        userRole.setRoleName(userRole.getRoleName());
+        userRole.setId(userRole.getId());
+
+        userRole=repository.save(userRole);
+        userRole.setInsertedtime(new Date());
+        return userRole;
+    }
+
+
 }
