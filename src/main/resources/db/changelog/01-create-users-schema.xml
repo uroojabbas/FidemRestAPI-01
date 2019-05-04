@@ -996,7 +996,7 @@
                          tableName="modules"/>
         
         <createTable remarks="Adding Module Permissions Table"
-                     tableName="modulePermissions">
+                     tableName="modulepermissions">
             <column name="permissionType" type="varchar(50)">
                 <constraints nullable="false" />
             </column>
@@ -1014,10 +1014,10 @@
         <addDefaultValue columnDataType="boolean"
                          columnName="isdeleted"
                          defaultValueBoolean="false"
-                         tableName="modulePermissions"/>
+                         tableName="modulepermissions"/>
         
         <addForeignKeyConstraint baseColumnNames="moduleId"
-                                 baseTableName="modulePermissions"
+                                 baseTableName="modulepermissions"
                                  constraintName="fk_modulePerm_moduleId"
                                  onDelete="CASCADE"
                                  onUpdate="RESTRICT"
@@ -1067,10 +1067,10 @@
 
     <addPrimaryKey columnNames="roleid, permissionTypeId"
                    constraintName="pk_role_permission_PK"
-                   tableName="rolePermission"/>
+                   tableName="rolepermission"/>
 
     <addForeignKeyConstraint baseColumnNames="roleid"
-                             baseTableName="rolePermission"
+                             baseTableName="rolepermission"
                              constraintName="fk_userRole_roleid"
                              onDelete="CASCADE"
                              onUpdate="RESTRICT"
@@ -1078,12 +1078,12 @@
                              referencedTableName="userRole"/>
 
     <addForeignKeyConstraint baseColumnNames="permissionTypeId"
-                             baseTableName="rolePermission"
+                             baseTableName="rolepermission"
                              constraintName="fk_modulePermissions_permissiontypeid"
                              onDelete="CASCADE"
                              onUpdate="RESTRICT"
                              referencedColumnNames="id"
-                             referencedTableName="modulePermissions"/>
+                             referencedTableName="modulepermissions"/>
 
 </changeSet>
     
