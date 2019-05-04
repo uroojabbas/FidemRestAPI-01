@@ -1028,7 +1028,7 @@
 <changeSet author="wajeeh" id="23">
 
     <createTable remarks="Used to store Users and the info"
-                 tableName="userRole">
+                 tableName="userrole">
 
         <column autoIncrement="true" name="id" type="int">
             <constraints primaryKey="true" nullable="false" />
@@ -1075,7 +1075,7 @@
                              onDelete="CASCADE"
                              onUpdate="RESTRICT"
                              referencedColumnNames="id"
-                             referencedTableName="userRole"/>
+                             referencedTableName="userrole"/>
 
     <addForeignKeyConstraint baseColumnNames="permissionTypeId"
                              baseTableName="rolepermission"
