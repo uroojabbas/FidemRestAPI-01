@@ -36,9 +36,9 @@ public class Product  implements java.io.Serializable {
     private String publisher;
     private int countryid;
     private int productcategoryid;
-    private int marketsegmentid;
+    private Integer marketsegmentid;
     private Integer pagecount;
-    private double productcost;
+    private Double productcost;
     private int paperqualityid;
     private double retailprice;
     private Integer userid;
@@ -124,12 +124,13 @@ public class Product  implements java.io.Serializable {
 
     @Transient
     public String getVendorName(){
-        if(this.vendorName == null ||
-                this.vendorName.isEmpty()){
-            return this.vendor.getName();
-        }else{
-            return this.vendorName;
+        String vName = "";
+        if(this.vendor != null){
+            vName = this.vendor.getName();
+        }else if((this.vendorName != null) && (!this.vendorName.isEmpty())){
+            vName = this.vendorName;
         }
+        return vName;
     }
 
     @Transient
@@ -266,12 +267,12 @@ public class Product  implements java.io.Serializable {
     }
 
 
-    @Column(name="marketsegmentid", nullable=false)
-    public int getMarketsegmentid() {
+    @Column(name="marketsegmentid")
+    public Integer getMarketsegmentid() {
         return this.marketsegmentid;
     }
 
-    public void setMarketsegmentid(int marketsegmentid) {
+    public void setMarketsegmentid(Integer marketsegmentid) {
         this.marketsegmentid = marketsegmentid;
     }
 
@@ -287,11 +288,11 @@ public class Product  implements java.io.Serializable {
 
 
     @Column(name="productcost")
-    public double getProductcost() {
+    public Double getProductcost() {
         return this.productcost;
     }
 
-    public void setProductcost(double productcost) {
+    public void setProductcost(Double productcost) {
         this.productcost = productcost;
     }
 

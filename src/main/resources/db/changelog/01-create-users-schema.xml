@@ -1054,8 +1054,8 @@
     <createTable remarks="Used to store Users and the info"
                  tableName="rolePermission">
 
-        <column autoIncrement="true" name="roleid" type="int">
-            <constraints primaryKey="true" nullable="false" />
+        <column name="roleid" type="int">
+            <constraints nullable="false" />
         </column>
 
         <column name="permissionTypeId" type="int">
@@ -1064,6 +1064,10 @@
 
 
     </createTable>
+
+    <addPrimaryKey columnNames="roleid, permissionTypeId"
+                   constraintName="pk_role_permission_PK"
+                   tableName="rolePermission"/>
 
     <addForeignKeyConstraint baseColumnNames="roleid"
                              baseTableName="rolePermission"
@@ -1111,4 +1115,5 @@
             tableName="product"/>
 
     </changeSet>
+
 </databaseChangeLog>
