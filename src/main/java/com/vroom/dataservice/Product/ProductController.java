@@ -29,7 +29,7 @@ public class ProductController {
 
     @GetMapping("/product/vendor/{vendorId}")
     @ResponseBody
-    public List<Product> getProductByVendorId(@PathVariable int vendorId){
+    public List<AbstractProduct> getProductByVendorId(@PathVariable int vendorId){
         logger.debug("getProductById : [" + vendorId + "]");
         return productService.getProductByVendorId(vendorId);
 

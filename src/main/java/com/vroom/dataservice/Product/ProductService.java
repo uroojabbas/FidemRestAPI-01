@@ -112,7 +112,7 @@ public class ProductService {
         return productRepository.save(product);
     }
 
-    public List<Product> getProductByVendorId(int vendorId){
+    public List<AbstractProduct> getProductByVendorId(int vendorId){
       return productRepository.findByVendorId(vendorId);
     }
 }
