@@ -11,7 +11,10 @@ import java.util.Set;
 public interface ProductRepository extends CrudRepository<Product,Long> {
 
 
-    @Query("SELECT p.id as id,p.name as name, p.isbn as isbn, p.subject as subject, 0 as quantity FROM Product p WHERE p.isdeleted = false")
+    @Query("SELECT p.id as id,p.name as name, p.isbn as isbn, p.subject as subject," +
+            " 0 as quantity, p.publisher as publisher, p.author as author," +
+            " p.language.language as languagename " +
+            " FROM Product p WHERE p.isdeleted = false")
     List<AbstractProduct> findAllProducts();
 
     @Query("SELECT p FROM Product p WHERE p.name = :name AND (p.isdeleted = false) ")

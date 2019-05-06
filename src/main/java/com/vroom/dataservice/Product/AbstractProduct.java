@@ -13,4 +13,10 @@ public interface AbstractProduct {
 
     public String getSubject();
 
+    public String getPublisher();
+
+    public String getAuthor();
+
+    public String getLanguagename();
+
 }
