@@ -48,7 +48,7 @@ public class ProductService {
         return productRepository.findByName(name);
     }
 
-    public List<Product> getAllProducts() {
+    public List<AbstractProduct> getAllProducts() {
         logger.debug("getAllProducts");
         return productRepository.findAllProducts();
     }

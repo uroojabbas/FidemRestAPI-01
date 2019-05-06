@@ -42,7 +42,7 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public List<Product> getAllProducts(){
+    public List<AbstractProduct> getAllProducts(){
         logger.debug("getAllProducts");
         return productService.getAllProducts();
 

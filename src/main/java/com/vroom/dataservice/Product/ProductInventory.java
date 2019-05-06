@@ -3,19 +3,7 @@ package com.vroom.dataservice.Product;
 import com.vroom.dataservice.common.InventoryType;
 import com.vroom.dataservice.common.Region;
 
-public interface ProductInventory {
-
-    public int getId();
-
-
-    public String getName();
-
-
-    public String getIsbn();
-
-
-    public String getSubject();
-
+public interface ProductInventory extends  AbstractProduct{
 
     public Region getRegion();
 
