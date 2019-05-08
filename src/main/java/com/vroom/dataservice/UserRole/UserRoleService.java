@@ -32,11 +32,28 @@ public class UserRoleService {
 
         userRole.setRoleName(userRole.getRoleName());
         userRole.setId(userRole.getId());
-
         userRole=repository.save(userRole);
         userRole.setInsertedtime(new Date());
         return userRole;
     }
+
+    public Userrole delete(Userrole userRole){
+
+        userRole.setIsDeleted(true);
+
+        return userRole;
+    }
+
+    public Userrole edit(Userrole userRole){
+
+        userRole.getModifiedtime();
+        userRole.setIsDeleted(true);
+        userRole=repository.save(userRole);
+        userRole.setId(null);
+
+        return userRole;
+    }
+
 
 
 }

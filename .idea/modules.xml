@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataservice.iml" filepath="$PROJECT_DIR$/.idea/modules/dataservice.iml" group="dataservice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataservice.iml" filepath="$PROJECT_DIR$/.idea/modules/dataservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataservice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/dataservice_main.iml" group="dataservice" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataservice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/dataservice_test.iml" group="dataservice" />
     </modules>
