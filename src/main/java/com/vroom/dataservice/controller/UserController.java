@@ -28,7 +28,6 @@ public class UserController {
     public Object getUser(@PathVariable int id){
         logger.debug("getUser : [" + id + "]");
         return userRepository.findById(id);
-
     }
 
     @GetMapping("/users/{name}")

@@ -19,7 +19,13 @@ public class UserRoleService {
     private static final Logger logger = LoggerFactory.getLogger(UserRoleService.class);
 
     public Collection<Userrole> getUserRoleList() {
-        return this.repository.findAll();
+        return repository.findAll();
+    }
+
+    public Userrole getUserrolebyid(int id){
+        logger.debug("getUserRole : [" + id + "]");
+        return repository.findById(id);
+
     }
 
     /**
@@ -50,7 +56,7 @@ public class UserRoleService {
         userRole.setIsDeleted(true);
         userRole=repository.save(userRole);
         userRole.setId(null);
-
+        userRole.setModifiedtime(new Date());
         return userRole;
     }
 
