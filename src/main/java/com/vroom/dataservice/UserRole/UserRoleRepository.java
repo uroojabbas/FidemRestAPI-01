@@ -11,6 +11,6 @@ public interface  UserRoleRepository extends CrudRepository<Userrole,Long> {
     @Query("SELECT ur FROM Userrole ur WHERE ur.isDeleted = false ")
     List<Userrole> findAll();
 
-    @Query("SELECT ur FROM Userrole ur WHERE ur.id = :id AND (ur.isdeleted = false) ")
+    @Query("SELECT ur FROM Userrole ur WHERE ur.id = :id AND (ur.isDeleted = false) ")
     Userrole findById(@Param("id") int  id);
 }

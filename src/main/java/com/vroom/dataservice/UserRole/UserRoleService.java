@@ -37,27 +37,37 @@ public class UserRoleService {
         logger.debug("save User Role : Name[" + userRole.toString() + "]");
 
         userRole.setRoleName(userRole.getRoleName());
-        userRole.setId(userRole.getId());
-        userRole=repository.save(userRole);
+        userRole.setInsertedbyuserid(userRole.getInsertedbyuserid());
         userRole.setInsertedtime(new Date());
+        userRole.setModifiedbyuserid(null);
+        userRole.setModifiedtime(null);
+        userRole.setIsDeleted(false);
+        userRole=repository.save(userRole);
+
         return userRole;
     }
 
     public Userrole delete(Userrole userRole){
 
+        userRole = repository.findById(userRole.getId());
+
         userRole.setIsDeleted(true);
+
+        repository.save(userRole);
 
         return userRole;
     }
 
     public Userrole edit(Userrole userRole){
 
-        userRole.getModifiedtime();
-        userRole.setIsDeleted(true);
-        userRole=repository.save(userRole);
-        userRole.setId(null);
-        userRole.setModifiedtime(new Date());
-        return userRole;
+        Userrole previousUserRole = repository.findById(userRole.getId());
+
+        previousUserRole.setModifiedtime(new Date());
+        previousUserRole.setIsDeleted(true);
+
+        repository.save(previousUserRole);
+
+        return this.save(userRole);
     }
 
 
