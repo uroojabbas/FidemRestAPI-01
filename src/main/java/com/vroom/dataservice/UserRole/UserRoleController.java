@@ -32,9 +32,9 @@ public class UserRoleController {
 
     @PostMapping(value = "/userRole/delete",consumes = MediaType.APPLICATION_JSON_VALUE )
     @ResponseBody
-    public Userrole delete(@RequestBody Userrole userrole){
-        logger.debug("delete User Role : Name[" + userrole.toString() + "]");
-        return this.userRoleService.delete(userrole);
+    public Userrole delete(@RequestBody int id){
+        logger.debug("delete User Role : Id[" + id + "]");
+        return this.userRoleService.delete(id);
     }
 
     @PostMapping(value = "/userRole/edit",consumes = MediaType.APPLICATION_JSON_VALUE )

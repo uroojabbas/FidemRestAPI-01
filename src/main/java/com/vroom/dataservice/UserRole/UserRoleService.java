@@ -47,9 +47,9 @@ public class UserRoleService {
         return userRole;
     }
 
-    public Userrole delete(Userrole userRole){
+    public Userrole delete(int id){
 
-        userRole = repository.findById(userRole.getId());
+        Userrole userRole = repository.findById(id);
 
         userRole.setIsDeleted(true);
 
