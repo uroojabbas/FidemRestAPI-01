@@ -10,7 +10,8 @@ public interface ProductInventory extends  AbstractProduct{
 
     public InventoryType getInventoryType();
 
+    public int getTransferQuantity();
+
     public int getQuantity();
 
-    public int getTransferQuantity();
 }

@@ -16,6 +16,9 @@ public interface GoodsReceivedNoteRepository extends CrudRepository<Grnmaster,Lo
     @Query("SELECT grn FROM Grnmaster grn WHERE grn.id = :id AND (grn.isdeleted = false)")
     Grnmaster findById(@Param("id") int  id);
 
+    @Query("SELECT grn FROM Grnmaster grn WHERE grn.pomaster.vendor.id = :vendorId AND (grn.isdeleted = false)")
+    Collection<Grnmaster> findByVendorId(@Param("vendorId") int  vendorId);
+
     @Query(value = "Select grn.id, grn.poid as poId, po.insertedtime as poCreationDate,v.name as vendorName, " +
             "grn.insertedtime as receivedDate,user.name as userName, sum(grnd.amount) as amount " +
             "From grnmaster grn " +

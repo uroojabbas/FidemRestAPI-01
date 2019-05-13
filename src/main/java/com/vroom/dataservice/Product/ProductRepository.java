@@ -13,7 +13,7 @@ public interface ProductRepository extends CrudRepository<Product,Long> {
 
     @Query("SELECT p.id as id,p.name as name, p.isbn as isbn, p.subject as subject," +
             " 0 as quantity, p.publisher as publisher, p.author as author," +
-            " p.language.language as languagename " +
+            " p.language.language as languagename, p.retailprice as price, p.productcost as productcost, p.vendor.discount as discount " +
             " FROM Product p WHERE p.isdeleted = false")
     List<AbstractProduct> findAllProducts();
 
@@ -28,7 +28,7 @@ public interface ProductRepository extends CrudRepository<Product,Long> {
 
     @Query("SELECT p.id as id,p.name as name, p.isbn as isbn, p.subject as subject," +
             " 0 as quantity, p.publisher as publisher, p.author as author," +
-            " p.language.language as languagename " +
+            " p.language.language as languagename, p.retailprice as price, p.productcost as productcost, p.vendor.discount as discount " +
             " FROM Product p WHERE p.vendor.id = :vendorId AND (p.isdeleted = false) ")
     List<AbstractProduct> findByVendorId(@Param("vendorId") int  vendorId);
 

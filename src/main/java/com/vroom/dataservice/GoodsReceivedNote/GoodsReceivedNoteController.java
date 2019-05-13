@@ -29,6 +29,12 @@ public class GoodsReceivedNoteController {
     @GetMapping("/grn/id/{grnId}")
     public Grnmaster getById(@PathVariable int grnId){
         logger.debug("getById");
-        return goodsReceivedNoteService.getById(grnId);
+        return goodsReceivedNoteService.findById(grnId);
+    }
+
+    @GetMapping("/grn/vendor/{vendorId}")
+    public Collection<Grnmaster> getByVendorId(@PathVariable int vendorId){
+        logger.debug("getById");
+        return goodsReceivedNoteService.findByVendorId(vendorId);
     }
 }

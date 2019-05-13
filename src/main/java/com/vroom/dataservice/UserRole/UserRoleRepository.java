@@ -13,4 +13,7 @@ public interface  UserRoleRepository extends CrudRepository<Userrole,Long> {
 
     @Query("SELECT ur FROM Userrole ur WHERE ur.id = :id AND (ur.isDeleted = false) ")
     Userrole findById(@Param("id") int  id);
+
+    @Query("SELECT ur FROM Userrole ur WHERE ur.roleName = :roleName AND (ur.isDeleted = false) ")
+    Userrole findByName(@Param("roleName") String  roleName);
 }

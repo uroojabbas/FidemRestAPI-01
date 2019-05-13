@@ -28,9 +28,14 @@ public class GoodsReceivedNoteService {
         );
     }
 
-    public Grnmaster getById(int grnId){
+    public Grnmaster findById(int grnId){
         return goodsReceivedNoteRepository.findById(grnId);
     }
+
+    public Collection<Grnmaster> findByVendorId(int vendorId){
+        return goodsReceivedNoteRepository.findByVendorId(vendorId);
+    }
+
 
     public Collection<GoodsReceivedNoteList> getGRNList(){
         return goodsReceivedNoteRepository.findAllGRNs();

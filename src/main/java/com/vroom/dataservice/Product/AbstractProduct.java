@@ -19,4 +19,10 @@ public interface AbstractProduct {
 
     public String getLanguagename();
 
+    public Double getPrice();
+
+    public Integer getDiscount();
+
+    public Double getProductcost();
+
 }

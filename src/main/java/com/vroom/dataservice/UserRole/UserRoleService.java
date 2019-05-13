@@ -35,18 +35,26 @@ public class UserRoleService {
      */
     public Userrole save(Userrole userRole) {
         logger.debug("save User Role : Name[" + userRole.toString() + "]");
+        boolean isUserRoleExists = this.isUserRoleExists(userRole.getRoleName());
+        if(!isUserRoleExists) {
+            userRole.setRoleName(userRole.getRoleName());
+            userRole.setInsertedbyuserid(userRole.getInsertedbyuserid());
+            userRole.setInsertedtime(new Date());
+            userRole.setModifiedbyuserid(null);
+            userRole.setModifiedtime(null);
+            userRole.setIsDeleted(false);
+            userRole = repository.save(userRole);
+        }else{
 
-        userRole.setRoleName(userRole.getRoleName());
-        userRole.setInsertedbyuserid(userRole.getInsertedbyuserid());
-        userRole.setInsertedtime(new Date());
-        userRole.setModifiedbyuserid(null);
-        userRole.setModifiedtime(null);
-        userRole.setIsDeleted(false);
-        userRole=repository.save(userRole);
-
+        }
         return userRole;
     }
 
+    private boolean isUserRoleExists(String roleName){
+        Userrole userrole = this.repository.findByName(roleName);
+
+        return (userrole == null) ? Boolean.FALSE : Boolean.TRUE;
+    }
     public Userrole delete(int id){
 
         Userrole userRole = repository.findById(id);
