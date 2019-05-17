@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class GoodsReceivedNoteService {
@@ -32,12 +33,16 @@ public class GoodsReceivedNoteService {
         return goodsReceivedNoteRepository.findById(grnId);
     }
 
-    public Collection<Grnmaster> findByVendorId(int vendorId){
+    public Collection<GoodsReceivedNoteList> findByVendorId(int vendorId){
         return goodsReceivedNoteRepository.findByVendorId(vendorId);
     }
 
 
     public Collection<GoodsReceivedNoteList> getGRNList(){
         return goodsReceivedNoteRepository.findAllGRNs();
+    }
+
+    public Collection<GoodReceivedNoteProductList> getGRNById(Number ... grnList){
+        return goodsReceivedNoteRepository.findGRNById(grnList);
     }
 }

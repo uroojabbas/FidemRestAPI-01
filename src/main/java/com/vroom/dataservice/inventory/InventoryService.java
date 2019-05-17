@@ -92,7 +92,7 @@ public class InventoryService {
 
                 Grndetail grndetail = new Grndetail(grnmaster, podetail.getProduct(),
                 podetail.getProduct().getQuantity(), (podetail.getProduct().getQuantity() *
-                        podetail.getProduct().getRetailprice()));
+                        podetail.getProduct().getProductcost()));
                 grnmaster.getGrndetail().add(grndetail);
             } );
 
