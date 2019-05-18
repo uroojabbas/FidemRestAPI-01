@@ -1115,5 +1115,12 @@
             tableName="product"/>
 
     </changeSet>
+    <changeSet id="25" author="wajeeh">
+    <addColumn tableName="Users">
+        <column name="reportingmanager" type="int"/>
+    </addColumn>
+
+    </changeSet>
+
 
 </databaseChangeLog>

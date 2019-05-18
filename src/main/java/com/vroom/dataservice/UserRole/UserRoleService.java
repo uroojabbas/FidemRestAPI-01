@@ -6,10 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-
+import java.util.List;
 import com.vroom.dbmodel.orm.Users;
+import com.vroom.dataservice.UserRole.prevnameds;
 
 @Service
 public class UserRoleService {
@@ -17,6 +21,7 @@ public class UserRoleService {
     UserRoleRepository repository;
 
     private static final Logger logger = LoggerFactory.getLogger(UserRoleService.class);
+    private static final prevnameds[] previousData= new prevnameds[50];
 
     public Collection<Userrole> getUserRoleList() {
         return repository.findAll();
@@ -25,7 +30,6 @@ public class UserRoleService {
     public Userrole getUserrolebyid(int id){
         logger.debug("getUserRole : [" + id + "]");
         return repository.findById(id);
-
     }
 
     /**
@@ -68,12 +72,9 @@ public class UserRoleService {
 
     public Userrole edit(Userrole userRole){
 
-        Userrole previousUserRole = repository.findById(userRole.getId());
 
-        previousUserRole.setModifiedtime(new Date());
-        previousUserRole.setIsDeleted(true);
 
-        repository.save(previousUserRole);
+        repository.save(userRole);
 
         return this.save(userRole);
     }

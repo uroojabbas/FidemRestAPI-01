@@ -23,24 +23,24 @@ public class UserRoleController {
         return this.userRoleService.getUserRoleList();
     }
 
-    @PostMapping(value = "/userRole/save",consumes = MediaType.APPLICATION_JSON_VALUE )
+    @PostMapping(value = "/userRoles/save",consumes = MediaType.APPLICATION_JSON_VALUE )
     @ResponseBody
     public Userrole save(@RequestBody Userrole userrole){
         logger.debug("save User Role : Name[" + userrole.toString() + "]");
-        return this.userRoleService.save(userrole);
+        return userRoleService.save(userrole);
     }
 
-    @PostMapping(value = "/userRole/delete",consumes = MediaType.APPLICATION_JSON_VALUE )
+    @PostMapping(value = "/userRoles/delete",consumes = MediaType.APPLICATION_JSON_VALUE )
     @ResponseBody
     public Userrole delete(@RequestBody int id){
         logger.debug("delete User Role : Id[" + id + "]");
         return this.userRoleService.delete(id);
     }
 
-    @PostMapping(value = "/userRole/edit",consumes = MediaType.APPLICATION_JSON_VALUE )
+    @PostMapping(value = "/userRoles/edit",consumes = MediaType.APPLICATION_JSON_VALUE )
     @ResponseBody
     public Userrole edit(@RequestBody Userrole userrole){
         logger.debug("edit User Role : Name[" + userrole.toString() + "]");
-        return this.userRoleService.edit(userrole);
+        return userRoleService.edit(userrole);
     }
 }
