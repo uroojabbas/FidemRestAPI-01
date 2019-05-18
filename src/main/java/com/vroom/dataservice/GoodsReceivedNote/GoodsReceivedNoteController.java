@@ -33,8 +33,14 @@ public class GoodsReceivedNoteController {
     }
 
     @GetMapping("/grn/vendor/{vendorId}")
-    public Collection<Grnmaster> getByVendorId(@PathVariable int vendorId){
+    public Collection<GoodsReceivedNoteList> getByVendorId(@PathVariable int vendorId){
         logger.debug("getById");
         return goodsReceivedNoteService.findByVendorId(vendorId);
+    }
+
+    @GetMapping("/grn/list/{grnList}")
+    public Collection<GoodReceivedNoteProductList> getGRNById(@PathVariable Number ... grnList){
+        logger.debug("getGRNById");
+        return goodsReceivedNoteService.getGRNById(grnList);
     }
 }
