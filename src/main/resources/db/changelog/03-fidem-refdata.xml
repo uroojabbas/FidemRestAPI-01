@@ -378,4 +378,14 @@
    </loadData>
     
     </changeSet>
+    
+    <changeSet id="04" author="Ali Jaffar">
+        <loadData
+     file="referencedata/paymentsource.csv"
+     tableName = "paymentsource" >
+       
+       <column header="paymentsourcename" name="paymentsourcename" type="string"/>
+       <column header="paymenttypeid" name="paymenttypeid" type="numeric"/>
+   </loadData>
+         </changeSet>
 </databaseChangeLog>

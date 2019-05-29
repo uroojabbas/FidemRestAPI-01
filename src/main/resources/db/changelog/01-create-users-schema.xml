@@ -1121,6 +1121,27 @@
     </addColumn>
 
     </changeSet>
+    
+   <changeSet id="26" author="ali">
+            <createTable remarks="User data of Payment Sources for Invoice Payment and elsewhere"
+                     tableName="paymentsource">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="paymentsourcename" type="varchar(50)">
+                 <constraints nullable="false" /></column>
+                
+            <column name="paymenttypeid" type="int">
+                 <constraints nullable="false" />
+            </column>
+        </createTable>
 
-
+        <addForeignKeyConstraint baseColumnNames="paymenttypeid"
+                                 baseTableName="paymentsource"
+                                 constraintName="fk_paymenttype"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="paymenttype"/>
+     </changeSet>
 </databaseChangeLog>
