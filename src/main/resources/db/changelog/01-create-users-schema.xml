@@ -1116,7 +1116,7 @@
 
     </changeSet>
     <changeSet id="25" author="wajeeh">
-    <addColumn tableName="Users">
+    <addColumn tableName="users">
         <column name="reportingmanager" type="int"/>
     </addColumn>
 
