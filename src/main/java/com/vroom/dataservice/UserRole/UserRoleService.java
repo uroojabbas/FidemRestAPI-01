@@ -13,15 +13,12 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import com.vroom.dbmodel.orm.Users;
-import com.vroom.dataservice.UserRole.prevnameds;
-
 @Service
 public class UserRoleService {
     @Autowired
     UserRoleRepository repository;
 
     private static final Logger logger = LoggerFactory.getLogger(UserRoleService.class);
-    private static final prevnameds[] previousData= new prevnameds[50];
 
     public Collection<Userrole> getUserRoleList() {
         return repository.findAll();
