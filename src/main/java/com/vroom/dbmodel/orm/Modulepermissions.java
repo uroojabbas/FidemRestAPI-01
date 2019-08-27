@@ -25,6 +25,7 @@ public class Modulepermissions  implements java.io.Serializable {
      private Integer id;
      private Modules module;
      private String permissionType;
+     private String permissionName;
      private boolean isdeleted;
 
     public Modulepermissions() {
@@ -77,6 +78,15 @@ public class Modulepermissions  implements java.io.Serializable {
     
     public void setIsdeleted(boolean isdeleted) {
         this.isdeleted = isdeleted;
+    }
+
+    @Column(name="permissionName", nullable=false)
+    public String getPermissionName() {
+        return permissionName;
+    }
+
+    public void setPermissionName(String permissionName) {
+        this.permissionName = permissionName;
     }
 }
 

@@ -1,6 +1,6 @@
 package com.vroom.dataservice.controller;
 
-import com.vroom.dataservice.services.UserService;
+import com.vroom.dataservice.User.UserService;
 import com.vroom.dbmodel.orm.Users;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

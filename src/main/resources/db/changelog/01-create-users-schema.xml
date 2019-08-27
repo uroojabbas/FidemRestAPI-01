@@ -1009,6 +1009,9 @@
             <column name="moduleId" type="int">
                 <constraints nullable="false" />
             </column>
+            <column name="permissionName" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
         </createTable>
 
         <addDefaultValue columnDataType="boolean"
@@ -1032,6 +1035,10 @@
 
         <column autoIncrement="true" name="id" type="int">
             <constraints primaryKey="true" nullable="false" />
+        </column>
+
+        <column name="roleId" type="int">
+            <constraints unique="true" nullable="false" uniqueConstraintName="userrole_roleId_unq"/>
         </column>
 
         <column  name="roleName" type="varchar(50)">
@@ -1074,7 +1081,7 @@
                              constraintName="fk_userRole_roleid"
                              onDelete="CASCADE"
                              onUpdate="RESTRICT"
-                             referencedColumnNames="id"
+                             referencedColumnNames="roleId"
                              referencedTableName="userrole"/>
 
     <addForeignKeyConstraint baseColumnNames="permissionTypeId"
@@ -1144,4 +1151,52 @@
                                  referencedColumnNames="id"
                                  referencedTableName="paymenttype"/>
      </changeSet>
+
+    <changeSet id="28" author="Urooj">
+        <createTable remarks="Used to store User Role info"
+                     tableName="userpermissions">
+
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column  name="roleId" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column  name="userId" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="isDeleted" type="boolean" defaultValue="false"/>
+
+            <column name="insertedtime" type="date"/>
+
+            <column name="insertedbyuserid" type="int">
+                nullable="false" />
+            </column>
+
+            <column name="modifiedbyuserid" type="int"/>
+
+            <column name="modifiedtime" type="date"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="roleId"
+                                 baseTableName="userpermissions"
+                                 constraintName="fk_userrole_id"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="roleId"
+                                 referencedTableName="userrole"/>
+
+        <addForeignKeyConstraint baseColumnNames="userId"
+                                 baseTableName="userpermissions"
+                                 constraintName="fk_user_permission_id"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+
+    </changeSet>
+
 </databaseChangeLog>

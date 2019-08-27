@@ -1,4 +1,4 @@
-package com.vroom.dataservice.services;
+package com.vroom.dataservice.User;
 
 import com.vroom.dataservice.com.vroom.dataservice.repository.DepartmentRepository;
 import com.vroom.dataservice.com.vroom.dataservice.repository.DesignationRepository;

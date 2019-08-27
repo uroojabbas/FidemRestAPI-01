@@ -16,4 +16,7 @@ public interface  UserRoleRepository extends CrudRepository<Userrole,Long> {
 
     @Query("SELECT ur FROM Userrole ur WHERE ur.roleName = :roleName AND (ur.isDeleted = false) ")
     Userrole findByName(@Param("roleName") String  roleName);
+
+    @Query("SELECT MAX(ur.roleId) FROM Userrole ur")
+    Integer getMaxRoleId();
 }

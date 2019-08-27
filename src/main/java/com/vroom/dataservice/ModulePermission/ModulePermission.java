@@ -5,5 +5,5 @@ public interface ModulePermission {
     public String getPermissionType();
     public int getModuleId();
     public int getPermissionTypeId();
-
+    public String getPermissionName();
 }

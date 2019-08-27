@@ -3,6 +3,8 @@ package com.vroom.dbmodel.orm;
 
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.*;
 import javax.persistence.Entity;
 
@@ -37,7 +39,9 @@ public class Users  extends AbstractEntity {
      private String departmentname;
      private String designationname;
 
-     @Transient
+    private Set<Userpermissions> userpermissionses = new HashSet<Userpermissions>(0);
+
+    @Transient
      public String getDepartmentname(){
          if(this.departmentname == null ||
                  this.departmentname.isEmpty()){
@@ -235,6 +239,14 @@ public class Users  extends AbstractEntity {
         this.password = password;
     }
 
+    @OneToMany(fetch=FetchType.LAZY, mappedBy="users")
+    public Set<Userpermissions> getUserpermissionses() {
+        return this.userpermissionses;
+    }
+
+    public void setUserpermissionses(Set<Userpermissions> userpermissionses) {
+        this.userpermissionses = userpermissionses;
+    }
 }
 
 

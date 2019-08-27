@@ -9,7 +9,8 @@ import java.util.Set;
 public interface ModulePermissionRepository extends CrudRepository<Modules,Long> {
 
     @Query(value = "Select m.id AS moduleId,m.moduleName AS moduleName, " +
-            "mp.id AS permissionTypeId, mp.permissionType AS permissionType  " +
+            "mp.id AS permissionTypeId, mp.permissionType AS permissionType,  " +
+            "mp.permissionName as permissionName " +
             "From modules m " +
             "INNER JOIN modulepermissions mp " +
             "ON(m.id = mp.moduleId) " +

@@ -102,9 +102,6 @@ public class Tostatus  implements java.io.Serializable {
         this.modifiedtime = modifiedtime;
     }
 
-
-
-
 }
 
 

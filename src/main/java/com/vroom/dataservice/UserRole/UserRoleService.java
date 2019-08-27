@@ -1,18 +1,14 @@
 package com.vroom.dataservice.UserRole;
 
 import com.vroom.dbmodel.orm.Userrole;
-import com.vroom.dbmodel.orm.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
-import com.vroom.dbmodel.orm.Users;
+
 @Service
 public class UserRoleService {
     @Autowired
@@ -44,6 +40,10 @@ public class UserRoleService {
             userRole.setModifiedbyuserid(null);
             userRole.setModifiedtime(null);
             userRole.setIsDeleted(false);
+            if(userRole.getRoleId() == null || userRole.getRoleId() == 0){
+                Integer roleId = repository.getMaxRoleId();
+                userRole.setRoleId(roleId ==  null ? 1 : roleId + 1);
+            }
             userRole = repository.save(userRole);
         }else{
 
@@ -71,10 +71,9 @@ public class UserRoleService {
 
 
 
-        repository.save(userRole);
+        return repository.save(userRole);
 
-        return this.save(userRole);
-    }
+        }
 
 
 

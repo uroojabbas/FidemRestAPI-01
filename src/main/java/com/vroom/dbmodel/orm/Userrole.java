@@ -2,11 +2,16 @@ package com.vroom.dbmodel.orm;
 // Generated Apr 25, 2019 12:36:16 AM by Hibernate Tools 5.2.0.Final
 
 
+import org.hibernate.annotations.GenerationTime;
+
 import java.util.Date;
+import javax.annotation.Generated;
 import javax.persistence.*;
 import javax.persistence.Entity;
 
+import static javax.persistence.GenerationType.AUTO;
 import static javax.persistence.GenerationType.IDENTITY;
+import static javax.persistence.GenerationType.SEQUENCE;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,6 +26,8 @@ public class Userrole  implements java.io.Serializable {
 
 
     private Integer id;
+
+    private Integer roleId;
     private String roleName;
     private Boolean isDeleted;
     private Date insertedtime;
@@ -118,9 +125,20 @@ public class Userrole  implements java.io.Serializable {
         this.modifiedtime = modifiedtime;
     }
 
+    @SequenceGenerator(name="seq", initialValue=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq")
+    @Column(name = "roleId")
+    public Integer getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
+    }
+
     @ManyToMany(fetch=FetchType.LAZY)
     @JoinTable(name="rolepermission", catalog="yaqeen", joinColumns = {
-            @JoinColumn(name="roleid", nullable=false, updatable=false) }, inverseJoinColumns = {
+            @JoinColumn(name="roleid", nullable=false, updatable=false, referencedColumnName = "roleId") }, inverseJoinColumns = {
             @JoinColumn(name="permissionTypeId", nullable=false, updatable=false) })
     public Set<Modulepermissions> getModulepermissionses() {
         return this.modulepermissionses;
