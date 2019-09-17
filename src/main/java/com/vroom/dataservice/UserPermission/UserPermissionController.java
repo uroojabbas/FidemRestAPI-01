@@ -5,12 +5,11 @@ import com.vroom.dbmodel.orm.Userrole;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.HashMap;
 
 @RestController
 public class UserPermissionController {
@@ -29,11 +28,20 @@ public class UserPermissionController {
 
     }
 
-    @GetMapping("/userRole")
+    @GetMapping("/userRole/userRoleList/{userId}")
     @ResponseBody
-    public Collection<RolePermission> getUserRoleist(){
+    public Collection<RolePermission> getUserRoleist(@PathVariable int userId){
         logger.debug("Get User Role List : ");
         return userPermissionService.findAll();
 
+    }
+
+    @PostMapping(value = "/userRoles/add_update",consumes = MediaType.APPLICATION_JSON_VALUE )
+    @ResponseBody
+    public boolean addUpdate(@RequestBody UserRoleDTO userRoleDTO){
+        logger.debug("Add/Update User Role ");
+
+        this.userPermissionService.save(userRoleDTO.getUserRoles(), userRoleDTO.getForUserId(), userRoleDTO.getFromUserId());
+        return true;
     }
 }

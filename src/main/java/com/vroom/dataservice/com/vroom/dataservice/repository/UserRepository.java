@@ -11,7 +11,7 @@ import java.util.List;
 public interface UserRepository extends CrudRepository<Users,Long>{
 
     @Query("SELECT u FROM Users u WHERE u.id=:id and (u.isdeleted = false OR u.isdeleted = 'false') ")
-    Users findById(@Param("id") int id);
+    Users findById(@Param("id") Number id);
 
     List<Users> findByName(String name);
 

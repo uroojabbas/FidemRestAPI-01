@@ -6,9 +6,19 @@ import java.util.Collection;
 public class RolePermission {
 
     private String name;
+    private boolean roleAssignToUser;
+
 
     public int getId() {
         return id;
+    }
+
+    public boolean isRoleAssignToUser() {
+        return roleAssignToUser;
+    }
+
+    public void setRoleAssignToUser(boolean roleAssignToUser) {
+        this.roleAssignToUser = roleAssignToUser;
     }
 
     public void setId(int id) {
@@ -16,6 +26,19 @@ public class RolePermission {
     }
 
     private int id;
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    private int userId;
+
+
+
 
     public Collection<Permission> getModulepermissionses() {
         return modulepermissionses;
