@@ -10,8 +10,11 @@ import java.util.Collection;
 
 public interface UserPermissionRepository extends CrudRepository<Userpermissions,Long> {
 
-    @Query("SELECT up.userrole FROM Userpermissions up WHERE up.users.id = :userId")
-    Collection<Userrole> findByUserId(@Param("userId") Number  userId);
+    @Query("SELECT up FROM Userpermissions up WHERE up.users.id = :userId and up.isDeleted = false")
+    Collection<Userpermissions> findByUserId(@Param("userId") Number  userId);
+
+    @Query("SELECT up.userrole FROM Userpermissions up WHERE up.users.id = :userId and up.isDeleted = false")
+    Collection<Userrole> findByRoleUserId(@Param("userId") Number  userId);
 
     @Query("SELECT up.userrole FROM Userpermissions up")
     Collection<Userrole> findAllUserRole();

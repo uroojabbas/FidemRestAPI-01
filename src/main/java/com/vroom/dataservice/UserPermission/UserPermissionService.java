@@ -25,7 +25,7 @@ public class UserPermissionService {
 
 
     public Collection<RolePermission> findAll() {
-        Collection<Userrole> userRoleList =  userRoleRepository.findAll();
+        Collection<Userrole> userRoleList = userRoleRepository.findAll();
         return this.getRolePermission(userRoleList, new ArrayList(0));
 
     }
@@ -33,10 +33,10 @@ public class UserPermissionService {
     private Collection<RolePermission> getRolePermission(Collection<Userrole> roleList,
                                                          Collection<Userrole> userRoleList) {
         Collection<RolePermission> rolePermissionList = new ArrayList(0);
-        for(Userrole userRole :roleList){
+        for (Userrole userRole : roleList) {
 
             RolePermission rolePermission = new RolePermission();
-            if(userRoleList.contains(userRole)) {
+            if (userRoleList.contains(userRole)) {
                 rolePermission.setRoleAssignToUser(Boolean.TRUE);
             } else {
                 rolePermission.setRoleAssignToUser(Boolean.FALSE);
@@ -53,33 +53,50 @@ public class UserPermissionService {
 
     public Collection<RolePermission> findByUserId(int userId) {
         Collection<Userrole> roleList = userRoleRepository.findAll();
-        Collection<Userrole> userRoleList = userPermissionRepository.findByUserId(userId);
+        Collection<Userrole> userRoleList = userPermissionRepository.findByRoleUserId(userId);
         return this.getRolePermission(roleList, userRoleList);
     }
 
     public void save(List<Integer> userRole, int forUserId, int fromUserId) {
 
-        Collection<Userrole> userRoleList = new ArrayList(0);
-        for(Integer roleId : userRole) {
-            if(userRoleList.isEmpty()) {
-                userRoleList = userPermissionRepository.findByUserId(forUserId);
-            }
-            Userrole uRole = userRoleList.stream()
-                    .filter(role -> role.getRoleId().equals(roleId))
+        Collection<Userpermissions> userRoleList = userPermissionRepository.findByUserId(forUserId);
+        Collection<Userpermissions> userpermissionsList = new ArrayList(0);
+        Users user = userRepository.findById(forUserId);
+
+        for (Integer roleId : userRole) {
+
+            Userpermissions uRole = userRoleList.stream()
+                    .filter(role -> role.getUserrole().getRoleId().equals(roleId))
                     .findAny()
                     .orElse(null);
 
-            if(uRole == null) {
-                this.saveUserRole(forUserId, roleId, fromUserId);
+            if (uRole == null) {
+                Userpermissions userRolePermission = this.createUserPermission(user, roleId, fromUserId);
+                if (userRolePermission != null) {
+                    userpermissionsList.add(userRolePermission);
+                }
+            } else {
+                userRoleList.remove(uRole);
             }
         }
 
+        for (Userpermissions userPermission : userRoleList) {
+            deleteUserPermission(userPermission, fromUserId);
 
+            userpermissionsList.add(userPermission);
+        }
+        this.userPermissionRepository.saveAll(userpermissionsList);
     }
 
-    private void saveUserRole(Number userId, Number roleId, Integer fromUserId) {
+    private void deleteUserPermission(Userpermissions userPermission,Integer fromUserId) {
+        userPermission.setIsDeleted(Boolean.TRUE);
+        userPermission.setModifiedbyuserid(fromUserId);
+        userPermission.setModifiedtime(new Date());
+
+    }
+    private Userpermissions createUserPermission(Users user, Number roleId, Integer fromUserId) {
         Userrole userRole = userRoleRepository.findById(roleId.intValue());
-        Users user = userRepository.findById(userId);
+
 
         Userpermissions userpermissions = new Userpermissions(userRole,
                 user,
@@ -89,7 +106,7 @@ public class UserPermissionService {
                 fromUserId,
                 new Date());
 
-        this.userPermissionRepository.save(userpermissions);
+        return userpermissions;
 
     }
 }

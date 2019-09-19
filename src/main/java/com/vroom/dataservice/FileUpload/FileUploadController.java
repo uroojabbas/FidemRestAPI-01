@@ -23,7 +23,7 @@ public class FileUploadController {
         this.fileUploadService = fileUploadService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/listfiles")
     public String listAllFiles(Model model) {
 
         model.addAttribute("files", fileUploadService.loadAll().map(
